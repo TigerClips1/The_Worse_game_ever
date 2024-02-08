@@ -26,3 +26,35 @@ func _physics_process(delta):
 		velocity.x = 0
 
 	move_and_slide()
+	
+	# TODO Timestep 25:58 Part 1
+	# Name Godot 4 Tutorial - Heart Platformer
+	
+	"""
+	A
+	B
+	C
+	D
+	E
+	F
+	G
+	H
+	I
+	J
+	K
+	L
+	M
+	N
+	O
+	P
+	Q
+	R
+	S
+	T
+	U
+	V
+	W
+	X
+	Y
+	Z
+	"""
