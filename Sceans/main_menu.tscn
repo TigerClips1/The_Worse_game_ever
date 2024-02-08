@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://qayckfv40ygw"]
+[gd_scene load_steps=6 format=3 uid="uid://qayckfv40ygw"]
 
 [ext_resource type="FontFile" uid="uid://chambj21cikbp" path="res://ASSETS/Font/ProtestGuerrilla-Regular.ttf" id="1_0pqbf"]
+[ext_resource type="Script" path="res://Sceans/main_menu.gd" id="1_4r1g1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4hdq7"]
 font = ExtResource("1_0pqbf")
@@ -21,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4r1g1")
 
 [node name="Titile" type="Label" parent="."]
 layout_mode = 0

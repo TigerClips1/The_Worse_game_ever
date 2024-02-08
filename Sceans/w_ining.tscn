@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3r2ep6e8krn5"]
+[gd_scene load_steps=5 format=3 uid="uid://c3r2ep6e8krn5"]
+
+[ext_resource type="Script" path="res://Sceans/w_ining.gd" id="1_xly4h"]
 
 [sub_resource type="SystemFont" id="SystemFont_5btwr"]
 
@@ -16,6 +18,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_xly4h")
 
 [node name="wining_Text" type="Label" parent="."]
 layout_mode = 0

@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cptf4radw1712"]
+[gd_scene load_steps=4 format=3 uid="uid://cptf4radw1712"]
+
+[ext_resource type="Script" path="res://Sceans/credits_2.gd" id="1_n4vib"]
 
 [sub_resource type="SystemFont" id="SystemFont_lyhyb"]
 font_names = PackedStringArray("Khmer OS")
@@ -17,3 +19,4 @@ text = "Story and game coding
 label_settings = SubResource("LabelSettings_fowyf")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("1_n4vib")

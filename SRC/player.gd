@@ -1,60 +1,48 @@
 extends CharacterBody2D
 
-
 const SPEED = 100.0
-const JUMP_VELOCITY = -400.0
+const ACCELERATION = 800.0
+const friction = 1000.0
+const JUMP_VELOCITY = -300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _physics_process(delta):
-	# Add the gravity.
+	Apply_Gravaty(delta)
+	Handlejump()
+	var input_axis = Input.get_axis("ui_left", "ui_right")
+	Apply_Actlation(input_axis, delta)
+	Apply_friction(input_axis, delta)
+	update_Anmation(input_axis)
+	move_and_slide()
+
+func Apply_Gravaty(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction != 0:
-		velocity.x = direction * SPEED
+func Handlejump():
+	if is_on_floor():
+		if Input.is_action_just_pressed("ui_accept"):
+			velocity.y = JUMP_VELOCITY
 	else:
-		velocity.x = 0
+		if Input.is_action_just_pressed("ui_accept") and  velocity.y < 0:
+			velocity.y = JUMP_VELOCITY / 1
 
-	move_and_slide()
-	
-	# TODO Timestep 25:58 Part 1
-	# Name Godot 4 Tutorial - Heart Platformer
-	
-	"""
-	A
-	B
-	C
-	D
-	E
-	F
-	G
-	H
-	I
-	J
-	K
-	L
-	M
-	N
-	O
-	P
-	Q
-	R
-	S
-	T
-	U
-	V
-	W
-	X
-	Y
-	Z
-	"""
+func Apply_Actlation(input_axis, delta):
+	if input_axis != 0:
+		velocity.x = move_toward(velocity.x, SPEED * input_axis, ACCELERATION * delta)
+
+func Apply_friction(input_axis, delta):
+	if input_axis == 0:
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
+func update_Anmation(input_axis):
+	if input_axis != 0:
+		animated_sprite_2d.flip_h = input_axis < 0 
+		animated_sprite_2d.play("walk")
+	else:
+		animated_sprite_2d.play("idle")
+
+# TODO NAME = Godot 4 Tutorial - Heart Platformer P2 - Coyote Jump
+# TIMESET = 1:29

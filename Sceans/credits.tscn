@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://8d4hn0mlalh1"]
+[gd_scene load_steps=3 format=3 uid="uid://8d4hn0mlalh1"]
+
+[ext_resource type="Script" path="res://Sceans/credits.gd" id="1_wq1hx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3drdq"]
 font_color = Color(1, 0.537255, 0.0745098, 1)
@@ -13,3 +15,4 @@ text = "Game by TIgerClips1"
 label_settings = SubResource("LabelSettings_3drdq")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("1_wq1hx")
