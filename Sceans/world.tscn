@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg48j48upwvrh"]
+[gd_scene load_steps=7 format=3 uid="uid://cg48j48upwvrh"]
 
 [ext_resource type="Script" path="res://SRC/world.gd" id="1_t4f6k"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="2_xlota"]
 [ext_resource type="PackedScene" uid="uid://rfbrfr8x5lre" path="res://Sceans/player.tscn" id="3_utxty"]
+[ext_resource type="PackedScene" uid="uid://dxryb1dsna2lw" path="res://Sceans/bg.tscn" id="4_lwslr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jsw2"]
 texture = ExtResource("2_xlota")
@@ -128,3 +129,6 @@ layer_0/tile_data = PackedInt32Array(65536, 458752, 2, 131072, 458752, 2, 196608
 
 [node name="Player" parent="." instance=ExtResource("3_utxty")]
 position = Vector2(-8, -72)
+
+[node name="Bg" parent="." instance=ExtResource("4_lwslr")]
+z_index = -1
