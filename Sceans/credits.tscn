@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://8d4hn0mlalh1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3drdq"]
+font_color = Color(1, 0.537255, 0.0745098, 1)
+outline_color = Color(0, 0.976471, 0.988235, 1)
+
+[node name="credits" type="Label"]
+offset_left = 80.0
+offset_top = 24.0
+offset_right = 238.0
+offset_bottom = 47.0
+text = "Game by TIgerClips1"
+label_settings = SubResource("LabelSettings_3drdq")
+horizontal_alignment = 1
+vertical_alignment = 1

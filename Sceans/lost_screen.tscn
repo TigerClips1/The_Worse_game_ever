@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp7tlfiw8skog"]
+
+[sub_resource type="SystemFont" id="SystemFont_68swm"]
+font_names = PackedStringArray("DejaVu Sans")
+font_italic = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_p06w1"]
+font = SubResource("SystemFont_68swm")
+font_size = 22
+font_color = Color(0.968627, 0.239216, 1, 1)
+
+[node name="lost screen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lose" type="Label" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 24.0
+offset_right = 210.0
+offset_bottom = 51.0
+text = "Your lose"
+label_settings = SubResource("LabelSettings_p06w1")
+horizontal_alignment = 1
+vertical_alignment = 1

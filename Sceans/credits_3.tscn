@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmwbdjj8jlopk"]
+
+[sub_resource type="SystemFont" id="SystemFont_bux5l"]
+font_names = PackedStringArray("DejaVu Sans Mono")
+
+[sub_resource type="LabelSettings" id="LabelSettings_2nf4i"]
+font = SubResource("SystemFont_bux5l")
+font_color = Color(1, 0.572549, 0.690196, 1)
+
+[node name="Credits3" type="Label"]
+offset_left = 56.0
+offset_top = 8.0
+offset_right = 269.0
+offset_bottom = 71.0
+text = "Assets from
+	https://www.kenney.nl/
+	"
+label_settings = SubResource("LabelSettings_2nf4i")
+horizontal_alignment = 1
+vertical_alignment = 1

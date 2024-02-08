@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8onedwv1xdss"]
+
+[sub_resource type="SystemFont" id="SystemFont_ri4hx"]
+font_names = PackedStringArray("FreeMono")
+
+[sub_resource type="LabelSettings" id="LabelSettings_shdyy"]
+font = SubResource("SystemFont_ri4hx")
+font_color = Color(0.133333, 0, 0.980392, 1)
+
+[node name="credits4" type="Label"]
+offset_left = 88.0
+offset_right = 237.0
+offset_bottom = 49.0
+text = "sound/efx/bgMusic
+from ?"
+label_settings = SubResource("LabelSettings_shdyy")
+horizontal_alignment = 1
+vertical_alignment = 1

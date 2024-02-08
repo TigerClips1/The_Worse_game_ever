@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://qayckfv40ygw"]
+
+[ext_resource type="FontFile" uid="uid://chambj21cikbp" path="res://ASSETS/Font/ProtestGuerrilla-Regular.ttf" id="1_0pqbf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4hdq7"]
+font = ExtResource("1_0pqbf")
+font_color = Color(0.329412, 1, 0.890196, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_6r0ga"]
+font_names = PackedStringArray("C059")
+
+[sub_resource type="LabelSettings" id="LabelSettings_k2j3u"]
+font = SubResource("SystemFont_6r0ga")
+font_size = 10
+font_color = Color(0.321569, 1, 0.886275, 1)
+
+[node name="Main menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Titile" type="Label" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_right = 239.0
+offset_bottom = 23.0
+text = "The worse game ever"
+label_settings = SubResource("LabelSettings_4hdq7")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 168.0
+offset_right = 399.0
+offset_bottom = 191.0
+text = "Copyright © TigerClips1 2024"
+label_settings = SubResource("LabelSettings_k2j3u")

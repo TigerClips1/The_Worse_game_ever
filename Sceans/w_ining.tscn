@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3r2ep6e8krn5"]
+
+[sub_resource type="SystemFont" id="SystemFont_5btwr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7m1m8"]
+font = SubResource("SystemFont_5btwr")
+font_size = 28
+font_color = Color(1, 0.364706, 0.560784, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ck31m"]
+font_size = 10
+font_color = Color(0.576471, 0.94902, 1, 1)
+
+[node name="WIning" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="wining_Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_right = 212.0
+offset_bottom = 39.0
+text = "You win"
+label_settings = SubResource("LabelSettings_7m1m8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Help Me" type="Label" parent="wining_Text"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 104.0
+offset_bottom = 87.0
+text = "sJ1pp6rqBc4"
+label_settings = SubResource("LabelSettings_ck31m")
+horizontal_alignment = 1
+vertical_alignment = 1

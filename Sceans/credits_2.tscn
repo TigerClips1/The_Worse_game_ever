@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cptf4radw1712"]
+
+[sub_resource type="SystemFont" id="SystemFont_lyhyb"]
+font_names = PackedStringArray("Khmer OS")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fowyf"]
+font = SubResource("SystemFont_lyhyb")
+font_color = Color(0, 0.698039, 0.8, 1)
+
+[node name="credits2" type="Label"]
+offset_left = 80.0
+offset_top = 8.0
+offset_right = 244.0
+offset_bottom = 77.0
+text = "Story and game coding 
+	By TigerClips1"
+label_settings = SubResource("LabelSettings_fowyf")
+horizontal_alignment = 1
+vertical_alignment = 1
