@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp7tlfiw8skog"]
 
-[ext_resource type="Script" path="res://Sceans/lost_screen.gd" id="1_4po4k"]
+[ext_resource type="Script" path="res://SRC/lost_screen.gd" id="1_4po4k"]
 
 [sub_resource type="SystemFont" id="SystemFont_68swm"]
 font_names = PackedStringArray("DejaVu Sans")

@@ -1,9 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://cg48j48upwvrh"]
+[gd_scene load_steps=10 format=3 uid="uid://cg48j48upwvrh"]
 
 [ext_resource type="Script" path="res://SRC/world.gd" id="1_t4f6k"]
+[ext_resource type="Texture2D" uid="uid://dd4vgiuhw1hyx" path="res://ASSETS/Misc/tile_0068.png" id="2_byaog"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="2_xlota"]
 [ext_resource type="PackedScene" uid="uid://rfbrfr8x5lre" path="res://Sceans/player.tscn" id="3_utxty"]
 [ext_resource type="PackedScene" uid="uid://dxryb1dsna2lw" path="res://Sceans/bg.tscn" id="4_lwslr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l0ft"]
+size = Vector2(151, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5jbw"]
+size = Vector2(305, 33)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jsw2"]
 texture = ExtResource("2_xlota")
@@ -121,14 +128,95 @@ sources/0 = SubResource("TileSetAtlasSource_3jsw2")
 position = Vector2(8, 0)
 script = ExtResource("1_t4f6k")
 
+[node name="SPikes" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SPikes"]
+visible = false
+position = Vector2(112.5, 166.5)
+shape = SubResource("RectangleShape2D_8l0ft")
+
+[node name="Spike" type="Sprite2D" parent="SPikes"]
+position = Vector2(26, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike2" type="Sprite2D" parent="SPikes"]
+position = Vector2(182, 156)
+texture = ExtResource("2_byaog")
+
+[node name="spike3" type="Sprite2D" parent="SPikes"]
+position = Vector2(249, 156)
+texture = ExtResource("2_byaog")
+
+[node name="spike4" type="Sprite2D" parent="SPikes"]
+position = Vector2(266, 157)
+texture = ExtResource("2_byaog")
+
+[node name="Spike5" type="Sprite2D" parent="SPikes"]
+position = Vector2(282, 157)
+texture = ExtResource("2_byaog")
+
+[node name="Spoke6" type="Sprite2D" parent="SPikes"]
+position = Vector2(232, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike7" type="Sprite2D" parent="SPikes"]
+position = Vector2(215, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike8" type="Sprite2D" parent="SPikes"]
+position = Vector2(199, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike9" type="Sprite2D" parent="SPikes"]
+position = Vector2(165, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike10" type="Sprite2D" parent="SPikes"]
+position = Vector2(148, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike11" type="Sprite2D" parent="SPikes"]
+position = Vector2(131, 157)
+texture = ExtResource("2_byaog")
+
+[node name="Spike12" type="Sprite2D" parent="SPikes"]
+position = Vector2(116, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike13" type="Sprite2D" parent="SPikes"]
+position = Vector2(99, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike14" type="Sprite2D" parent="SPikes"]
+position = Vector2(81, 156)
+texture = ExtResource("2_byaog")
+
+[node name="SPike15" type="Sprite2D" parent="SPikes"]
+position = Vector2(63, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Spike16" type="Sprite2D" parent="SPikes"]
+position = Vector2(45, 156)
+texture = ExtResource("2_byaog")
+
+[node name="Death" type="Area2D" parent="SPikes"]
+position = Vector2(0, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SPikes/Death"]
+position = Vector2(142.5, 164.5)
+shape = SubResource("RectangleShape2D_f5jbw")
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, -16)
 tile_set = SubResource("TileSet_132q6")
 format = 2
-layer_0/tile_data = PackedInt32Array(65536, 458752, 2, 131072, 458752, 2, 196608, 458752, 2, 262144, 458752, 2, 327680, 458752, 2, 393216, 458752, 2, 458752, 458752, 2, 524288, 458752, 2, 589824, 458752, 2, 655360, 458752, 2, 65537, 458752, 2, 65538, 458752, 2, 65539, 458752, 2, 65540, 458752, 2, 65541, 458752, 2, 65542, 458752, 2, 65543, 458752, 2, 65544, 458752, 2, 65545, 458752, 2, 65546, 458752, 2, 65547, 458752, 2, 65548, 458752, 2, 65549, 458752, 2, 65550, 458752, 2, 65551, 458752, 2, 65552, 458752, 2, 131088, 458752, 2, 196624, 458752, 2, 262160, 458752, 2, 327696, 458752, 2, 393232, 458752, 2, 458768, 458752, 2, 524304, 458752, 2, 589840, 458752, 2, 655376, 458752, 2, 655375, 458752, 2, 655374, 458752, 2, 655373, 458752, 2, 655372, 458752, 2, 655371, 458752, 2, 655370, 458752, 2, 655369, 458752, 2, 655368, 458752, 2, 655367, 458752, 2, 655366, 458752, 2, 655365, 458752, 2, 655364, 458752, 2, 655363, 458752, 2, 655362, 458752, 2, 655361, 458752, 2, 589825, 851968, 1, 589826, 851968, 1, 589827, 851968, 1, 589828, 851968, 1, 589829, 851968, 1, 589830, 851968, 1, 589831, 851968, 1, 589832, 851968, 1, 589833, 851968, 1, 589834, 851968, 1, 589835, 851968, 1, 589836, 851968, 1, 589837, 851968, 1, 589838, 851968, 1, 589839, 851968, 1, 262159, 0, 0, 131087, 524288, 1, 524292, 0, 0, 131079, 458752, 1, 327687, 0, 0, 393217, 0, 0, 524299, 0, 0)
+layer_0/tile_data = PackedInt32Array(131072, 458752, 2, 196608, 458752, 2, 262144, 458752, 2, 327680, 458752, 2, 393216, 458752, 2, 458752, 458752, 2, 524288, 458752, 2, 589824, 458752, 2, 655360, 458752, 2, 131088, 458752, 2, 196624, 458752, 2, 262160, 458752, 2, 327696, 458752, 2, 393232, 458752, 2, 458768, 458752, 2, 524304, 458752, 2, 589840, 458752, 2, 655376, 458752, 2, 655375, 458752, 2, 655374, 458752, 2, 655373, 458752, 2, 655372, 458752, 2, 655371, 458752, 2, 655370, 458752, 2, 655369, 458752, 2, 655368, 458752, 2, 655367, 458752, 2, 655366, 458752, 2, 655365, 458752, 2, 655364, 458752, 2, 655363, 458752, 2, 655362, 458752, 2, 655361, 458752, 2, 262159, 0, 0, 131087, 524288, 1, 524292, 0, 0, 131079, 458752, 1, 327687, 0, 0, 393217, 0, 0, 524299, 0, 0, 65538, 458752, 2, 65539, 458752, 2, 65540, 458752, 2, 65541, 458752, 2, 65542, 458752, 2, 65543, 458752, 2, 65544, 458752, 2, 65545, 458752, 2, 65546, 458752, 2, 65547, 458752, 2, 65548, 458752, 2, 65549, 458752, 2, 65550, 458752, 2, 65551, 458752, 2, 65552, 458752, 2, 65536, 458752, 2, 65537, 458752, 2, 65553, 458752, 2, 131089, 458752, 2, 196625, 458752, 2, 393233, 458752, 2, 327697, 458752, 2, 262161, 458752, 2, 458769, 458752, 2, 524305, 458752, 2, 589841, 458752, 2, 655377, 458752, 2, 720913, 458752, 2, 720912, 458752, 2, 720911, 458752, 2, 720910, 458752, 2, 720909, 458752, 2, 720908, 458752, 2, 720907, 458752, 2, 720906, 458752, 2, 720905, 458752, 2, 720904, 458752, 2, 720903, 458752, 2, 720902, 458752, 2, 720901, 458752, 2, 720900, 458752, 2, 720899, 458752, 2, 720898, 458752, 2, 720897, 458752, 2, 720896, 458752, 2, 786431, 458752, 2, 720895, 458752, 2, 655359, 458752, 2, 589823, 458752, 2, 524287, 458752, 2, 458751, 458752, 2, 393215, 458752, 2, 327679, 458752, 2, 262143, 458752, 2, 196607, 458752, 2, 131071, 458752, 2, 65535, 458752, 2, 0, 458752, 2, 2, 458752, 2, 1, 458752, 2, 5, 458752, 2, 3, 458752, 2, 4, 458752, 2, 6, 458752, 2, 7, 458752, 2, 8, 458752, 2, 10, 458752, 2, 9, 458752, 2, 11, 458752, 2, 12, 458752, 2, 13, 458752, 2, 14, 458752, 2, 15, 458752, 2, 16, 458752, 2, 17, 458752, 2)
 
 [node name="Player" parent="." instance=ExtResource("3_utxty")]
 position = Vector2(-8, -72)
 
 [node name="Bg" parent="." instance=ExtResource("4_lwslr")]
 z_index = -1
+layer_0/tile_data = PackedInt32Array(0, 393217, 0, 1, 458753, 0, 2, 393217, 0, 3, 458753, 0, 4, 393217, 0, 5, 458753, 0, 6, 393217, 0, 7, 458753, 0, 8, 393217, 0, 9, 458753, 0, 10, 393217, 0, 11, 458753, 0, 65546, 393217, 0, 65547, 458753, 0, 65544, 393217, 0, 65545, 458753, 0, 65542, 393217, 0, 65543, 458753, 0, 65540, 393217, 0, 65541, 458753, 0, 65538, 393217, 0, 65539, 458753, 0, 65536, 393217, 0, 65537, 458753, 0, 131072, 393217, 0, 131073, 458753, 0, 131074, 393217, 0, 131075, 458753, 0, 131076, 393217, 0, 131077, 458753, 0, 131078, 393217, 0, 131079, 458753, 0, 131080, 393217, 0, 131081, 458753, 0, 131082, 393217, 0, 131083, 458753, 0, 196608, 393217, 0, 196609, 458753, 0, 196610, 393217, 0, 196611, 458753, 0, 196612, 393217, 0, 196613, 458753, 0, 196614, 393217, 0, 196615, 458753, 0, 196616, 393217, 0, 196617, 458753, 0, 196618, 393217, 0, 196619, 458753, 0, 262144, 393217, 0, 262145, 458753, 0, 262146, 393217, 0, 262147, 458753, 0, 262148, 393217, 0, 262149, 458753, 0, 262150, 393217, 0, 262151, 458753, 0, 262152, 393217, 0, 262153, 458753, 0, 262154, 393217, 0, 262155, 458753, 0, 327680, 393217, 1, 327681, 458753, 1, 327682, 393217, 1, 327683, 458753, 1, 327684, 393217, 1, 327685, 458753, 1, 327686, 393217, 1, 327687, 458753, 1, 327688, 393217, 1, 327689, 458753, 1, 327690, 393217, 1, 327691, 458753, 1, 393216, 393217, 2, 393217, 458753, 2, 393218, 393217, 2, 393219, 458753, 2, 393220, 393217, 2, 393221, 458753, 2, 393222, 393217, 2, 393223, 458753, 2, 393224, 393217, 2, 393225, 458753, 2, 393226, 393217, 2, 393227, 458753, 2)
+
+[connection signal="body_entered" from="SPikes/Death" to="." method="_on_death_body_entered"]
