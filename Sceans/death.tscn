@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://lo6p81lkuin"]
+
+[node name="StaticBody2D" type="StaticBody2D"]

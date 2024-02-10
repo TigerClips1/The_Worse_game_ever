@@ -1,11 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
-const ACCELERATION = 800.0
-const friction = 1000.0
-const JUMP_VELOCITY = -300.0
+@export var movementData : PlayerMovementData
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+var air_jump = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $Coyote_jump_Timer
@@ -15,7 +12,9 @@ func _physics_process(delta):
 	Handlejump()
 	var input_axis = Input.get_axis("ui_left", "ui_right")
 	Apply_Actlation(input_axis, delta)
+	Handile_Air_acceleration(input_axis, delta)
 	Apply_friction(input_axis, delta)
+	Apply_air_resistance(input_axis, delta)
 	update_Anmation(input_axis)
 	var was_on_floor = is_on_floor()
 	move_and_slide()
@@ -25,29 +24,48 @@ func _physics_process(delta):
 
 func Apply_Gravaty(delta):
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * movementData.Gravity_scale * delta
+		
+# TODO add wall jump in anther update
+#func HandleWalljump():
+	#if not is_on_wall(): return
+	#var wall_normal = get_wall_normal()
+	#if Input.is_action_just_pressed("ui_accept") and wall_normal == Vector2.LEFT:
+		#
 
 func Handlejump():
+	if is_on_floor(): air_jump = true
 	if is_on_floor() or coyote_jump_timer.time_left > 0.0:
 		if Input.is_action_just_pressed("ui_accept"):
-			velocity.y = JUMP_VELOCITY
+			velocity.y = movementData.jump_velocity
 	if not is_on_floor():
-		if Input.is_action_just_pressed("ui_accept") and  velocity.y < 0:
-			velocity.y = JUMP_VELOCITY / 1
+		if Input.is_action_just_pressed("ui_accept") and  velocity.y < movementData.jump_velocity / 2:
+			velocity.y = movementData.jump_velocity / 2
+		if Input.is_action_just_pressed("ui_accept") and air_jump:
+			velocity.y = movementData.jump_velocity * 0.8
+			air_jump = false
 
 func Apply_Actlation(input_axis, delta):
+	if not is_on_floor(): return
 	if input_axis != 0:
-		velocity.x = move_toward(velocity.x, SPEED * input_axis, ACCELERATION * delta)
+		velocity.x = move_toward(velocity.x, movementData.speed * input_axis, movementData.acceleration * delta)
+
+func Handile_Air_acceleration(input_axis, delta):
+	if is_on_floor(): return
+	if input_axis != 0:
+		velocity.x = move_toward(velocity.x, movementData.speed * input_axis, movementData.Air_acceleration * delta)
 
 func Apply_friction(input_axis, delta):
-	if input_axis == 0:
-		velocity.x = move_toward(velocity.x, 0, friction * delta)
+	if input_axis == 0 and is_on_floor():
+		velocity.x = move_toward(velocity.x, 0, movementData.friction * delta)
+
+func Apply_air_resistance(input_axis, delta):
+	if input_axis == 0 and not is_on_floor():
+		velocity.x =  move_toward(velocity.x, 0, movementData.Air_resistance * delta)
+
 func update_Anmation(input_axis):
 	if input_axis != 0:
 		animated_sprite_2d.flip_h = input_axis < 0 
 		animated_sprite_2d.play("walk")
 	else:
 		animated_sprite_2d.play("idle")
-
-# TODO NAME = Godot 4 Tutorial - Heart Platformer P2 - Coyote Jump
-# TIMESET = 1:29
