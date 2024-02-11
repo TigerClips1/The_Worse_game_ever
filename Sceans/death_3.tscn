@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv8hlq7q7q5k1"]
+
+[ext_resource type="Script" path="res://SRC/Death_3.gd" id="1_oj0e0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81436"]
+size = Vector2(16, 14)
+
+[node name="Death_3" type="Area2D"]
+script = ExtResource("1_oj0e0")
+
+[node name="Killme3" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3)
+shape = SubResource("RectangleShape2D_81436")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
