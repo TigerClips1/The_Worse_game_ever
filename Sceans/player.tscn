@@ -41,15 +41,20 @@ script = ExtResource("1_n01tu")
 movementData = ExtResource("2_f6mx3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(40, 104)
+position = Vector2(1, -49)
 sprite_frames = SubResource("SpriteFrames_ggbfo")
 animation = &"walk"
 frame_progress = 0.00421903
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(41, 104)
+position = Vector2(1, -49)
 shape = SubResource("RectangleShape2D_7h8af")
 
 [node name="Coyote_jump_Timer" type="Timer" parent="."]
 wait_time = 0.15
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -50)
+scale = Vector2(3.51067, 23.2363)
+zoom = Vector2(2, 2)
