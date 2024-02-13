@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://rfbrfr8x5lre"]
 
 [ext_resource type="Script" path="res://SRC/player.gd" id="1_n01tu"]
-[ext_resource type="Resource" uid="uid://j1vocnco4nc3" path="res://resorce/Defult_Play_Data.tres" id="2_f6mx3"]
+[ext_resource type="Resource" uid="uid://j1vocnco4nc3" path="res://resources/Defult_Play_Data.tres" id="2_f6mx3"]
 [ext_resource type="Texture2D" uid="uid://b4mjsdrfetnwm" path="res://ASSETS/Images/Player/tilemap-characters_packed.png" id="2_qlmp2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auupl"]
@@ -45,10 +45,9 @@ position = Vector2(40, 104)
 sprite_frames = SubResource("SpriteFrames_ggbfo")
 animation = &"walk"
 frame_progress = 0.00421903
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(39, 103.5)
+position = Vector2(41, 104)
 shape = SubResource("RectangleShape2D_7h8af")
 
 [node name="Coyote_jump_Timer" type="Timer" parent="."]
