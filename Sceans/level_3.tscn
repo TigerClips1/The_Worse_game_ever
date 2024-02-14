@@ -1,15 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dstcevk2hfm2o"]
+[gd_scene load_steps=11 format=3 uid="uid://dstcevk2hfm2o"]
 
 [ext_resource type="Script" path="res://SRC/level_3.gd" id="1_l1dq5"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="1_txvkr"]
 [ext_resource type="PackedScene" uid="uid://rfbrfr8x5lre" path="res://Sceans/player.tscn" id="3_85008"]
-[ext_resource type="PackedScene" uid="uid://dqvn800qpqdlt" path="res://Sceans/Death_2.0.tscn" id="4_j83sn"]
-[ext_resource type="PackedScene" uid="uid://jv056acjyvay" path="res://Sceans/death_30.tscn" id="5_e8fvw"]
-[ext_resource type="PackedScene" uid="uid://crac2tgkahdsu" path="res://Sceans/death_40.tscn" id="6_k66um"]
-[ext_resource type="PackedScene" uid="uid://4oow2h7ap7lr" path="res://Sceans/death_50.tscn" id="7_ij2ve"]
-[ext_resource type="PackedScene" uid="uid://bhxf6weliqd1d" path="res://Sceans/death_60.tscn" id="8_r6j6v"]
-[ext_resource type="PackedScene" uid="uid://bmj72bujhfw7h" path="res://Sceans/death_70.tscn" id="9_5k0n7"]
-[ext_resource type="PackedScene" uid="uid://cahav5cyxdeu8" path="res://Sceans/death_80.tscn" id="10_ork5m"]
+[ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="4_dsn83"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6a8ix"]
 texture = ExtResource("1_txvkr")
@@ -183,6 +177,15 @@ sources/0 = SubResource("TileSetAtlasSource_6a8ix")
 font_size = 20
 font_color = Color(0.623529, 0, 0.247059, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjb3e"]
+size = Vector2(5, 164)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwnd8"]
+size = Vector2(305, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sapq"]
+size = Vector2(6, 111)
+
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_l1dq5")
 
@@ -205,61 +208,22 @@ vertical_alignment = 1
 [node name="Player" parent="." instance=ExtResource("3_85008")]
 position = Vector2(40, 72)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(176, 88)
+[node name="Hazard_Area" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="Area2D" parent="." instance=ExtResource("4_j83sn")]
-position = Vector2(32, 176)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area"]
+position = Vector2(19.5, 83)
+shape = SubResource("RectangleShape2D_mjb3e")
 
-[node name="Death_30" parent="." instance=ExtResource("5_e8fvw")]
-position = Vector2(32, 160)
+[node name="Hazard_Area2" parent="." instance=ExtResource("4_dsn83")]
+position = Vector2(19.5, 83)
 
-[node name="Death_40" parent="." instance=ExtResource("6_k66um")]
-position = Vector2(40, 8)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area2"]
+position = Vector2(151, 94.5)
+shape = SubResource("RectangleShape2D_lwnd8")
 
-[node name="Death_50" parent="." instance=ExtResource("7_ij2ve")]
-position = Vector2(320, 64)
+[node name="Hazard_Area3" parent="." instance=ExtResource("4_dsn83")]
+position = Vector2(170.5, 177.5)
 
-[node name="Death60" parent="." instance=ExtResource("8_r6j6v")]
-position = Vector2(280, 64)
-
-[node name="Death70" parent="." instance=ExtResource("9_5k0n7")]
-position = Vector2(263, 46)
-
-[node name="Death80" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(81, 99)
-
-[node name="Death81" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(98, 118)
-
-[node name="Death82" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(116, 136)
-
-[node name="Death83" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(136, 154)
-
-[node name="Death84" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(153, 82)
-
-[node name="Death85" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(208, 62)
-
-[node name="Death86" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(98, 62)
-rotation = -1.53294
-
-[node name="Death87" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(44, 63)
-rotation = -1.53294
-
-[node name="Death88" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(82, 126)
-rotation = -1.53294
-
-[node name="Death89" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(133, 127)
-rotation = -1.53294
-
-[node name="Death90" parent="." instance=ExtResource("10_ork5m")]
-position = Vector2(244, 110)
-rotation = -1.53294
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area3"]
+position = Vector2(151.5, -69.5)
+shape = SubResource("RectangleShape2D_7sapq")

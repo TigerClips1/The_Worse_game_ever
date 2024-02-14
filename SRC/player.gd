@@ -7,6 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $Coyote_jump_Timer
 
+
 func _physics_process(delta):
 	Apply_Gravaty(delta)
 	Handlejump()
@@ -38,7 +39,7 @@ func Handlejump():
 	if is_on_floor() or coyote_jump_timer.time_left > 0.0:
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = movementData.jump_velocity
-	if not is_on_floor():
+	elif not is_on_floor():
 		if Input.is_action_just_pressed("ui_accept") and  velocity.y < movementData.jump_velocity / 2:
 			velocity.y = movementData.jump_velocity / 2
 		if Input.is_action_just_pressed("ui_accept") and air_jump:
@@ -69,3 +70,13 @@ func update_Anmation(input_axis):
 		animated_sprite_2d.play("walk")
 	else:
 		animated_sprite_2d.play("idle")
+
+func reload_scene():
+	call_deferred("_reload_scene")
+
+func _reload_scene():
+	if is_inside_tree():
+		get_tree().change_scene_to_file("res://Sceans/lost_screen.tscn")
+
+func _on_hazard_detector_area_entered(_area):
+	reload_scene()

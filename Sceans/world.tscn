@@ -1,16 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://cg48j48upwvrh"]
+[gd_scene load_steps=11 format=3 uid="uid://cg48j48upwvrh"]
 
 [ext_resource type="Script" path="res://SRC/world.gd" id="1_t4f6k"]
 [ext_resource type="Texture2D" uid="uid://dd4vgiuhw1hyx" path="res://ASSETS/Misc/tile_0068.png" id="2_byaog"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="2_xlota"]
 [ext_resource type="PackedScene" uid="uid://rfbrfr8x5lre" path="res://Sceans/player.tscn" id="3_utxty"]
 [ext_resource type="PackedScene" uid="uid://dxryb1dsna2lw" path="res://Sceans/bg.tscn" id="4_lwslr"]
+[ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="6_8pia3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8l0ft"]
 size = Vector2(151, 21)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5jbw"]
-size = Vector2(305, 33)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jsw2"]
 texture = ExtResource("2_xlota")
@@ -124,6 +122,9 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_3jsw2")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggro8"]
+size = Vector2(268, 8)
+
 [node name="World" type="Node2D"]
 position = Vector2(8, 0)
 script = ExtResource("1_t4f6k")
@@ -198,13 +199,6 @@ texture = ExtResource("2_byaog")
 position = Vector2(45, 156)
 texture = ExtResource("2_byaog")
 
-[node name="Death" type="Area2D" parent="SPikes"]
-position = Vector2(0, 2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SPikes/Death"]
-position = Vector2(142.5, 164.5)
-shape = SubResource("RectangleShape2D_f5jbw")
-
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, -16)
 tile_set = SubResource("TileSet_132q6")
@@ -218,4 +212,8 @@ position = Vector2(35, 98)
 z_index = -1
 layer_0/tile_data = PackedInt32Array(0, 393217, 0, 1, 458753, 0, 2, 393217, 0, 3, 458753, 0, 4, 393217, 0, 5, 458753, 0, 6, 393217, 0, 7, 458753, 0, 8, 393217, 0, 9, 458753, 0, 10, 393217, 0, 11, 458753, 0, 65546, 393217, 0, 65547, 458753, 0, 65544, 393217, 0, 65545, 458753, 0, 65542, 393217, 0, 65543, 458753, 0, 65540, 393217, 0, 65541, 458753, 0, 65538, 393217, 0, 65539, 458753, 0, 65536, 393217, 0, 65537, 458753, 0, 131072, 393217, 0, 131073, 458753, 0, 131074, 393217, 0, 131075, 458753, 0, 131076, 393217, 0, 131077, 458753, 0, 131078, 393217, 0, 131079, 458753, 0, 131080, 393217, 0, 131081, 458753, 0, 131082, 393217, 0, 131083, 458753, 0, 196608, 393217, 0, 196609, 458753, 0, 196610, 393217, 0, 196611, 458753, 0, 196612, 393217, 0, 196613, 458753, 0, 196614, 393217, 0, 196615, 458753, 0, 196616, 393217, 0, 196617, 458753, 0, 196618, 393217, 0, 196619, 458753, 0, 262144, 393217, 0, 262145, 458753, 0, 262146, 393217, 0, 262147, 458753, 0, 262148, 393217, 0, 262149, 458753, 0, 262150, 393217, 0, 262151, 458753, 0, 262152, 393217, 0, 262153, 458753, 0, 262154, 393217, 0, 262155, 458753, 0, 327680, 393217, 1, 327681, 458753, 1, 327682, 393217, 1, 327683, 458753, 1, 327684, 393217, 1, 327685, 458753, 1, 327686, 393217, 1, 327687, 458753, 1, 327688, 393217, 1, 327689, 458753, 1, 327690, 393217, 1, 327691, 458753, 1, 393216, 393217, 2, 393217, 458753, 2, 393218, 393217, 2, 393219, 458753, 2, 393220, 393217, 2, 393221, 458753, 2, 393222, 393217, 2, 393223, 458753, 2, 393224, 393217, 2, 393225, 458753, 2, 393226, 393217, 2, 393227, 458753, 2)
 
-[connection signal="body_entered" from="SPikes/Death" to="." method="_on_death_body_entered"]
+[node name="Hazard_Area" parent="." instance=ExtResource("6_8pia3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area"]
+position = Vector2(153, 161)
+shape = SubResource("RectangleShape2D_ggro8")
