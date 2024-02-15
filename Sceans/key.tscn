@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b47xgwwncr0pl"]
+
+[ext_resource type="Texture2D" uid="uid://cxaff7r53wpk5" path="res://ASSETS/Misc/tile_0027.png" id="1_fj4aa"]
+[ext_resource type="Script" path="res://SRC/key.gd" id="1_ku0tg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xj4qh"]
+
+[node name="Key" type="Area2D" groups=["Keys"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ku0tg")
+
+[node name="Key_art" type="Sprite2D" parent="."]
+texture = ExtResource("1_fj4aa")
+
+[node name="Clide" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xj4qh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
