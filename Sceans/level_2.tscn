@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://clp0a4ff3jose"]
+[gd_scene load_steps=11 format=3 uid="uid://clp0a4ff3jose"]
 
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="1_64cbw"]
 [ext_resource type="Script" path="res://SRC/level_2.gd" id="1_kpfqp"]
 [ext_resource type="PackedScene" uid="uid://rfbrfr8x5lre" path="res://Sceans/player.tscn" id="2_hupra"]
+[ext_resource type="PackedScene" uid="uid://dstcevk2hfm2o" path="res://Sceans/level_3.tscn" id="2_y1rfk"]
 [ext_resource type="PackedScene" uid="uid://bf1n1ap0b5rva" path="res://Sceans/SPIKES.tscn" id="5_pyj2i"]
 [ext_resource type="PackedScene" uid="uid://b47xgwwncr0pl" path="res://Sceans/key.tscn" id="6_pktav"]
 [ext_resource type="PackedScene" uid="uid://c8ek1v0plts3y" path="res://Sceans/bg_2.tscn" id="7_ar0yw"]
@@ -180,6 +181,7 @@ sources/0 = SubResource("TileSetAtlasSource_12pbu")
 
 [node name="level2" type="Node2D"]
 script = ExtResource("1_kpfqp")
+next_level = ExtResource("2_y1rfk")
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ald52")

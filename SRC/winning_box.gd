@@ -1,12 +1,10 @@
-extends Area2D
+extends StaticBody2D
 
-func reload_scene():
-	call_deferred("_reload_scene")
 
-func _reload_scene():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/level_2.tscn")
 
-func _on_body_entered(_body):
-	queue_free()
-	reload_scene()
+func _on_area_2d_body_entered(_body):
+	if self.name in Events.key_Founded:
+		queue_free()
+		print("Key added")
+	if  not self.name in Events.key_Founded:
+		return

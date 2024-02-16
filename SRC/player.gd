@@ -4,8 +4,10 @@ extends CharacterBody2D
 
 var air_jump = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var hasKey = false
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $Coyote_jump_Timer
+
 
 
 func _physics_process(delta):

@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="The Worse game ever made"
-run/main_scene="res://Sceans/world.tscn"
+run/main_scene="res://Sceans/Level1.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
+
+[autoload]
+
+Events="*res://SRC/Events.gd"
 
 [display]
 
