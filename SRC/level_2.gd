@@ -2,13 +2,21 @@ extends Node2D
 
 @export var movementData : PlayerMovementData
 @export var next_level : PackedScene
-# Called when the node enters the scene tree for the first time.
+
+func reload_scene():
+	call_deferred("_reload_scene")
+
+func _reload_scene():
+	if is_inside_tree():
+		get_tree().change_scene_to_packed(next_level)
+
+
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 
-#func _on_spike_death_body_entered(body):
-	#if body.name == "Player":
-		#call_deferred("reload_scene")
-#
-#func reload_scene():
-	#get_tree().change_scene_to_file("res://Sceans/lost_screen.tscn")
+	Events.Level_comepiled.connect(_level_completed)
+
+
+func _level_completed():
+	if not next_level is PackedScene: return
+	reload_scene()

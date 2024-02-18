@@ -28,7 +28,7 @@ func _physics_process(delta):
 func Apply_Gravaty(delta):
 	if not is_on_floor():
 		velocity.y += gravity * movementData.Gravity_scale * delta
-		
+
 # TODO add wall jump in anther update
 #func HandleWalljump():
 	#if not is_on_wall(): return
@@ -68,7 +68,7 @@ func Apply_air_resistance(input_axis, delta):
 
 func update_Anmation(input_axis):
 	if input_axis != 0:
-		animated_sprite_2d.flip_h = input_axis < 0 
+		animated_sprite_2d.flip_h = input_axis < 0
 		animated_sprite_2d.play("walk")
 	else:
 		animated_sprite_2d.play("idle")
@@ -82,3 +82,4 @@ func _reload_scene():
 
 func _on_hazard_detector_area_entered(_area):
 	reload_scene()
+
