@@ -14,8 +14,17 @@ func _reload_scene():
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	Events.Level_comepiled.connect(_level_completed)
-
+	Events.Level_restart.connect(_level_restart)
 
 func _level_completed():
 	if not next_level is PackedScene: return
 	reload_scene()
+
+func _start_over():
+	if is_inside_tree():
+		get_tree().change_scene_to_file("res://Sceans/Level1.tscn")
+func _action():
+	call_deferred("_start_over")
+
+func _level_restart():
+	_action()

@@ -16,3 +16,4 @@ texture = ExtResource("1_xlokx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area"]
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_yvw0k")
+debug_color = Color(0.992157, 0, 0.270588, 0.419608)

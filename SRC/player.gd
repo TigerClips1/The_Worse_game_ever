@@ -82,8 +82,7 @@ func _reload_scene():
 
 func _on_hazard_detector_area_entered(_area):
 	reload_scene()
-	
-	
+
 func reload_scene_easter():
 	call_deferred("_reload_scene_easter")
 

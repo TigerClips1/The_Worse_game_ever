@@ -35,7 +35,7 @@ animations = [{
 size = Vector2(12, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejsfo"]
-size = Vector2(7, 23)
+size = Vector2(12, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60y3p"]
 size = Vector2(9.5, 24)
@@ -54,6 +54,7 @@ animation = &"walk"
 frame_progress = 0.00421903
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(1, -49)
 shape = SubResource("RectangleShape2D_7h8af")
 
@@ -73,7 +74,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_detector"]
-position = Vector2(1, -50)
+position = Vector2(0, -49)
 shape = SubResource("RectangleShape2D_ejsfo")
 
 [node name="Hazard_EasterEgg" type="Area2D" parent="."]

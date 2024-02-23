@@ -4,3 +4,15 @@ extends Node2D
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color.CRIMSON)
+	Events.Level_comepiled.connect(_level_completed)
+
+func reload_scene():
+	call_deferred("_reload_scene")
+
+func _reload_scene():
+	if is_inside_tree():
+		get_tree().change_scene_to_packed(next_level)
+
+func _level_completed():
+	if not next_level is PackedScene: return
+	reload_scene()
