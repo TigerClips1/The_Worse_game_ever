@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var movementData : PlayerMovementData
+@export var movementData : _PlayerMovementData
 @export var next_level : PackedScene
 
 func reload_scene():

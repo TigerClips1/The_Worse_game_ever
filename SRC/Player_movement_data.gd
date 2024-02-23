@@ -1,4 +1,4 @@
-class_name PlayerMovementData
+class_name _PlayerMovementData
 extends Resource
 
 @export var speed = 100.0

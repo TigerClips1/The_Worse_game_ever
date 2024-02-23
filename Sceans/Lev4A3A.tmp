@@ -185,7 +185,7 @@ sources/0 = SubResource("TileSetAtlasSource_3jsw2")
 size = Vector2(268, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8edv"]
-size = Vector2(38, 17)
+size = Vector2(20, 27)
 
 [node name="Level_ONe" type="Node2D"]
 position = Vector2(9, 0)
@@ -194,7 +194,7 @@ next_level = ExtResource("2_o888i")
 
 [node name="SPikes" type="StaticBody2D" parent="."]
 
-[node name="SPike_Area" type="CollisionShape2D" parent="SPikes"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SPikes"]
 position = Vector2(112.5, 166.5)
 shape = SubResource("RectangleShape2D_8l0ft")
 
@@ -262,7 +262,7 @@ texture = ExtResource("3_4xfa3")
 position = Vector2(45, 156)
 texture = ExtResource("3_4xfa3")
 
-[node name="Map" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, -16)
 tile_set = SubResource("TileSet_132q6")
 format = 2
@@ -277,30 +277,29 @@ layer_0/tile_data = PackedInt32Array(0, 393217, 0, 1, 458753, 0, 2, 393217, 0, 3
 
 [node name="Hazard_Area" parent="." instance=ExtResource("7_mys3v")]
 
-[node name="Death" type="CollisionShape2D" parent="Hazard_Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area"]
 position = Vector2(153, 159.5)
 shape = SubResource("RectangleShape2D_ggro8")
 debug_color = Color(1, 0.00392157, 0.0745098, 0.419608)
 
-[node name="Key1" parent="." instance=ExtResource("9_n46ci")]
+[node name="Area2D" parent="." instance=ExtResource("9_n46ci")]
 position = Vector2(206, 116)
 
-[node name="Key2" parent="." instance=ExtResource("9_n46ci")]
+[node name="Area2D2" parent="." instance=ExtResource("9_n46ci")]
 position = Vector2(135, 42)
 
-[node name="Key3" parent="." instance=ExtResource("9_n46ci")]
+[node name="Area2D3" parent="." instance=ExtResource("9_n46ci")]
 position = Vector2(27, 84)
 
-[node name="Key4" parent="." instance=ExtResource("9_n46ci")]
+[node name="Area2D4" parent="." instance=ExtResource("9_n46ci")]
 position = Vector2(82, 109)
 
-[node name="Win" parent="." instance=ExtResource("9_ybyft")]
-position = Vector2(280, 76)
+[node name="Node2D" parent="." instance=ExtResource("9_ybyft")]
+position = Vector2(281, 55)
 
 [node name="Hazzards_Anit_cheat" parent="." instance=ExtResource("10_byywf")]
-position = Vector2(281, 56)
+position = Vector2(281, 55)
 
-[node name="Rick_Roll" type="CollisionShape2D" parent="Hazzards_Anit_cheat"]
-position = Vector2(-9, 45.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazzards_Anit_cheat"]
+position = Vector2(0, 23.5)
 shape = SubResource("RectangleShape2D_q8edv")
-debug_color = Color(0.870588, 0, 0.85098, 0.419608)

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var movementData : PlayerMovementData
+@export var movementData : _PlayerMovementData
 
 var air_jump = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -82,4 +82,15 @@ func _reload_scene():
 
 func _on_hazard_detector_area_entered(_area):
 	reload_scene()
+	
+	
+func reload_scene_easter():
+	call_deferred("_reload_scene_easter")
 
+func _reload_scene_easter():
+	if is_inside_tree():
+		get_tree().change_scene_to_file("res://Sceans/end_cheat.tscn")
+
+func _on_hazard_easter_egg_area_entered(_area):
+	reload_scene_easter()
+	OS.shell_open("https://www.youtube.com/watch?v=EpX1_YJPGAY")

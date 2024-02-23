@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bur8bayuldshu"]
+
+[ext_resource type="FontFile" uid="uid://t4j3a1g0wr1p" path="res://ASSETS/Font/LemonJellyPersonalUse-dEqR.ttf" id="1_1yjtb"]
+[ext_resource type="Script" path="res://SRC/end_cheat.gd" id="1_ss5nc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1f3t0"]
+font = ExtResource("1_1yjtb")
+font_size = 22
+font_color = Color(1, 0.364706, 0.572549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2i08h"]
+font = ExtResource("1_1yjtb")
+font_size = 23
+font_color = Color(1, 0.392157, 0.623529, 1)
+
+[node name="End_Cheat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ss5nc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 2.0
+offset_right = 248.0
+offset_bottom = 25.0
+text = "You Got the cheat Ending"
+label_settings = SubResource("LabelSettings_1f3t0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 31.0
+offset_right = 277.0
+offset_bottom = 55.0
+text = "Stop Chating Kid get all the keys"
+label_settings = SubResource("LabelSettings_2i08h")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dstcevk2hfm2o"]
+[gd_scene load_steps=24 format=3 uid="uid://dstcevk2hfm2o"]
 
 [ext_resource type="Script" path="res://SRC/level_3.gd" id="1_l1dq5"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="1_txvkr"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="4_dsn83"]
 [ext_resource type="PackedScene" uid="uid://cqmdxl8p4ue5" path="res://Sceans/Keys.tscn" id="6_ie3my"]
 [ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/box.tscn" id="7_5l6aw"]
+[ext_resource type="PackedScene" uid="uid://dpu7ewq7gh4ec" path="res://Sceans/hazzards_anit_cheat.tscn" id="8_qhg36"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6a8ix"]
 texture = ExtResource("1_txvkr")
@@ -181,16 +182,16 @@ font_size = 20
 font_color = Color(0.623529, 0, 0.247059, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjb3e"]
-size = Vector2(9, 164)
+size = Vector2(9, 181)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwnd8"]
 size = Vector2(305, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7sapq"]
-size = Vector2(7, 111)
+size = Vector2(7, 125.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j054i"]
-size = Vector2(294, 8)
+size = Vector2(306, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i0br"]
 size = Vector2(38, 7)
@@ -199,19 +200,21 @@ size = Vector2(38, 7)
 size = Vector2(7, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cic27"]
-size = Vector2(11.75, 12.5)
+size = Vector2(16, 9.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glwdr"]
-size = Vector2(5.375, 15.25)
+size = Vector2(9.18775, 16.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qdcke"]
 size = Vector2(7, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ab8mv"]
-size = Vector2(3, 17)
+size = Vector2(6, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fifoy"]
-size = Vector2(7, 14)
+size = Vector2(8, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p7bt"]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_l1dq5")
@@ -239,117 +242,141 @@ position = Vector2(45, 74)
 
 [node name="Hazard_Area" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area"]
-position = Vector2(21.5, 83)
+[node name="Death1" type="CollisionShape2D" parent="Hazard_Area"]
+position = Vector2(21.5, 91.5)
 shape = SubResource("RectangleShape2D_mjb3e")
+debug_color = Color(0.992157, 0, 0.270588, 0.419608)
 
 [node name="Hazard_Area2" parent="." instance=ExtResource("4_dsn83")]
 position = Vector2(19.5, 83)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area2"]
+[node name="Death2" type="CollisionShape2D" parent="Hazard_Area2"]
 position = Vector2(151, 93)
 shape = SubResource("RectangleShape2D_lwnd8")
+debug_color = Color(0.996078, 0, 0.223529, 0.419608)
 
 [node name="Hazard_Area3" parent="." instance=ExtResource("4_dsn83")]
 position = Vector2(170.5, 177.5)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area3"]
-position = Vector2(151, -69.5)
+[node name="Death4" type="CollisionShape2D" parent="Hazard_Area3"]
+position = Vector2(151, -62.25)
 shape = SubResource("RectangleShape2D_7sapq")
+debug_color = Color(0.996078, 0, 0.196078, 0.419608)
 
 [node name="Hazard_Area4" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area4"]
-position = Vector2(183, 3)
+[node name="Dath5" type="CollisionShape2D" parent="Hazard_Area4"]
+position = Vector2(172, 3)
 shape = SubResource("RectangleShape2D_j054i")
+debug_color = Color(0.996078, 0, 0.227451, 0.419608)
 
 [node name="Hazard_Area5" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area5"]
+[node name="Death6" type="CollisionShape2D" parent="Hazard_Area5"]
 position = Vector2(289, 57.5)
 shape = SubResource("RectangleShape2D_6i0br")
+debug_color = Color(1, 0, 0.145098, 0.419608)
 
 [node name="Hazard_Area6" parent="." instance=ExtResource("4_dsn83")]
 position = Vector2(289, 56.5)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area6"]
+[node name="Death7" type="CollisionShape2D" parent="Hazard_Area6"]
 position = Vector2(-21.5, -10.5)
 shape = SubResource("RectangleShape2D_p1sbf")
+debug_color = Color(0.996078, 0, 0.192157, 0.419608)
 
 [node name="Hazard_Area7" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area7"]
-position = Vector2(46, 56)
+[node name="Death8" type="CollisionShape2D" parent="Hazard_Area7"]
+position = Vector2(46, 56.3125)
 shape = SubResource("RectangleShape2D_cic27")
+debug_color = Color(0.996078, 0, 0.215686, 0.419608)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hazard_Area7"]
-position = Vector2(100, 54.25)
+[node name="Death9" type="CollisionShape2D" parent="Hazard_Area7"]
+position = Vector2(100, 56.625)
 shape = SubResource("RectangleShape2D_cic27")
+debug_color = Color(0.992157, 0, 0.227451, 0.419608)
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Hazard_Area7"]
-position = Vector2(135.125, 124)
+[node name="Death10" type="CollisionShape2D" parent="Hazard_Area7"]
+position = Vector2(135.125, 123.25)
 shape = SubResource("RectangleShape2D_cic27")
+debug_color = Color(0.984314, 0, 0.356863, 0.419608)
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Hazard_Area7"]
+[node name="Death11" type="CollisionShape2D" parent="Hazard_Area7"]
 position = Vector2(244, 104)
 shape = SubResource("RectangleShape2D_cic27")
+debug_color = Color(0.952941, 0.219608, 0, 0.419608)
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Hazard_Area7"]
-position = Vector2(82, 124)
+[node name="Death12" type="CollisionShape2D" parent="Hazard_Area7"]
+position = Vector2(82, 122.875)
 shape = SubResource("RectangleShape2D_cic27")
+debug_color = Color(0.992157, 0, 0.262745, 0.419608)
 
 [node name="Hazard_Area8" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area8"]
-position = Vector2(161, 82)
+[node name="Death13" type="CollisionShape2D" parent="Hazard_Area8"]
+position = Vector2(160.594, 81.3125)
 shape = SubResource("RectangleShape2D_glwdr")
+debug_color = Color(0.992157, 0, 0.247059, 0.419608)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hazard_Area8"]
-position = Vector2(213.688, 64)
+[node name="Death14" type="CollisionShape2D" parent="Hazard_Area8"]
+position = Vector2(212.188, 64)
 shape = SubResource("RectangleShape2D_glwdr")
+debug_color = Color(0.996078, 0, 0.192157, 0.419608)
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Hazard_Area8"]
+[node name="Death15" type="CollisionShape2D" parent="Hazard_Area8"]
 position = Vector2(143.375, 154.375)
 shape = SubResource("RectangleShape2D_glwdr")
+debug_color = Color(0.992157, 0, 0.270588, 0.419608)
 
 [node name="Hazard_Area9" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area9"]
+[node name="Death16" type="CollisionShape2D" parent="Hazard_Area9"]
 position = Vector2(87.5, 101)
 shape = SubResource("RectangleShape2D_qdcke")
+debug_color = Color(0.996078, 0, 0.219608, 0.419608)
 
 [node name="Hazard_Area10" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area10"]
-position = Vector2(107.5, 118.5)
+[node name="Death17" type="CollisionShape2D" parent="Hazard_Area10"]
+position = Vector2(105, 118.5)
 shape = SubResource("RectangleShape2D_ab8mv")
+debug_color = Color(0.992157, 0, 0.231373, 0.419608)
 
 [node name="Hazard_Area11" parent="." instance=ExtResource("4_dsn83")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area11"]
-position = Vector2(124.5, 136)
+[node name="Death18" type="CollisionShape2D" parent="Hazard_Area11"]
+position = Vector2(124, 135)
 shape = SubResource("RectangleShape2D_fifoy")
+debug_color = Color(0.996078, 0, 0.168627, 0.419608)
 
-[node name="Area2D" parent="." instance=ExtResource("6_ie3my")]
+[node name="Key1" parent="." instance=ExtResource("6_ie3my")]
 position = Vector2(224, 133)
 
-[node name="Area2D2" parent="." instance=ExtResource("6_ie3my")]
+[node name="Key2" parent="." instance=ExtResource("6_ie3my")]
 position = Vector2(171, 115)
 
-[node name="Area2D3" parent="." instance=ExtResource("6_ie3my")]
+[node name="Key3" parent="." instance=ExtResource("6_ie3my")]
 position = Vector2(172, 64)
 
-[node name="Area2D4" parent="." instance=ExtResource("6_ie3my")]
+[node name="Key4" parent="." instance=ExtResource("6_ie3my")]
 position = Vector2(101, 84)
 
-[node name="Area2D5" parent="." instance=ExtResource("6_ie3my")]
+[node name="Key5" parent="." instance=ExtResource("6_ie3my")]
 position = Vector2(136, 101)
 
-[node name="Area2D6" parent="." instance=ExtResource("6_ie3my")]
+[node name="Key6" parent="." instance=ExtResource("6_ie3my")]
 position = Vector2(225, 43)
 
-[node name="Area2D7" parent="." instance=ExtResource("6_ie3my")]
+[node name="Key7" parent="." instance=ExtResource("6_ie3my")]
 position = Vector2(277, 25)
 
-[node name="Node2D" parent="." instance=ExtResource("7_5l6aw")]
-position = Vector2(318, 27)
+[node name="Win_box" parent="." instance=ExtResource("7_5l6aw")]
+position = Vector2(318, 17)
+
+[node name="Hazzards_Anit_cheat" parent="." instance=ExtResource("8_qhg36")]
+
+[node name="RIck_Roll_No_Cheat" type="CollisionShape2D" parent="Hazzards_Anit_cheat"]
+position = Vector2(315, 45)
+shape = SubResource("RectangleShape2D_2p7bt")
+debug_color = Color(0.890196, 0, 0.788235, 0.419608)

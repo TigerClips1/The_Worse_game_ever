@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://clp0a4ff3jose"]
+[gd_scene load_steps=14 format=3 uid="uid://clp0a4ff3jose"]
 
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="1_64cbw"]
 [ext_resource type="Script" path="res://SRC/level_2.gd" id="1_kpfqp"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c8ek1v0plts3y" path="res://Sceans/bg_2.tscn" id="7_ar0yw"]
 [ext_resource type="PackedScene" uid="uid://cqmdxl8p4ue5" path="res://Sceans/Keys.tscn" id="7_tabqt"]
 [ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/box.tscn" id="8_7nwep"]
+[ext_resource type="PackedScene" uid="uid://dpu7ewq7gh4ec" path="res://Sceans/hazzards_anit_cheat.tscn" id="9_4txm3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_12pbu"]
 texture = ExtResource("1_64cbw")
@@ -180,6 +181,9 @@ physics_layer_1/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_nixxo")
 sources/0 = SubResource("TileSetAtlasSource_12pbu")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kioje"]
+size = Vector2(21, 18)
+
 [node name="level2" type="Node2D"]
 script = ExtResource("1_kpfqp")
 next_level = ExtResource("2_y1rfk")
@@ -336,20 +340,27 @@ rotation = -1.6492
 position = Vector2(315, 102)
 rotation = -1.6492
 
-[node name="Area2D" parent="." instance=ExtResource("7_tabqt")]
+[node name="Key1" parent="." instance=ExtResource("7_tabqt")]
 position = Vector2(250, 70)
 
-[node name="Area2D2" parent="." instance=ExtResource("7_tabqt")]
+[node name="Key2" parent="." instance=ExtResource("7_tabqt")]
 position = Vector2(27, 134)
 
-[node name="Area2D3" parent="." instance=ExtResource("7_tabqt")]
+[node name="Key3" parent="." instance=ExtResource("7_tabqt")]
 position = Vector2(172, 33)
 
-[node name="Area2D4" parent="." instance=ExtResource("7_tabqt")]
-position = Vector2(299, 61)
+[node name="Key4" parent="." instance=ExtResource("7_tabqt")]
+position = Vector2(294, 31)
 
-[node name="Area2D5" parent="." instance=ExtResource("7_tabqt")]
+[node name="Key5" parent="." instance=ExtResource("7_tabqt")]
 position = Vector2(61, 64)
 
-[node name="Node2D" parent="." instance=ExtResource("8_7nwep")]
+[node name="End" parent="." instance=ExtResource("8_7nwep")]
 position = Vector2(315, 8)
+
+[node name="Hazzards_Anit_cheat" parent="." instance=ExtResource("9_4txm3")]
+
+[node name="Rick_Roll" type="CollisionShape2D" parent="Hazzards_Anit_cheat"]
+position = Vector2(315.5, 44)
+shape = SubResource("RectangleShape2D_kioje")
+debug_color = Color(0.792157, 0.0784314, 1, 0.419608)
