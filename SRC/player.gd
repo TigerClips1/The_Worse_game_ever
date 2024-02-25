@@ -4,16 +4,15 @@ extends CharacterBody2D
 
 var air_jump = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var hasKey = false
+var is_alive = true
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $Coyote_jump_Timer
-
-
+@onready var death = $Death
 
 func _physics_process(delta):
 	Apply_Gravaty(delta)
 	Handlejump()
-	var input_axis = Input.get_axis("ui_left", "ui_right")
+	var input_axis = Input.get_axis("Left_arrow", "Right_arrow")
 	Apply_Actlation(input_axis, delta)
 	Handile_Air_acceleration(input_axis, delta)
 	Apply_friction(input_axis, delta)
@@ -39,12 +38,12 @@ func Apply_Gravaty(delta):
 func Handlejump():
 	if is_on_floor(): air_jump = true
 	if is_on_floor() or coyote_jump_timer.time_left > 0.0:
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("Space"):
 			velocity.y = movementData.jump_velocity
 	elif not is_on_floor():
-		if Input.is_action_just_pressed("ui_accept") and  velocity.y < movementData.jump_velocity / 2:
+		if Input.is_action_just_pressed("Space") and  velocity.y < movementData.jump_velocity / 2:
 			velocity.y = movementData.jump_velocity / 2
-		if Input.is_action_just_pressed("ui_accept") and air_jump:
+		if Input.is_action_just_pressed("Space") and air_jump:
 			velocity.y = movementData.jump_velocity * 0.8
 			air_jump = false
 
@@ -73,6 +72,9 @@ func update_Anmation(input_axis):
 	else:
 		animated_sprite_2d.play("idle")
 
+func Apply_death_Anmation():
+		death.play("Death")
+
 func reload_scene():
 	call_deferred("_reload_scene")
 
@@ -81,6 +83,9 @@ func _reload_scene():
 		get_tree().change_scene_to_file("res://Sceans/lost_screen.tscn")
 
 func _on_hazard_detector_area_entered(_area):
+	animated_sprite_2d.hide()
+	Apply_death_Anmation()
+	await get_tree().create_timer(0.2).timeout
 	reload_scene()
 
 func reload_scene_easter():

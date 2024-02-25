@@ -10,12 +10,10 @@ func _reload_scene():
 	if is_inside_tree():
 		get_tree().change_scene_to_packed(next_level)
 
-
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 
 	Events.Level_comepiled.connect(_level_completed)
-
 
 func _level_completed():
 	if not next_level is PackedScene: return
