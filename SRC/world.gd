@@ -16,6 +16,7 @@ func _ready():
 func _level_completed():
 	if not next_level is PackedScene: return
 	reload_scene()
+	#get_tree().
 
 func _start_over():
 	if is_inside_tree():

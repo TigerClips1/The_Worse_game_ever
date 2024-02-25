@@ -36,7 +36,7 @@ animations = [{
 size = Vector2(12, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejsfo"]
-size = Vector2(12, 26)
+size = Vector2(6, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60y3p"]
 size = Vector2(9.5, 24)
@@ -410,7 +410,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_detector"]
-position = Vector2(0, -49)
+position = Vector2(0, -49.5)
 shape = SubResource("RectangleShape2D_ejsfo")
 
 [node name="Hazard_EasterEgg" type="Area2D" parent="."]

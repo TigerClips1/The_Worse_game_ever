@@ -181,7 +181,7 @@ physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_3jsw2")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ggro8"]
-size = Vector2(268, 11)
+size = Vector2(269, 10)
 
 [node name="Level_ONe" type="Node2D"]
 position = Vector2(9, 0)
@@ -274,7 +274,7 @@ layer_0/tile_data = PackedInt32Array(0, 393217, 0, 1, 458753, 0, 2, 393217, 0, 3
 [node name="Hazard_Area" parent="." instance=ExtResource("7_mys3v")]
 
 [node name="Death" type="CollisionShape2D" parent="Hazard_Area"]
-position = Vector2(153, 159.5)
+position = Vector2(153.5, 159)
 shape = SubResource("RectangleShape2D_ggro8")
 debug_color = Color(1, 0.00392157, 0.0745098, 0.419608)
 

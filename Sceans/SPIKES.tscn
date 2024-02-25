@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="2_6fcf8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvw0k"]
-size = Vector2(20, 11)
+size = Vector2(17, 11)
 
 [node name="SPIKES" type="Node2D"]
 
@@ -14,6 +14,6 @@ texture = ExtResource("1_xlokx")
 [node name="Hazard_Area" parent="." instance=ExtResource("2_6fcf8")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area"]
-position = Vector2(0, 4.5)
+position = Vector2(-1.5, 4.5)
 shape = SubResource("RectangleShape2D_yvw0k")
 debug_color = Color(0.992157, 0, 0.270588, 0.419608)
