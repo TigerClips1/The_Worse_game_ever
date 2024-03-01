@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8onedwv1xdss"]
+[gd_scene load_steps=5 format=3 uid="uid://b8onedwv1xdss"]
 
 [ext_resource type="Script" path="res://SRC/credits_4.gd" id="1_8hslg"]
+[ext_resource type="PackedScene" uid="uid://cxiqehgl0pi16" path="res://Sceans/specal_thanks.tscn" id="2_jq6nj"]
 
 [sub_resource type="SystemFont" id="SystemFont_ri4hx"]
 font_names = PackedStringArray("FreeMono")
@@ -19,3 +20,4 @@ label_settings = SubResource("LabelSettings_shdyy")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_8hslg")
+next_level = ExtResource("2_jq6nj")

@@ -98,3 +98,17 @@ func _reload_scene_easter():
 func _on_hazard_easter_egg_area_entered(_area):
 	reload_scene_easter()
 	OS.shell_open("https://www.youtube.com/watch?v=EpX1_YJPGAY")
+
+func _input(_event):
+	_apply_input()
+
+func _Mainmenu():
+	if is_inside_tree():
+		get_tree().change_scene_to_file("res://Sceans/main_menu.tscn")
+
+func _Exit_mainmenu():
+	call_deferred("_Mainmenu")
+
+func _apply_input():
+	if Input.is_action_just_released("Exit"):
+		_Exit_mainmenu()

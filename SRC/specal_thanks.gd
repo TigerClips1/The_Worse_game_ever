@@ -1,7 +1,7 @@
-extends Label
+extends Control
+
 @export var next_level : PackedScene
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	await get_tree().create_timer(5).timeout
@@ -17,4 +17,3 @@ func _reload_scene():
 func _credit_move():
 	if not next_level is PackedScene: return
 	reload_scene()
-

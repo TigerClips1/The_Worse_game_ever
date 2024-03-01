@@ -1,24 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cveyuderpw7ee"]
+[gd_scene load_steps=2 format=3 uid="uid://cveyuderpw7ee"]
 
 [ext_resource type="Script" path="res://SRC/Game_control_screen.gd" id="1_ihiql"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_fcnen"]
-font_color = Color(0.243137, 1, 0.988235, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_posp0"]
-font_color = Color(1, 0.576471, 0.92549, 1)
-
-[sub_resource type="SystemFont" id="SystemFont_ss0kh"]
-font_names = PackedStringArray("Noto Sans Telugu UI")
-
-[sub_resource type="LabelSettings" id="LabelSettings_o5w83"]
-font = SubResource("SystemFont_ss0kh")
-font_color = Color(0.894118, 0.941176, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_476nm"]
-font_color = Color(0, 0.698039, 0.8, 1)
-
-[node name="Control_screen" type="Control"]
+[node name="Game_control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,46 +11,49 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ihiql")
 
-[node name="Label" type="Label" parent="."]
+[node name="Back_main_menu" type="Button" parent="."]
 layout_mode = 0
-offset_left = 92.0
-offset_top = 29.0
-offset_right = 182.0
-offset_bottom = 52.0
-text = "Move  left <"
-label_settings = SubResource("LabelSettings_fcnen")
+offset_top = 149.0
+offset_right = 141.0
+offset_bottom = 180.0
+text = "Back Main Menu "
+
+[node name="Next" type="Button" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 149.0
+offset_right = 323.0
+offset_bottom = 180.0
+text = "Next"
+
+[node name="Move" type="Label" parent="."]
+layout_mode = 0
+offset_left = 111.0
+offset_right = 180.0
+offset_bottom = 23.0
+text = "Move < >"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="jump" type="Label" parent="."]
 layout_mode = 0
-offset_left = 90.0
+offset_left = 106.0
+offset_top = 24.0
+offset_right = 196.0
+offset_bottom = 47.0
+text = "Jump Space"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Double Jump" type="Label" parent="."]
+layout_mode = 0
+offset_left = 84.0
 offset_top = 55.0
-offset_right = 190.0
+offset_right = 233.0
 offset_bottom = 78.0
-text = "Move Right >"
-label_settings = SubResource("LabelSettings_posp0")
+text = "Double Jump space"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="."]
-layout_mode = 0
-offset_left = 74.0
-offset_top = 82.0
-offset_right = 226.0
-offset_bottom = 105.0
-text = "Jump/Double Space"
-label_settings = SubResource("LabelSettings_o5w83")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label4" type="Label" parent="."]
-layout_mode = 0
-offset_left = 68.0
-offset_top = 2.0
-offset_right = 260.0
-offset_bottom = 25.0
-text = "Controller Comeing soon"
-label_settings = SubResource("LabelSettings_476nm")
-horizontal_alignment = 1
-vertical_alignment = 1
+[connection signal="pressed" from="Back_main_menu" to="." method="_on_back_main_menu_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

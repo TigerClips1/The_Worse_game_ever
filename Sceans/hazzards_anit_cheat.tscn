@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://dpu7ewq7gh4ec"]
+[gd_scene load_steps=2 format=3 uid="uid://dpu7ewq7gh4ec"]
+
+[ext_resource type="Script" path="res://SRC/hazzards_anit_cheat.gd" id="1_c2olt"]
 
 [node name="Hazzards_Anit_cheat" type="Area2D"]
 collision_layer = 8
 collision_mask = 0
+script = ExtResource("1_c2olt")

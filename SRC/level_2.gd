@@ -12,7 +12,6 @@ func _reload_scene():
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
-
 	Events.Level_comepiled.connect(_level_completed)
 
 func _level_completed():

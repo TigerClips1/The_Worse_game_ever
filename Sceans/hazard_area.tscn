@@ -1,10 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://ds7eese7nc1kw"]
 
-[ext_resource type="Script" path="res://Sceans/input_gone.gd" id="1_lmuuj"]
+[sub_resource type="GDScript" id="GDScript_gw12y"]
+script/source = "extends Area2D
+
+"
 
 [node name="Hazard_Area" type="Area2D"]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("1_lmuuj")
+script = SubResource("GDScript_gw12y")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
