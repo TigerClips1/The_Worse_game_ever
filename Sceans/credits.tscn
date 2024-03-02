@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://8d4hn0mlalh1"]
+[gd_scene load_steps=5 format=3 uid="uid://8d4hn0mlalh1"]
 
 [ext_resource type="Script" path="res://SRC/credits.gd" id="1_wq1hx"]
 [ext_resource type="PackedScene" uid="uid://cptf4radw1712" path="res://Sceans/credits_2.tscn" id="2_6gcbn"]
+[ext_resource type="PackedScene" uid="uid://dfbvhbgdegwt0" path="res://Sceans/credits_music.tscn" id="3_abdth"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3drdq"]
 font_color = Color(1, 0.537255, 0.0745098, 1)
@@ -18,3 +19,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_wq1hx")
 next_level = ExtResource("2_6gcbn")
+
+[node name="Credits" parent="." instance=ExtResource("3_abdth")]

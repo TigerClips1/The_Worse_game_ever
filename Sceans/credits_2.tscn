@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cptf4radw1712"]
+[gd_scene load_steps=7 format=3 uid="uid://cptf4radw1712"]
 
 [ext_resource type="Script" path="res://SRC/credits_2.gd" id="1_n4vib"]
 [ext_resource type="PackedScene" uid="uid://bmwbdjj8jlopk" path="res://Sceans/credits_3.tscn" id="2_iryhv"]
+[ext_resource type="AudioStream" uid="uid://tget3qsy4xra" path="res://ASSETS/Audio/bgm/ekwlrfdjghejogfewrhe.ogg" id="3_pyqqg"]
+[ext_resource type="Script" path="res://SRC/AudioStreamPlayer.gd" id="4_yaius"]
 
 [sub_resource type="SystemFont" id="SystemFont_lyhyb"]
 font_names = PackedStringArray("Khmer OS")
@@ -25,3 +27,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_n4vib")
 next_level = ExtResource("2_iryhv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pyqqg")
+script = ExtResource("4_yaius")

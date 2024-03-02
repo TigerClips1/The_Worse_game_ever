@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://0dytv66g2inu"]
+[gd_scene load_steps=4 format=3 uid="uid://0dytv66g2inu"]
 
 [ext_resource type="Script" path="res://SRC/thanks_for_playing.gd" id="1_upgwn"]
+[ext_resource type="AudioStream" uid="uid://tget3qsy4xra" path="res://ASSETS/Audio/bgm/ekwlrfdjghejogfewrhe.ogg" id="2_p6ukh"]
+[ext_resource type="Script" path="res://SRC/AudioStreamPlayer.gd" id="3_dy75v"]
 
 [node name="Thanks for playing" type="Control"]
 layout_mode = 3
@@ -26,3 +28,7 @@ Goodbye
 God bless "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_p6ukh")
+script = ExtResource("3_dy75v")

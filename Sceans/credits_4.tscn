@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8onedwv1xdss"]
+[gd_scene load_steps=7 format=3 uid="uid://b8onedwv1xdss"]
 
 [ext_resource type="Script" path="res://SRC/credits_4.gd" id="1_8hslg"]
 [ext_resource type="PackedScene" uid="uid://cxiqehgl0pi16" path="res://Sceans/specal_thanks.tscn" id="2_jq6nj"]
+[ext_resource type="AudioStream" uid="uid://tget3qsy4xra" path="res://ASSETS/Audio/bgm/ekwlrfdjghejogfewrhe.ogg" id="3_rkc21"]
+[ext_resource type="Script" path="res://SRC/AudioStreamPlayer.gd" id="4_6fl2c"]
 
 [sub_resource type="SystemFont" id="SystemFont_ri4hx"]
 font_names = PackedStringArray("FreeMono")
@@ -21,3 +23,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_8hslg")
 next_level = ExtResource("2_jq6nj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rkc21")
+script = ExtResource("4_6fl2c")

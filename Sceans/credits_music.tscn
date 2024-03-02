@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfbvhbgdegwt0"]
+
+[ext_resource type="AudioStream" uid="uid://tget3qsy4xra" path="res://ASSETS/Audio/bgm/ekwlrfdjghejogfewrhe.ogg" id="1_yxek7"]
+[ext_resource type="Script" path="res://SRC/credits_music.gd" id="2_vqrqj"]
+
+[node name="Credits" type="AudioStreamPlayer"]
+stream = ExtResource("1_yxek7")
+script = ExtResource("2_vqrqj")
