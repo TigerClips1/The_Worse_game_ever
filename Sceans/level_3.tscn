@@ -238,7 +238,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player" parent="." instance=ExtResource("3_85008")]
-position = Vector2(45, 74)
+position = Vector2(46, 78)
 
 [node name="Hazard_Area" parent="." instance=ExtResource("4_dsn83")]
 

@@ -9366,7 +9366,7 @@ position = Vector2(456, -136)
 position = Vector2(80, -64)
 
 [node name="Player" parent="." instance=ExtResource("7_2xton")]
-position = Vector2(-48, -88)
+position = Vector2(-46, -85)
 
 [node name="Key12" parent="." instance=ExtResource("6_dnw3e")]
 position = Vector2(40, -80)

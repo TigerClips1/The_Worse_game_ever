@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmwbdjj8jlopk"]
+[gd_scene load_steps=5 format=3 uid="uid://bmwbdjj8jlopk"]
 
 [ext_resource type="Script" path="res://SRC/credits_3.gd" id="1_3qaox"]
 [ext_resource type="PackedScene" uid="uid://b8onedwv1xdss" path="res://Sceans/credits_4.tscn" id="2_sw5t4"]
-[ext_resource type="AudioStream" uid="uid://tget3qsy4xra" path="res://ASSETS/Audio/bgm/ekwlrfdjghejogfewrhe.ogg" id="3_i2pjr"]
-[ext_resource type="Script" path="res://SRC/AudioStreamPlayer.gd" id="4_mfnhd"]
 
 [sub_resource type="SystemFont" id="SystemFont_bux5l"]
 font_names = PackedStringArray("DejaVu Sans Mono")
@@ -25,7 +23,3 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_3qaox")
 next_level = ExtResource("2_sw5t4")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_i2pjr")
-script = ExtResource("4_mfnhd")

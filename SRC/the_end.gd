@@ -15,4 +15,8 @@ func _reload_scene():
 
 func _level_completed():
 	if not next_level is PackedScene: return
+	get_tree().paused = true
+	await  LevelFade._fade_to_black()
+	get_tree().paused = false
 	reload_scene()
+	LevelFade._fade_from_black()

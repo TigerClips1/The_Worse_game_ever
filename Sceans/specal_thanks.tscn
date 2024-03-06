@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxiqehgl0pi16"]
+[gd_scene load_steps=3 format=3 uid="uid://cxiqehgl0pi16"]
 
 [ext_resource type="Script" path="res://SRC/specal_thanks.gd" id="1_1lxiv"]
 [ext_resource type="PackedScene" uid="uid://0dytv66g2inu" path="res://Sceans/thanks_for_playing.tscn" id="2_u4wgt"]
-[ext_resource type="AudioStream" uid="uid://tget3qsy4xra" path="res://ASSETS/Audio/bgm/ekwlrfdjghejogfewrhe.ogg" id="3_1ncrw"]
-[ext_resource type="Script" path="res://SRC/AudioStreamPlayer.gd" id="4_ljcaw"]
 
 [node name="Specal Thanks" type="Control"]
 layout_mode = 3
@@ -45,7 +43,3 @@ FusionZgamer
 and all other youtuber"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_1ncrw")
-script = ExtResource("4_ljcaw")

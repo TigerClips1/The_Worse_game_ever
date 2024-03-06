@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://cveyuderpw7ee"]
+[gd_scene load_steps=6 format=3 uid="uid://cveyuderpw7ee"]
 
 [ext_resource type="Script" path="res://SRC/Game_control_screen.gd" id="1_ihiql"]
+[ext_resource type="FontFile" uid="uid://chambj21cikbp" path="res://ASSETS/Font/ProtestGuerrilla-Regular.ttf" id="2_ihygg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x0tl6"]
+font = ExtResource("2_ihygg")
+font_color = Color(0, 0.717647, 0.768627, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6phod"]
+font = ExtResource("2_ihygg")
+font_color = Color(0.498039, 0.0666667, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ysjxe"]
+font = ExtResource("2_ihygg")
+font_color = Color(0.882353, 0, 0.239216, 1)
 
 [node name="Game_control" type="Control"]
 layout_mode = 3
@@ -11,27 +24,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ihiql")
 
-[node name="Back_main_menu" type="Button" parent="."]
-layout_mode = 0
-offset_top = 149.0
-offset_right = 141.0
-offset_bottom = 180.0
-text = "Back Main Menu "
-
-[node name="Next" type="Button" parent="."]
-layout_mode = 0
-offset_left = 182.0
-offset_top = 149.0
-offset_right = 323.0
-offset_bottom = 180.0
-text = "Next"
-
 [node name="Move" type="Label" parent="."]
 layout_mode = 0
 offset_left = 111.0
 offset_right = 180.0
 offset_bottom = 23.0
 text = "Move < >"
+label_settings = SubResource("LabelSettings_x0tl6")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -42,6 +41,7 @@ offset_top = 24.0
 offset_right = 196.0
 offset_bottom = 47.0
 text = "Jump Space"
+label_settings = SubResource("LabelSettings_6phod")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -52,8 +52,38 @@ offset_top = 55.0
 offset_right = 233.0
 offset_bottom = 78.0
 text = "Double Jump space"
+label_settings = SubResource("LabelSettings_ysjxe")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Back_main_menu" to="." method="_on_back_main_menu_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003125
+anchor_top = 1.18889
+anchor_right = 0.003125
+anchor_bottom = 1.18889
+offset_top = -66.0
+offset_right = 141.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Back_main_menu" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Back Main Menu "
+
+[node name="Next" type="Button" parent="."]
+layout_mode = 2
+offset_left = 278.0
+offset_top = 150.0
+offset_right = 323.0
+offset_bottom = 181.0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Next"
+
+[connection signal="pressed" from="VBoxContainer/Back_main_menu" to="." method="_on_back_main_menu_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

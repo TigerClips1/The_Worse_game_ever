@@ -1,17 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://qayckfv40ygw"]
+[gd_scene load_steps=7 format=3 uid="uid://qayckfv40ygw"]
 
 [ext_resource type="FontFile" uid="uid://chambj21cikbp" path="res://ASSETS/Font/ProtestGuerrilla-Regular.ttf" id="1_0pqbf"]
 [ext_resource type="Script" path="res://SRC/main_menu.gd" id="1_4r1g1"]
+
+[sub_resource type="Theme" id="Theme_l81pr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4hdq7"]
 font = ExtResource("1_0pqbf")
 font_color = Color(0.329412, 1, 0.890196, 1)
 
-[sub_resource type="SystemFont" id="SystemFont_6r0ga"]
+[sub_resource type="SystemFont" id="SystemFont_dp825"]
 font_names = PackedStringArray("C059")
 
 [sub_resource type="LabelSettings" id="LabelSettings_k2j3u"]
-font = SubResource("SystemFont_6r0ga")
+font = SubResource("SystemFont_dp825")
 font_size = 10
 font_color = Color(0.321569, 1, 0.886275, 1)
 
@@ -21,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_l81pr")
 script = ExtResource("1_4r1g1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -44,14 +47,15 @@ horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/Main menu"]
 layout_mode = 0
-offset_left = -108.0
-offset_top = 138.0
-offset_right = 115.0
-offset_bottom = 161.0
+offset_left = -111.0
+offset_top = 126.0
+offset_right = 112.0
+offset_bottom = 149.0
 text = "Copyright © TigerClips1 2024"
 label_settings = SubResource("LabelSettings_k2j3u")
 
 [node name="Start" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "StartGame"
 
