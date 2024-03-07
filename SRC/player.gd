@@ -6,7 +6,7 @@ var air_jump = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_alive = true
 var input_enabled = true
-@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var players_sprite = $Players_Sprite
 @onready var coyote_jump_timer = $Coyote_jump_Timer
 @onready var death = $Death
 
@@ -18,12 +18,12 @@ func _physics_process(delta):
 	Handile_Air_acceleration(input_axis, delta)
 	Apply_friction(input_axis, delta)
 	Apply_air_resistance(input_axis, delta)
-	update_Anmation(input_axis)
 	var was_on_floor = is_on_floor()
 	move_and_slide()
 	var just_left_ledge = was_on_floor and not is_on_floor() and velocity.y >= 0
 	if just_left_ledge:
 		coyote_jump_timer.start()
+	update_Anmation(input_axis)
 
 func Apply_Gravaty(delta):
 	if not is_on_floor():
@@ -69,10 +69,10 @@ func Apply_air_resistance(input_axis, delta):
 
 func update_Anmation(input_axis):
 	if input_axis != 0:
-		animated_sprite_2d.flip_h = input_axis < 0
-		animated_sprite_2d.play("walk")
+		players_sprite.flip_h = input_axis < 0
+		players_sprite.play("walk")
 	else:
-		animated_sprite_2d.play("idle")
+		players_sprite.play("idle")
 
 func reload_scene():
 	call_deferred("_reload_scene")
@@ -83,7 +83,7 @@ func _reload_scene():
 
 func _on_hazard_detector_area_entered(_area):
 	get_tree().paused = true
-	animated_sprite_2d.hide()
+	players_sprite.hide()
 	await death._play()
 	death._restore()
 	await  LevelFade._fade_to_black()

@@ -8,7 +8,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Fade_Color:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,7 +24,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Fade_Color:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -39,7 +39,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Fade_Color:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -61,12 +61,12 @@ process_mode = 3
 layer = 10
 script = ExtResource("1_wo5nu")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Fade_Player" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_7np6f")
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Fade_Color" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

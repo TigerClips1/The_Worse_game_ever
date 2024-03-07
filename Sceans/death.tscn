@@ -6,14 +6,15 @@
 script/source = "extends Node
 
 
-@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var death_anamtion = $Death_Anamtion
+
 
 func _play():
-	animated_sprite_2d.play(\"default\")
-	await animated_sprite_2d.animation_finished
+	death_anamtion.play(\"default\")
+	await death_anamtion.animation_finished
 func _reset():
-	animated_sprite_2d.play(\"resest\")
-	await animated_sprite_2d.animation_finished
+	death_anamtion.play(\"resest\")
+	await death_anamtion.animation_finished
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kkxsn"]
@@ -368,7 +369,7 @@ animations = [{
 [node name="Death" type="Node"]
 script = SubResource("GDScript_jvaae")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Death_Anamtion" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 position = Vector2(7, 12)
 sprite_frames = SubResource("SpriteFrames_rl067")

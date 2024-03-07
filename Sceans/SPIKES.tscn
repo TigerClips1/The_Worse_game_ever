@@ -11,9 +11,9 @@ size = Vector2(17, 11)
 [node name="Skill" type="Sprite2D" parent="."]
 texture = ExtResource("1_xlokx")
 
-[node name="Hazard_Area" parent="." instance=ExtResource("2_6fcf8")]
+[node name="Death_area" parent="." instance=ExtResource("2_6fcf8")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_Area"]
+[node name="Death_Shape" type="CollisionShape2D" parent="Death_area"]
 position = Vector2(-1.5, 4.5)
 shape = SubResource("RectangleShape2D_yvw0k")
 debug_color = Color(0.992157, 0, 0.270588, 0.419608)

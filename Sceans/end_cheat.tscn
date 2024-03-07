@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ss5nc")
 
-[node name="Label" type="Label" parent="."]
+[node name="Troll_1" type="Label" parent="."]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 2.0
@@ -33,7 +33,7 @@ label_settings = SubResource("LabelSettings_1f3t0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="Troll_2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 31.0

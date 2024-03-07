@@ -357,12 +357,12 @@ sprite_frames = SubResource("SpriteFrames_awcfm")
 animation = &"Death"
 script = ExtResource("4_ry325")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Players_Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -49)
 sprite_frames = SubResource("SpriteFrames_ggbfo")
 animation = &"walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Player_area" type="CollisionShape2D" parent="."]
 position = Vector2(1, -49)
 shape = SubResource("RectangleShape2D_7h8af")
 
@@ -370,7 +370,7 @@ shape = SubResource("RectangleShape2D_7h8af")
 wait_time = 0.1
 one_shot = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Player_Camrea" type="Camera2D" parent="."]
 position = Vector2(0, -50)
 scale = Vector2(3.51067, 23.2363)
 zoom = Vector2(1.7, 1.7)
@@ -381,7 +381,7 @@ position_smoothing_speed = 10.0
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_detector"]
+[node name="Area_detecter" type="CollisionShape2D" parent="Hazard_detector"]
 position = Vector2(0, -49.5)
 shape = SubResource("RectangleShape2D_ejsfo")
 
@@ -389,7 +389,7 @@ shape = SubResource("RectangleShape2D_ejsfo")
 collision_layer = 0
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard_EasterEgg"]
+[node name="Area_Troll_Detectoer" type="CollisionShape2D" parent="Hazard_EasterEgg"]
 position = Vector2(0.75, -50)
 shape = SubResource("RectangleShape2D_60y3p")
 debug_color = Color(0.94902, 0, 0.568627, 0.419608)

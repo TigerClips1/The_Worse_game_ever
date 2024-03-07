@@ -1,11 +1,11 @@
 extends CanvasLayer
 
-@onready var animation_player = $AnimationPlayer
+@onready var fade_player = $Fade_Player
 
 func _fade_from_black():
-	animation_player.play("Fade_from_black")
-	await  animation_player.animation_finished
+	fade_player.play("Fade_from_black")
+	await  fade_player.animation_finished
 
 func _fade_to_black():
-	animation_player.play("Fade")
-	await  animation_player.animation_finished
+	fade_player.play("Fade")
+	await  fade_player.animation_finished
