@@ -1,10 +1,11 @@
-[gd_scene load_steps=54 format=3 uid="uid://rfbrfr8x5lre"]
+[gd_scene load_steps=55 format=3 uid="uid://rfbrfr8x5lre"]
 
 [ext_resource type="Script" path="res://SRC/player.gd" id="1_n01tu"]
 [ext_resource type="Resource" uid="uid://j1vocnco4nc3" path="res://resources/Defult_Play_Data.tres" id="2_n7rif"]
 [ext_resource type="Texture2D" uid="uid://b4mjsdrfetnwm" path="res://ASSETS/Images/Player/tilemap-characters_packed.png" id="2_qlmp2"]
 [ext_resource type="Texture2D" uid="uid://dda8js7ldb7lx" path="res://ASSETS/Images/vfx/Effect_BloodImpact_1_60x63.png" id="3_qma4p"]
 [ext_resource type="Script" path="res://SRC/Death.gd" id="4_ry325"]
+[ext_resource type="PackedScene" uid="uid://cs5haxf5j8cty" path="res://Sceans/timer.tscn" id="6_iyjh2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kkxsn"]
 atlas = ExtResource("3_qma4p")
@@ -343,6 +344,7 @@ size = Vector2(6, 23)
 size = Vector2(9.5, 24)
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(158, 119)
 collision_layer = 2
 floor_constant_speed = true
 floor_snap_length = 3.0
@@ -393,6 +395,9 @@ collision_mask = 8
 position = Vector2(0.75, -50)
 shape = SubResource("RectangleShape2D_60y3p")
 debug_color = Color(0.94902, 0, 0.568627, 0.419608)
+
+[node name="TImer_Count" parent="." instance=ExtResource("6_iyjh2")]
+position = Vector2(-154, -116)
 
 [connection signal="area_entered" from="Hazard_detector" to="." method="_on_hazard_detector_area_entered"]
 [connection signal="area_entered" from="Hazard_EasterEgg" to="." method="_on_hazard_easter_egg_area_entered"]

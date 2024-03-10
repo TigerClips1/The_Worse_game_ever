@@ -4,6 +4,7 @@ extends Node2D
 @onready var count_down_gray = %Count_Down_Gray
 @onready var count_dowm_text = %Count_Dowm_Text
 @onready var countdown = $Countdown
+
 func reload_scene():
 	call_deferred("_reload_scene")
 

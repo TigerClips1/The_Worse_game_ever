@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs5haxf5j8cty"]
+
+[ext_resource type="Script" path="res://SRC/timer.gd" id="1_f8f4a"]
+
+[sub_resource type="SystemFont" id="SystemFont_e1k6v"]
+font_names = PackedStringArray("Noto Naskh Arabic")
+
+[sub_resource type="LabelSettings" id="LabelSettings_2itis"]
+font = SubResource("SystemFont_e1k6v")
+font_color = Color(1, 0.435294, 0.658824, 1)
+
+[node name="Timer_Start" type="Node2D"]
+script = ExtResource("1_f8f4a")
+
+[node name="TImer_Count" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 136.0
+offset_top = 31.0
+offset_right = 176.0
+offset_bottom = 60.0
+text = "00:00"
+label_settings = SubResource("LabelSettings_2itis")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 12.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
