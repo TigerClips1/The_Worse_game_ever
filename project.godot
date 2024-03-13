@@ -12,10 +12,11 @@ config_version=5
 
 config/name="The Worse game ever made"
 config/version="V1.0"
-run/main_scene="res://Sceans/main_menu.tscn"
+run/main_scene="res://Sceans/warning.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 run/max_fps=60
 boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,6 +28,7 @@ LevelFade="*res://Sceans/level_fade.tscn"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
+window/size/mode=2
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
