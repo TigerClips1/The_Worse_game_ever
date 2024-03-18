@@ -2,9 +2,20 @@ extends Node2D
 
 @export var next_level : PackedScene
 
+#var input_axis = Input.get_axis("Alt", "plus")
+
 func _ready():
 	RenderingServer.set_default_clear_color(Color.CRIMSON)
 	Events.Level_comepiled.connect(_level_completed)
+
+func _input(_event):
+	if _event is InputEventKey and _event.pressed:
+		if _event.keycode != KEY_ALT and  KEY_TAB and KEY_PLUS:
+			get_tree().paused = true
+			await  LevelFade._fade_to_black()
+			get_tree().paused = false
+			get_tree().change_scene_to_file("res://Sceans/screat_ending.tscn")
+			LevelFade._fade_from_black()
 
 func reload_scene():
 	call_deferred("_reload_scene")
@@ -20,3 +31,4 @@ func _level_completed():
 	get_tree().paused = false
 	reload_scene()
 	LevelFade._fade_from_black()
+	

@@ -9324,6 +9324,7 @@ size = Vector2(18, 9)
 size = Vector2(33, 9)
 
 [node name="TheEnd" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_pnbkj")
 next_level = ExtResource("2_ffff4")
 

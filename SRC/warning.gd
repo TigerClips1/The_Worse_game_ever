@@ -8,5 +8,5 @@ func _ready():
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Sceans/Level1.tscn")
+	get_tree().change_scene_to_file("res://Sceans/HeadPhone_Warning.tscn")
 	LevelFade._fade_from_black()
