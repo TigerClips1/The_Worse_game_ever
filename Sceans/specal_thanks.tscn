@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxiqehgl0pi16"]
+[gd_scene load_steps=7 format=3 uid="uid://cxiqehgl0pi16"]
 
 [ext_resource type="Script" path="res://SRC/specal_thanks.gd" id="1_1lxiv"]
 [ext_resource type="PackedScene" uid="uid://0dytv66g2inu" path="res://Sceans/thanks_for_playing.tscn" id="2_u4wgt"]
+[ext_resource type="FontFile" uid="uid://chambj21cikbp" path="res://ASSETS/Font/ProtestGuerrilla-Regular.ttf" id="3_m45d3"]
+
+[sub_resource type="SystemFont" id="SystemFont_tkj64"]
+font_names = PackedStringArray("Padauk")
+
+[sub_resource type="LabelSettings" id="LabelSettings_f2hhf"]
+font = SubResource("SystemFont_tkj64")
+font_color = Color(0.666667, 0, 0.282353, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xjjft"]
+font = ExtResource("3_m45d3")
+font_color = Color(0.419608, 0, 0.0470588, 1)
 
 [node name="Specal Thanks" type="Control"]
 layout_mode = 3
@@ -23,6 +35,7 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 text = "Specal Thanks"
+label_settings = SubResource("LabelSettings_f2hhf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -41,5 +54,6 @@ text = "you the player
 Markplier
 FusionZgamer
 and all other youtuber"
+label_settings = SubResource("LabelSettings_xjjft")
 horizontal_alignment = 1
 vertical_alignment = 1

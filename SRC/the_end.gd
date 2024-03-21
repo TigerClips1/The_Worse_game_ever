@@ -10,19 +10,26 @@ func _ready():
 
 func _input(_event):
 	if _event is InputEventKey and _event.pressed:
-		if _event.keycode != KEY_ALT and  KEY_TAB and KEY_PLUS:
+		if _event.keycode == KEY_ALT and  KEY_TAB:
 			get_tree().paused = true
 			await  LevelFade._fade_to_black()
-			get_tree().paused = false
-			get_tree().change_scene_to_file("res://Sceans/screat_ending.tscn")
+			reload_scene_screat()
 			LevelFade._fade_from_black()
+			get_tree().paused = false
 
 func reload_scene():
 	call_deferred("_reload_scene")
 
+func reload_scene_screat():
+	call_deferred("_reload_scene_Screat")
+
 func _reload_scene():
 	if is_inside_tree():
 		get_tree().change_scene_to_packed(next_level)
+
+func _reload_scene_Screat():
+	if is_inside_tree():
+		get_tree().change_scene_to_file("res://Sceans/screat_ending.tscn")
 
 func _level_completed():
 	if not next_level is PackedScene: return

@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://0dytv66g2inu"]
+[gd_scene load_steps=4 format=3 uid="uid://0dytv66g2inu"]
 
 [ext_resource type="Script" path="res://SRC/thanks_for_playing.gd" id="1_upgwn"]
+
+[sub_resource type="SystemFont" id="SystemFont_ejbaw"]
+font_names = PackedStringArray("Open Sans")
+
+[sub_resource type="LabelSettings" id="LabelSettings_udcuh"]
+font = SubResource("SystemFont_ejbaw")
+font_color = Color(0.992157, 0, 0.47451, 1)
 
 [node name="Thanks for playing" type="Control"]
 layout_mode = 3
@@ -24,5 +31,10 @@ text = "Thanks for Playing
 I made this project to help me learn godot
 Goodbye
 God bless "
+label_settings = SubResource("LabelSettings_udcuh")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="THanks" type="Camera2D" parent="."]
+position = Vector2(167, 89)
+zoom = Vector2(0.9, 0.9)

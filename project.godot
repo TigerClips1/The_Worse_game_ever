@@ -24,6 +24,7 @@ config/icon="res://icon.svg"
 Events="*res://SRC/Events.gd"
 LevelFade="*res://Sceans/level_fade.tscn"
 AddFile="*res://SRC/Add_File.gd"
+CreditsMusic="*res://Sceans/credits_music.tscn"
 
 [display]
 

@@ -98,5 +98,5 @@ func _on_hazard_detector_area_entered(_area):
 	death_glitch._restore()
 	await  LevelFade._fade_to_black()
 	reload_scene()
-	AddFile._loading_file()
 	LevelFade._fade_from_black()
+	get_tree().paused = false

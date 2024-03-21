@@ -8,7 +8,7 @@ var is_alive = true
 var input_enabled = true
 var level_Time = 0.0
 var start_level_msc = 0.0
-@onready var players_sprite = $Players_Sprite
+@onready var player_spirte = $Player_Spirte
 @onready var coyote_jump_timer = $Coyote_jump_Timer
 @onready var death = $Death
 
@@ -72,10 +72,10 @@ func Apply_air_resistance(input_axis, delta):
 
 func update_Anmation(input_axis):
 	if input_axis != 0:
-		players_sprite.flip_h = input_axis < 0
-		players_sprite.play("walk")
+		player_spirte.flip_h = input_axis < 0
+		player_spirte.play("Walk")
 	else:
-		players_sprite.play("idle")
+		player_spirte.play("idle")
 
 func reload_scene():
 	call_deferred("_reload_scene")
@@ -86,7 +86,7 @@ func _reload_scene():
 
 func _on_hazard_detector_area_entered(_area):
 	get_tree().paused = true
-	players_sprite.hide()
+	player_spirte.hide()
 	await death._play()
 	death._restore()
 	await  LevelFade._fade_to_black()

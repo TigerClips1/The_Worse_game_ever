@@ -340,7 +340,7 @@ size = Vector2(12, 21)
 size = Vector2(6, 23)
 
 [sub_resource type="Gradient" id="Gradient_ffwkx"]
-offsets = PackedFloat32Array(0.175325, 0.642857, 0.876623)
+offsets = PackedFloat32Array(0.311688, 0.642857, 0.876623)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_cnig3"]
@@ -397,8 +397,9 @@ wait_time = 0.1
 one_shot = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(3.99999, -50.5)
-scale = Vector2(1.21875, 1.01562)
+position = Vector2(-3.99999, -52.5)
+scale = Vector2(1.875, 1.29688)
+energy = 0.55
 texture = SubResource("GradientTexture2D_cnig3")
 
 [connection signal="area_entered" from="Hazard_detector_Glitch" to="." method="_on_hazard_detector_area_entered"]
