@@ -25,12 +25,16 @@ Events="*res://SRC/Events.gd"
 LevelFade="*res://Sceans/level_fade.tscn"
 AddFile="*res://SRC/Add_File.gd"
 CreditsMusic="*res://Sceans/credits_music.tscn"
+MenuMusic="*res://Sceans/menu_music.tscn"
+Click="*res://Sceans/click.tscn"
+GltichNext="*res://Sceans/gltich_next.tscn"
+DeathSound="*res://Sceans/death_sound.tscn"
+SPookey="*res://Sceans/sevmue_1fx_0d_btuu.tscn"
 
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/size/mode=2
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
@@ -117,3 +121,4 @@ plus={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

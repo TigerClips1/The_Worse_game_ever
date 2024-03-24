@@ -3,6 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MenuMusic.autoplay = true
 	RenderingServer.set_default_clear_color(Color.DARK_BLUE)
 	await get_tree().create_timer(5).timeout
 	get_tree().paused = true

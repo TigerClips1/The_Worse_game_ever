@@ -14,25 +14,27 @@ script = ExtResource("1_3uk1x")
 
 [node name="Main" type="Camera2D" parent="."]
 position = Vector2(196, 79)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.7, 0.7)
 
 [node name="Warning" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Warning This Game contain "
+text = "Warning this
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Warning2" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-text = "This Game contain Flashing light and loud nosie "
+text = "Game Contains Flashing Lights and Loud Noise"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Warning3" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-text = "This Game  is Not for People who are Easly disturb"
+text = "This Game is Not for People who are Easily Disturbed
+"
 horizontal_alignment = 1
 vertical_alignment = 1

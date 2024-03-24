@@ -13,6 +13,7 @@ func _reload_scene():
 		get_tree().change_scene_to_packed(next_level)
 
 func _ready():
+	MenuMusic.stop()
 	Events.Level_comepiled.connect(_level_completed)
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	get_tree().paused = true

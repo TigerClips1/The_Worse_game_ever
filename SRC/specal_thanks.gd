@@ -3,7 +3,9 @@ extends Control
 @export var next_level : PackedScene
 
 func _ready():
-	CreditsMusic.autoplay = true
+	CreditsMusic.stop()
+	GltichNext.play()
+	SPookey.play()
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	await get_tree().create_timer(1).timeout
@@ -12,6 +14,20 @@ func _ready():
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	await get_tree().create_timer(5).timeout
 	_credit_move()
+
+func _return():
+	await  LevelFade._fade_to_black()
+	call_deferred("_Back_main_menu")
+	CreditsMusic.stop()
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+	LevelFade._fade_from_black()
+
+func _input(_event):
+	exit_input()
+
+func exit_input():
+	if Input.is_action_just_released("Exit"):
+		_return()
 
 func reload_scene():
 	call_deferred("_reload_scene")

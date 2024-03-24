@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv1jcuju8aft1"]
+
+[ext_resource type="AudioStream" uid="uid://piacokqmb8ts" path="res://ASSETS/Audio/Soud_Efx/interface-124464.mp3" id="1_doxoj"]
+
+[node name="Click" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_doxoj")

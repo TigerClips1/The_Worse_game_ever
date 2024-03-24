@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2wxe1d2meumy"]
+
+[ext_resource type="AudioStream" uid="uid://do433cmucossp" path="res://ASSETS/Audio/Credits_Bgm/SEVMUE1FX0dBTUU.mp3" id="1_430yu"]
+
+[node name="SEVMUE1FX0dBTUU" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = ExtResource("1_430yu")

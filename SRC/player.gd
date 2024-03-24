@@ -32,13 +32,6 @@ func Apply_Gravaty(delta):
 	if not is_on_floor():
 		velocity.y += gravity * movementData.Gravity_scale * delta
 
-# TODO add wall jump in anther update
-#func HandleWalljump():
-	#if not is_on_wall(): return
-	#var wall_normal = get_wall_normal()
-	#if Input.is_action_just_pressed("ui_accept") and wall_normal == Vector2.LEFT:
-		#
-
 func Handlejump():
 	if is_on_floor(): air_jump = true
 	if is_on_floor() or coyote_jump_timer.time_left > 0.0:
@@ -85,13 +78,14 @@ func _reload_scene():
 		get_tree().change_scene_to_file("res://Sceans/lost_screen.tscn")
 
 func _on_hazard_detector_area_entered(_area):
+	DeathSound.play()
+	DeathSound.autoplay = true
 	get_tree().paused = true
 	player_spirte.hide()
 	await death._play()
-	death._restore()
 	await  LevelFade._fade_to_black()
 	reload_scene()
-	AddFile._loading_file()
+	#AddFile._loading_file()
 	LevelFade._fade_from_black()
 
 func reload_scene_easter():

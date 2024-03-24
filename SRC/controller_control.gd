@@ -6,8 +6,10 @@ extends Control
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	back.grab_focus()
+	MenuMusic.autoplay = true
 
 func _on_back_pressed():
+	Click.play()
 	await  LevelFade._fade_to_black()
 	get_tree().change_scene_to_file("res://Sceans/Game_control_screen.tscn")
 	LevelFade._fade_from_black()

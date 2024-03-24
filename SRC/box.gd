@@ -20,8 +20,8 @@ func _Troll_ending():
 	await  get_tree().create_timer(3).timeout
 	get_tree().quit()
 
-func _on_area_2d_body_entered(_body: Node2D) -> void:
-	box.hide()
-	var Box = get_tree().get_nodes_in_group("Keys")
-	if Box.size() >= 1:
-		Events.Level_comepiled.emit()
+##func _on_area_2d_body_entered(_body: Node2D) -> void:
+	#box.hide()
+	#var Box = get_tree().get_nodes_in_group("Keys")
+	#if Box.size() >= 1:
+		#Events.Level_comepiled.emit()

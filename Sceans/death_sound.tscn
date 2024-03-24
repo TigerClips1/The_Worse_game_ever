@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qbbsefu71w6f"]
+
+[ext_resource type="AudioStream" uid="uid://bfjbex6td8f2g" path="res://ASSETS/Audio/Soud_Efx/explosion-sfx-43814.mp3" id="1_ha6v4"]
+
+[node name="Death_Sound" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = ExtResource("1_ha6v4")

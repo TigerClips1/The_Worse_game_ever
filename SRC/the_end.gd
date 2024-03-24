@@ -15,6 +15,7 @@ func _input(_event):
 			await  LevelFade._fade_to_black()
 			reload_scene_screat()
 			LevelFade._fade_from_black()
+			GltichNext.play()
 			get_tree().paused = false
 
 func reload_scene():
