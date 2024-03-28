@@ -372,6 +372,7 @@ animation = &"Death"
 script = ExtResource("4_52nmw")
 
 [node name="Players_Sprite_glitch" type="AnimatedSprite2D" parent="."]
+process_mode = 3
 position = Vector2(1, -49)
 sprite_frames = SubResource("SpriteFrames_ggbfo")
 animation = &"idle"

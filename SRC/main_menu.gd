@@ -30,3 +30,8 @@ func _on_control_pressed():
 func _on_quit_pressed():
 	Click.play()
 	get_tree().quit()
+
+
+func _on_options_pressed():
+	Click.play()
+	get_tree().change_scene_to_file("res://Sceans/setting.tscn")

@@ -67,6 +67,10 @@ text = "How to Play"
 layout_mode = 2
 text = "Credits"
 
+[node name="Options" type="Button" parent="Stright_box"]
+layout_mode = 2
+text = "Options"
+
 [node name="quit" type="Button" parent="Stright_box"]
 layout_mode = 2
 text = "Quit"
@@ -74,4 +78,6 @@ text = "Quit"
 [connection signal="pressed" from="Stright_box/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Stright_box/Control" to="." method="_on_control_pressed"]
 [connection signal="pressed" from="Stright_box/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Stright_box/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Stright_box/Options" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Stright_box/quit" to="." method="_on_quit_pressed"]
