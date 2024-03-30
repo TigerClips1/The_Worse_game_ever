@@ -1,6 +1,7 @@
 extends Control
 
 @export var next_level : PackedScene
+@onready var label = $"SEVMUCBNRSBJVFMgVE9PSyBNRQ=="
 
 func _ready():
 	CreditsMusic.stop()
@@ -12,6 +13,10 @@ func _ready():
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 	await get_tree().create_timer(1).timeout
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	await get_tree().create_timer(1).timeout
+	label.show()
+	await get_tree().create_timer(2).timeout
+	label.hide()
 	await get_tree().create_timer(5).timeout
 	_credit_move()
 

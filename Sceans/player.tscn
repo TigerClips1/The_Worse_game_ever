@@ -351,6 +351,13 @@ floor_snap_length = 3.0
 script = ExtResource("1_n01tu")
 movementData = ExtResource("2_n7rif")
 
+[node name="Player_Camrea" type="Camera2D" parent="."]
+position = Vector2(0, -50)
+scale = Vector2(3.51067, 23.2363)
+zoom = Vector2(1.7, 1.7)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
 [node name="Player_Spirte" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -51)
 sprite_frames = SubResource("SpriteFrames_jc0bd")
@@ -371,13 +378,6 @@ shape = SubResource("RectangleShape2D_7h8af")
 [node name="Coyote_jump_Timer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
-
-[node name="Player_Camrea" type="Camera2D" parent="."]
-position = Vector2(0, -50)
-scale = Vector2(3.51067, 23.2363)
-zoom = Vector2(1.7, 1.7)
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
 
 [node name="Hazard_detector" type="Area2D" parent="."]
 process_mode = 3

@@ -810,7 +810,7 @@ position = Vector2(577, -767)
 position = Vector2(600, -828)
 
 [node name="Hooror_lighting" type="DirectionalLight2D" parent="."]
-blend_mode = 2
+blend_mode = 1
 shadow_enabled = true
 
 [node name="Hazard_Area" parent="." instance=ExtResource("5_abr1v")]

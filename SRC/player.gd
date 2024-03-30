@@ -115,4 +115,6 @@ func _Exit_mainmenu():
 
 func _apply_input():
 	if Input.is_action_just_released("Exit"):
+		await  LevelFade._fade_to_black()
 		_Exit_mainmenu()
+		LevelFade._fade_from_black()

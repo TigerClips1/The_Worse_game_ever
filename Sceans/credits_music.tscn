@@ -6,4 +6,5 @@
 [node name="Credits_music" type="AudioStreamPlayer2D"]
 process_mode = 3
 stream = ExtResource("1_5m1ga")
+bus = &"Music"
 script = ExtResource("1_ywbx4")

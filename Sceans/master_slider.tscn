@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://4lx37i15fjdf"]
+
+[node name="MasterSlider" type="HSlider"]
+offset_right = 8.0
+offset_bottom = 16.0

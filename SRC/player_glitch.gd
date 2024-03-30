@@ -48,6 +48,7 @@ func HandleWalljump():
 		velocity.x = wall_normal.x * movementData.speed
 		velocity.y = movementData.jump_velocity
 		just_wall_jump = true
+
 func Handlejump():
 	if is_on_floor(): air_jump = true
 	if is_on_floor() or coyote_jump_timer_glitch.time_left > 0.0:

@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cicjmmup8ok2l"]
+
+[ext_resource type="Script" path="res://SRC/vsync.gd" id="1_iqebw"]
+
+[node name="Vsync" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+script = ExtResource("1_iqebw")
+
+[node name="Vsync_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -4.0
+offset_right = -47.0
+offset_bottom = 19.0
+grow_vertical = 2
+text = "Vsync"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Vsync_Check_Box" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="toggled" from="VBoxContainer/Vsync_Check_Box" to="." method="_on_check_box_toggled"]

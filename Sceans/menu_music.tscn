@@ -5,3 +5,4 @@
 [node name="Menu_Music" type="AudioStreamPlayer2D"]
 process_mode = 3
 stream = ExtResource("1_rutbe")
+bus = &"Music"

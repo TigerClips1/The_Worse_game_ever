@@ -18,6 +18,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_upgwn")
 
+[node name="THanks" type="Camera2D" parent="."]
+position = Vector2(167, 89)
+zoom = Vector2(0.9, 0.9)
+
 [node name="Good_Bye_Player" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -34,7 +38,3 @@ God bless "
 label_settings = SubResource("LabelSettings_udcuh")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="THanks" type="Camera2D" parent="."]
-position = Vector2(167, 89)
-zoom = Vector2(0.9, 0.9)

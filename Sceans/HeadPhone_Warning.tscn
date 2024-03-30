@@ -14,6 +14,10 @@ grow_vertical = 2
 theme = ExtResource("1_h3g56")
 script = ExtResource("1_e6017")
 
+[node name="HeadPhones" type="Camera2D" parent="."]
+position = Vector2(161, 110)
+zoom = Vector2(0.7, 0.7)
+
 [node name="HeadPhone_Warning" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -36,7 +40,3 @@ vertical_alignment = 1
 position = Vector2(154, 49)
 scale = Vector2(0.0986328, 0.0957031)
 texture = ExtResource("1_4hly6")
-
-[node name="HeadPhones" type="Camera2D" parent="."]
-position = Vector2(161, 110)
-zoom = Vector2(0.7, 0.7)

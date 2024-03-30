@@ -1,9 +1,115 @@
-[gd_scene format=3 uid="uid://bgnljg6qjs461"]
+[gd_scene load_steps=5 format=3 uid="uid://bgnljg6qjs461"]
+
+[ext_resource type="Theme" uid="uid://bt58wc3moy45a" path="res://resources/Setting.tres" id="1_by5cl"]
+[ext_resource type="PackedScene" uid="uid://5rp5vinsfolo" path="res://Sceans/music_slider.tscn" id="1_mnwb1"]
+[ext_resource type="Script" path="res://SRC/setting.gd" id="1_t4ini"]
+[ext_resource type="PackedScene" uid="uid://cicjmmup8ok2l" path="res://Sceans/vsync.tscn" id="3_0ir3g"]
 
 [node name="Setting" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_by5cl")
+script = ExtResource("1_t4ini")
+
+[node name="Main_Camrea" type="Camera2D" parent="."]
+position = Vector2(166, 92)
+zoom = Vector2(0.9, 0.9)
+
+[node name="Mute" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 68.0
+offset_right = -2.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mute_cantainer" type="VBoxContainer" parent="Mute"]
+layout_mode = 2
+
+[node name="Mute" type="Button" parent="Mute/Mute_cantainer"]
+layout_mode = 2
+text = "Mute"
+
+[node name="Back" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Back_cantainer" type="VBoxContainer" parent="Back"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Back/Back_cantainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="Slider" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.5
+offset_right = 27.5
+offset_bottom = 137.0
+grow_horizontal = 2
+
+[node name="Slider_Hitbox" type="HBoxContainer" parent="Slider"]
+layout_mode = 2
+
+[node name="Slider_Vbox" type="VBoxContainer" parent="Slider/Slider_Hitbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.35
+
+[node name="Master_Label" type="Label" parent="Slider/Slider_Hitbox/Slider_Vbox"]
+layout_mode = 2
+text = "Master"
+
+[node name="Master" parent="Slider/Slider_Hitbox/Slider_Vbox" instance=ExtResource("1_mnwb1")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="Music_label" type="Label" parent="Slider/Slider_Hitbox/Slider_Vbox"]
+layout_mode = 2
+text = "Music"
+
+[node name="Music" parent="Slider/Slider_Hitbox/Slider_Vbox" instance=ExtResource("1_mnwb1")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="Sound_label" type="Label" parent="Slider/Slider_Hitbox/Slider_Vbox"]
+layout_mode = 2
+text = "Sound"
+
+[node name="Sound" parent="Slider/Slider_Hitbox/Slider_Vbox" instance=ExtResource("1_mnwb1")]
+layout_mode = 2
+bus_name = "Sound"
+
+[node name="Vsync" parent="." instance=ExtResource("3_0ir3g")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 14.0
+offset_top = 8.0
+offset_right = 14.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Mute/Mute_cantainer/Mute" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Back/Back_cantainer/Back" to="." method="_on_button_pressed_back"]

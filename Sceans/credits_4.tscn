@@ -1,23 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8onedwv1xdss"]
+[gd_scene load_steps=4 format=3 uid="uid://b8onedwv1xdss"]
 
 [ext_resource type="Script" path="res://SRC/credits_4.gd" id="1_8hslg"]
+[ext_resource type="LabelSettings" uid="uid://d4il73tvm5ml1" path="res://resources/credits_4.tres" id="1_gerkl"]
 [ext_resource type="PackedScene" uid="uid://cxiqehgl0pi16" path="res://Sceans/specal_thanks.tscn" id="2_jq6nj"]
-
-[sub_resource type="SystemFont" id="SystemFont_ri4hx"]
-font_names = PackedStringArray("FreeMono")
-
-[sub_resource type="LabelSettings" id="LabelSettings_shdyy"]
-font = SubResource("SystemFont_ri4hx")
-font_color = Color(0.133333, 0, 0.980392, 1)
 
 [node name="credits4" type="Label"]
 offset_left = 88.0
-offset_right = 237.0
+offset_right = 252.0
 offset_bottom = 49.0
 text = "sound/efx/bgMusic
-from ?"
-label_settings = SubResource("LabelSettings_shdyy")
+"
+label_settings = ExtResource("1_gerkl")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_8hslg")
 next_level = ExtResource("2_jq6nj")
+
+[node name="Credits1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 172.0
+offset_bottom = 71.0
+text = "pixabay.com"
+label_settings = ExtResource("1_gerkl")
+
+[node name="Credits 2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 72.0
+offset_right = 184.0
+offset_bottom = 95.0
+text = "Roblox Music Libeary"
+label_settings = ExtResource("1_gerkl")
+
+[node name="Credits3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 104.0
+offset_right = 172.0
+offset_bottom = 127.0
+text = "youtube.com"
+label_settings = ExtResource("1_gerkl")
