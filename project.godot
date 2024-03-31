@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="The Worse game ever made"
+config/description="THe Worse_game_Ever is a game that so trash "
 config/version="V1.0"
 run/main_scene="res://Sceans/warning.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 run/max_fps=60
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="res://ASSETS/Images/Icon/icon.png"
 
 [autoload]
 
@@ -118,6 +119,8 @@ plus={
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Hazards"
 2d_physics/layer_4="Hazzards_Anti_Cheat"
+2d_physics/layer_5="Keys"
+2d_physics/layer_6="Box"
 
 [rendering]
 

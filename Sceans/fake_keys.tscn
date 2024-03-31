@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcxkako3wv5he"]
+
+[ext_resource type="Texture2D" uid="uid://cxaff7r53wpk5" path="res://ASSETS/Misc/tile_0027.png" id="1_b3sey"]
+[ext_resource type="Script" path="res://SRC/fake_keys.gd" id="1_slquj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_el7wx"]
+
+[node name="Fake_keys" type="Node2D"]
+script = ExtResource("1_slquj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b3sey")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("CircleShape2D_el7wx")

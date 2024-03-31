@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dstcevk2hfm2o"]
+[gd_scene load_steps=22 format=3 uid="uid://dstcevk2hfm2o"]
 
 [ext_resource type="Script" path="res://SRC/level_3.gd" id="1_l1dq5"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="1_txvkr"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="4_dsn83"]
 [ext_resource type="PackedScene" uid="uid://cqmdxl8p4ue5" path="res://Sceans/Keys.tscn" id="6_ie3my"]
 [ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/box.tscn" id="7_5l6aw"]
-[ext_resource type="PackedScene" uid="uid://dpu7ewq7gh4ec" path="res://Sceans/hazzards_anit_cheat.tscn" id="8_qhg36"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6a8ix"]
 texture = ExtResource("1_txvkr")
@@ -214,8 +213,6 @@ size = Vector2(6, 17)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fifoy"]
 size = Vector2(8, 14)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p7bt"]
-
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_l1dq5")
 next_level = ExtResource("2_3e0dl")
@@ -378,10 +375,3 @@ position = Vector2(277, 25)
 
 [node name="Win_box" parent="." instance=ExtResource("7_5l6aw")]
 position = Vector2(318, 17)
-
-[node name="Hazzards_Anit_cheat" parent="." instance=ExtResource("8_qhg36")]
-
-[node name="RIck_Roll_No_Cheat" type="CollisionShape2D" parent="Hazzards_Anit_cheat"]
-position = Vector2(315, 45)
-shape = SubResource("RectangleShape2D_2p7bt")
-debug_color = Color(0.890196, 0, 0.788235, 0.419608)

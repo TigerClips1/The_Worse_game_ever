@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://rfbrfr8x5lre"]
+[gd_scene load_steps=57 format=3 uid="uid://rfbrfr8x5lre"]
 
 [ext_resource type="Script" path="res://SRC/player.gd" id="1_n01tu"]
 [ext_resource type="Resource" uid="uid://j1vocnco4nc3" path="res://resources/Defult_Play_Data.tres" id="2_n7rif"]
@@ -6,6 +6,18 @@
 [ext_resource type="Script" path="res://SRC/Death.gd" id="4_ry325"]
 [ext_resource type="Texture2D" uid="uid://gn8s7mo4kxf7" path="res://ASSETS/Images/Player/tilemap-characters.png" id="5_8iypi"]
 [ext_resource type="PackedScene" uid="uid://cs5haxf5j8cty" path="res://Sceans/timer.tscn" id="6_iyjh2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60y3p"]
+size = Vector2(9.5, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejsfo"]
+size = Vector2(10, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8xb1"]
+size = Vector2(11, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avl2m"]
+size = Vector2(16, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0hter"]
 atlas = ExtResource("5_8iypi")
@@ -337,12 +349,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7h8af"]
 size = Vector2(12, 21)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejsfo"]
-size = Vector2(6, 23)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_60y3p"]
-size = Vector2(9.5, 24)
-
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(158, 119)
 collision_layer = 2
@@ -350,6 +356,48 @@ floor_constant_speed = true
 floor_snap_length = 3.0
 script = ExtResource("1_n01tu")
 movementData = ExtResource("2_n7rif")
+
+[node name="Hazard_EasterEgg" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="Area_Troll_Detectoer" type="CollisionShape2D" parent="Hazard_EasterEgg"]
+position = Vector2(2, -51)
+shape = SubResource("RectangleShape2D_60y3p")
+debug_color = Color(0.94902, 0, 0.568627, 0.419608)
+
+[node name="Hazard_detector" type="Area2D" parent="."]
+process_mode = 3
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="Area_detecter" type="CollisionShape2D" parent="Hazard_detector"]
+process_mode = 3
+position = Vector2(2, -51)
+shape = SubResource("RectangleShape2D_ejsfo")
+debug_color = Color(0, 0.627451, 0.494118, 0.419608)
+
+[node name="Keys" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys"]
+position = Vector2(1.5, -52.5)
+shape = SubResource("RectangleShape2D_b8xb1")
+debug_color = Color(0.984314, 0, 0.356863, 0.419608)
+
+[node name="Box_Area" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box_Area"]
+position = Vector2(3, -51)
+shape = SubResource("RectangleShape2D_avl2m")
+debug_color = Color(0.694118, 0.282353, 1, 0.419608)
 
 [node name="Player_Camrea" type="Camera2D" parent="."]
 position = Vector2(0, -50)
@@ -374,32 +422,14 @@ script = ExtResource("4_ry325")
 [node name="Player_area" type="CollisionShape2D" parent="."]
 position = Vector2(2, -52)
 shape = SubResource("RectangleShape2D_7h8af")
+debug_color = Color(0.960784, 0.196078, 0, 0.419608)
 
 [node name="Coyote_jump_Timer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
 
-[node name="Hazard_detector" type="Area2D" parent="."]
-process_mode = 3
-collision_layer = 0
-collision_mask = 4
-
-[node name="Area_detecter" type="CollisionShape2D" parent="Hazard_detector"]
-process_mode = 3
-position = Vector2(2, -51)
-shape = SubResource("RectangleShape2D_ejsfo")
-
-[node name="Hazard_EasterEgg" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 8
-
-[node name="Area_Troll_Detectoer" type="CollisionShape2D" parent="Hazard_EasterEgg"]
-position = Vector2(2, -51)
-shape = SubResource("RectangleShape2D_60y3p")
-debug_color = Color(0.94902, 0, 0.568627, 0.419608)
-
 [node name="TImer_Count" parent="." instance=ExtResource("6_iyjh2")]
 position = Vector2(-154, -116)
 
-[connection signal="area_entered" from="Hazard_detector" to="." method="_on_hazard_detector_area_entered"]
 [connection signal="area_entered" from="Hazard_EasterEgg" to="." method="_on_hazard_easter_egg_area_entered"]
+[connection signal="area_entered" from="Hazard_detector" to="." method="_on_hazard_detector_area_entered"]

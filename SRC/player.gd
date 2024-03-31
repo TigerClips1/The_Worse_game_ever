@@ -1,3 +1,4 @@
+class_name  Player
 extends CharacterBody2D
 
 @export var movementData : _PlayerMovementData
@@ -12,6 +13,8 @@ var start_level_msc = 0.0
 @onready var coyote_jump_timer = $Coyote_jump_Timer
 @onready var death = $Death
 
+func _ready():
+	add_to_group("Player")
 
 func _physics_process(delta):
 	Apply_Gravaty(delta)

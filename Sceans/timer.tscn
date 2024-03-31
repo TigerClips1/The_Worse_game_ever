@@ -14,6 +14,7 @@ script = ExtResource("1_f8f4a")
 
 [node name="TImer_Count" type="Label" parent="."]
 unique_name_in_owner = true
+z_index = 1
 offset_left = 136.0
 offset_top = 31.0
 offset_right = 176.0

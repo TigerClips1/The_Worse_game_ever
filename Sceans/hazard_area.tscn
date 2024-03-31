@@ -8,6 +8,7 @@ script/source = "extends Area2D
 [node name="Hazard_Area" type="Area2D"]
 collision_layer = 4
 collision_mask = 0
+monitoring = false
 script = SubResource("GDScript_gw12y")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
