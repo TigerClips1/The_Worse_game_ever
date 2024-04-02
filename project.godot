@@ -32,6 +32,7 @@ GltichNext="*res://Sceans/gltich_next.tscn"
 DeathSound="*res://Sceans/death_sound.tscn"
 SPookey="*res://Sceans/sevmue_1fx_0d_btuu.tscn"
 Jumpscare="*res://Sceans/jumpscare.tscn"
+DiscordRpc="*res://SRC/DISCORD_RPC.gd"
 
 [display]
 
