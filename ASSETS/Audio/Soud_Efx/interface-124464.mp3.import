@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://piacokqmb8ts"
-path="res://godot/imported/interface-124464.mp3-58390defdb43a0298276ca6771d0136e.mp3str"
+path="res://.godot/imported/interface-124464.mp3-58390defdb43a0298276ca6771d0136e.mp3str"
 
 [deps]
 
 source_file="res://ASSETS/Audio/Soud_Efx/interface-124464.mp3"
-dest_files=["res://godot/imported/interface-124464.mp3-58390defdb43a0298276ca6771d0136e.mp3str"]
+dest_files=["res://.godot/imported/interface-124464.mp3-58390defdb43a0298276ca6771d0136e.mp3str"]
 
 [params]
 

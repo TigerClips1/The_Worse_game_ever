@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://kvkekxe6ipj7"
-path="res://godot/imported/pixel-perfect-112527.mp3-30d84ec9136b95cd863dee40f2d412c5.mp3str"
+path="res://.godot/imported/pixel-perfect-112527.mp3-30d84ec9136b95cd863dee40f2d412c5.mp3str"
 
 [deps]
 
 source_file="res://ASSETS/Audio/Bgm/pixel-perfect-112527.mp3"
-dest_files=["res://godot/imported/pixel-perfect-112527.mp3-30d84ec9136b95cd863dee40f2d412c5.mp3str"]
+dest_files=["res://.godot/imported/pixel-perfect-112527.mp3-30d84ec9136b95cd863dee40f2d412c5.mp3str"]
 
 [params]
 

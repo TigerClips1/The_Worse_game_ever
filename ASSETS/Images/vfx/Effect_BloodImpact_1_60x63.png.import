@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dda8js7ldb7lx"
-path="res://godot/imported/Effect_BloodImpact_1_60x63.png-d3b87e9c4fdae18ec4bb47392d9e49b2.ctex"
+path="res://.godot/imported/Effect_BloodImpact_1_60x63.png-d3b87e9c4fdae18ec4bb47392d9e49b2.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://ASSETS/Images/vfx/Effect_BloodImpact_1_60x63.png"
-dest_files=["res://godot/imported/Effect_BloodImpact_1_60x63.png-d3b87e9c4fdae18ec4bb47392d9e49b2.ctex"]
+dest_files=["res://.godot/imported/Effect_BloodImpact_1_60x63.png-d3b87e9c4fdae18ec4bb47392d9e49b2.ctex"]
 
 [params]
 
