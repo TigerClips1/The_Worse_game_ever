@@ -12,6 +12,7 @@ func _reload_scene():
 		get_tree().change_scene_to_packed(next_level)
 
 func _ready():
+	Level1Bgm.stop()
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	Events.Level_comepiled.connect(_level_completed)
 

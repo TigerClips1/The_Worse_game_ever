@@ -4,6 +4,7 @@ extends Node2D
 @onready var count_down_gray = %Count_Down_Gray
 @onready var count_dowm_text = %Count_Dowm_Text
 @onready var countdown = $Countdown
+@onready var game_Start = $Game
 
 func reload_scene():
 	call_deferred("_reload_scene")
@@ -21,6 +22,9 @@ func _ready():
 	countdown.play("CountDown")
 	await countdown.animation_finished
 	get_tree().paused = false
+	game_Start.play("Timer_Start")
+	Level1Bgm.play()
+	GameOverBgm.stop()
 
 func _level_completed():
 	if not next_level is PackedScene: return

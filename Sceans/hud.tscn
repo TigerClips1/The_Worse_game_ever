@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsdmwf6ca8dak"]
+
+[ext_resource type="Script" path="res://SRC/HUD.gd" id="1_sseys"]
+[ext_resource type="Theme" uid="uid://cr081nyfek6eb" path="res://resources/Panel_Style.tres" id="2_45l0s"]
+[ext_resource type="FontFile" uid="uid://dft6swqgtgbwm" path="res://ASSETS/Font/Hud_font/Anton-Regular.ttf" id="3_08s3d"]
+[ext_resource type="Texture2D" uid="uid://cxaff7r53wpk5" path="res://ASSETS/Misc/tile_0027.png" id="4_7cpe2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0f7pe"]
+font = ExtResource("3_08s3d")
+font_size = 7
+font_color = Color(1, 0, 1, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_sseys")
+
+[node name="Hud_holder" type="Panel" parent="."]
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 39.0
+offset_bottom = 17.0
+theme = ExtResource("2_45l0s")
+
+[node name="TextureRect" type="TextureRect" parent="Hud_holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 13.0
+offset_bottom = 10.0
+texture = ExtResource("4_7cpe2")
+expand_mode = 1
+
+[node name="Hud_counter" type="Label" parent="Hud_holder"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 14.0
+label_settings = SubResource("LabelSettings_0f7pe")
+vertical_alignment = 1

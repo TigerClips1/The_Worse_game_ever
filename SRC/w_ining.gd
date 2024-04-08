@@ -10,6 +10,9 @@ func _ready():
 	await  get_tree().create_timer(5).timeout
 	help_me.hide()
 	get_tree().quit()
+	WalkingSoundEfx.stop()
+	JumpSoundEfx.stop()
+	DeathSound.stop()
 
 func _input(_event):
 	_give_input()

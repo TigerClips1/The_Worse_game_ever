@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb7n4e6476fiu"]
+
+[ext_resource type="FontFile" uid="uid://dft6swqgtgbwm" path="res://ASSETS/Font/Hud_font/Anton-Regular.ttf" id="1_fg1bt"]
+[ext_resource type="Script" path="res://SRC/Run_Out_Time.gd" id="1_uxcvv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hdmbd"]
+font = ExtResource("1_fg1bt")
+font_size = 26
+font_color = Color(1, 0, 0, 1)
+outline_size = 16
+outline_color = Color(1, 0, 1, 1)
+shadow_size = 10
+
+[node name="RUn_out_time" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uxcvv")
+
+[node name="Main_Cam" type="Camera2D" parent="."]
+position = Vector2(172, 92)
+zoom = Vector2(0.8, 0.8)
+
+[node name="SLow" type="Label" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = -8.0
+offset_right = 274.0
+offset_bottom = 32.0
+text = "Run out of Time"
+label_settings = SubResource("LabelSettings_hdmbd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="eNDING" type="Label" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 32.0
+offset_right = 352.0
+offset_bottom = 72.0
+text = "You got the run out of time ending"
+label_settings = SubResource("LabelSettings_hdmbd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fASTER" type="Label" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 72.0
+offset_right = 348.0
+offset_bottom = 112.0
+text = "Be faster Kid"
+label_settings = SubResource("LabelSettings_hdmbd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tIME" type="Label" parent="."]
+layout_mode = 0
+offset_top = 112.0
+offset_right = 351.0
+offset_bottom = 152.0
+text = "Press ENTER TO RESTART"
+label_settings = SubResource("LabelSettings_hdmbd")
+horizontal_alignment = 1
+vertical_alignment = 1

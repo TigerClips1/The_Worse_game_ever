@@ -4,7 +4,12 @@ extends Control
 func _ready():
 	get_tree().paused = false
 	RenderingServer.set_default_clear_color(Color.BLACK)
-
+	WalkingSoundEfx.stop()
+	JumpSoundEfx.stop()
+	DeathSound.stop()
+	Level1Bgm.stop()
+	GameOverBgm.play()
+	
 func _input(_event):
 	_apply_input()
 
@@ -17,4 +22,6 @@ func _action():
 #
 func _apply_input():
 	if Input.is_action_just_released("Enter"):
+		Click.play()
+		await get_tree().create_timer(1).timeout
 		_action()

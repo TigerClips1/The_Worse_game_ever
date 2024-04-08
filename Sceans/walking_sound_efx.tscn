@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt0w3c7yupu6n"]
+
+[ext_resource type="AudioStream" uid="uid://cy805xf2mdmip" path="res://ASSETS/Audio/Soud_Efx/walking-soundscape-200112.mp3" id="1_jvjmi"]
+
+[node name="Walking_sound_efx" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = ExtResource("1_jvjmi")

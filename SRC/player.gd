@@ -40,11 +40,14 @@ func Handlejump():
 	if is_on_floor() or coyote_jump_timer.time_left > 0.0:
 		if Input.is_action_just_pressed("Space"):
 				velocity.y = movementData.jump_velocity
+				JumpSoundEfx.play()
 	elif not is_on_floor():
 			if Input.is_action_just_pressed("Space") and  velocity.y < movementData.jump_velocity / 2:
 				velocity.y = movementData.jump_velocity / 2
+				JumpSoundEfx.play()
 			if Input.is_action_just_pressed("Space") and air_jump:
 				velocity.y = movementData.jump_velocity * 0.8
+				JumpSoundEfx.play()
 				air_jump = false
 
 func Apply_Actlation(input_axis, delta):
@@ -68,6 +71,7 @@ func Apply_air_resistance(input_axis, delta):
 
 func update_Anmation(input_axis):
 	if input_axis != 0:
+		WalkingSoundEfx.play()
 		player_spirte.flip_h = input_axis < 0
 		player_spirte.play("Walk")
 	else:
@@ -81,6 +85,7 @@ func _reload_scene():
 		get_tree().change_scene_to_file("res://Sceans/lost_screen.tscn")
 
 func _on_hazard_detector_area_entered(_area):
+	WalkingSoundEfx.stop()
 	DeathSound.play()
 	DeathSound.autoplay = true
 	get_tree().paused = true
@@ -88,23 +93,7 @@ func _on_hazard_detector_area_entered(_area):
 	await death._play()
 	await  LevelFade._fade_to_black()
 	reload_scene()
-	#AddFile._loading_file()
 	LevelFade._fade_from_black()
-
-func reload_scene_easter():
-	call_deferred("_reload_scene_easter")
-
-func _reload_scene_easter():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/end_cheat.tscn")
-
-func _on_hazard_easter_egg_area_entered(_area):
-	await  LevelFade._fade_to_black()
-	reload_scene_easter()
-	LevelFade._fade_from_black()
-	OS.shell_open("https://www.youtube.com/watch?v=EpX1_YJPGAY")
-	await  get_tree().create_timer(5).timeout
-	get_tree().quit()
 
 func _input(_event):
 	_apply_input()

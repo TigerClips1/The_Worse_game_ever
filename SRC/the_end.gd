@@ -2,8 +2,6 @@ extends Node2D
 
 @export var next_level : PackedScene
 
-#var input_axis = Input.get_axis("Alt", "plus")
-
 func _ready():
 	RenderingServer.set_default_clear_color(Color.CRIMSON)
 	Events.Level_comepiled.connect(_level_completed)
@@ -39,4 +37,3 @@ func _level_completed():
 	get_tree().paused = false
 	reload_scene()
 	LevelFade._fade_from_black()
-	

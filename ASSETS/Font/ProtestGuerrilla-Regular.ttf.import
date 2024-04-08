@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://chambj21cikbp"
-path="res://.godot/imported/ProtestGuerrilla-Regular.ttf-e68fe307f56e2861257c4438db4ec1ee.fontdata"
+path="res://godot/imported/ProtestGuerrilla-Regular.ttf-e68fe307f56e2861257c4438db4ec1ee.fontdata"
 
 [deps]
 
 source_file="res://ASSETS/Font/ProtestGuerrilla-Regular.ttf"
-dest_files=["res://.godot/imported/ProtestGuerrilla-Regular.ttf-e68fe307f56e2861257c4438db4ec1ee.fontdata"]
+dest_files=["res://godot/imported/ProtestGuerrilla-Regular.ttf-e68fe307f56e2861257c4438db4ec1ee.fontdata"]
 
 [params]
 

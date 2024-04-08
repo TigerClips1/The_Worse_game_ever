@@ -1,14 +1,10 @@
-[gd_scene load_steps=57 format=3 uid="uid://rfbrfr8x5lre"]
+[gd_scene load_steps=55 format=3 uid="uid://rfbrfr8x5lre"]
 
 [ext_resource type="Script" path="res://SRC/player.gd" id="1_n01tu"]
 [ext_resource type="Resource" uid="uid://j1vocnco4nc3" path="res://resources/Defult_Play_Data.tres" id="2_n7rif"]
 [ext_resource type="Texture2D" uid="uid://dda8js7ldb7lx" path="res://ASSETS/Images/vfx/Effect_BloodImpact_1_60x63.png" id="3_qma4p"]
 [ext_resource type="Script" path="res://SRC/Death.gd" id="4_ry325"]
 [ext_resource type="Texture2D" uid="uid://gn8s7mo4kxf7" path="res://ASSETS/Images/Player/tilemap-characters.png" id="5_8iypi"]
-[ext_resource type="PackedScene" uid="uid://cs5haxf5j8cty" path="res://Sceans/timer.tscn" id="6_iyjh2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_60y3p"]
-size = Vector2(9.5, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejsfo"]
 size = Vector2(10, 23)
@@ -338,7 +334,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
-"speed": 10.0
+"speed": 60.0
 }, {
 "frames": [],
 "loop": false,
@@ -347,25 +343,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7h8af"]
-size = Vector2(12, 21)
+size = Vector2(14, 23)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(158, 119)
+position = Vector2(158, 112)
 collision_layer = 2
 floor_constant_speed = true
 floor_snap_length = 3.0
 script = ExtResource("1_n01tu")
 movementData = ExtResource("2_n7rif")
 
-[node name="Hazard_EasterEgg" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 8
-monitorable = false
-
-[node name="Area_Troll_Detectoer" type="CollisionShape2D" parent="Hazard_EasterEgg"]
-position = Vector2(2, -51)
-shape = SubResource("RectangleShape2D_60y3p")
-debug_color = Color(0.94902, 0, 0.568627, 0.419608)
+[node name="Player_Camrea" type="Camera2D" parent="."]
+position = Vector2(3, -61)
+scale = Vector2(3.51067, 23.2363)
+zoom = Vector2(1.4, 1.4)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="Hazard_detector" type="Area2D" parent="."]
 process_mode = 3
@@ -380,7 +373,7 @@ shape = SubResource("RectangleShape2D_ejsfo")
 debug_color = Color(0, 0.627451, 0.494118, 0.419608)
 
 [node name="Keys" type="Area2D" parent="."]
-collision_layer = 16
+collision_layer = 2
 collision_mask = 0
 monitoring = false
 
@@ -399,13 +392,6 @@ position = Vector2(3, -51)
 shape = SubResource("RectangleShape2D_avl2m")
 debug_color = Color(0.694118, 0.282353, 1, 0.419608)
 
-[node name="Player_Camrea" type="Camera2D" parent="."]
-position = Vector2(0, -50)
-scale = Vector2(3.51067, 23.2363)
-zoom = Vector2(1.7, 1.7)
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-
 [node name="Player_Spirte" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -51)
 sprite_frames = SubResource("SpriteFrames_jc0bd")
@@ -413,14 +399,16 @@ animation = &"Walk"
 
 [node name="Death" type="AnimatedSprite2D" parent="."]
 process_mode = 3
-position = Vector2(0, -48.5)
+position = Vector2(2, -51)
 scale = Vector2(0.366667, 0.396825)
 sprite_frames = SubResource("SpriteFrames_awcfm")
 animation = &"Death"
+frame = 40
+frame_progress = 1.0
 script = ExtResource("4_ry325")
 
 [node name="Player_area" type="CollisionShape2D" parent="."]
-position = Vector2(2, -52)
+position = Vector2(2, -51.5)
 shape = SubResource("RectangleShape2D_7h8af")
 debug_color = Color(0.960784, 0.196078, 0, 0.419608)
 
@@ -428,8 +416,4 @@ debug_color = Color(0.960784, 0.196078, 0, 0.419608)
 wait_time = 0.1
 one_shot = true
 
-[node name="TImer_Count" parent="." instance=ExtResource("6_iyjh2")]
-position = Vector2(-154, -116)
-
-[connection signal="area_entered" from="Hazard_EasterEgg" to="." method="_on_hazard_easter_egg_area_entered"]
 [connection signal="area_entered" from="Hazard_detector" to="." method="_on_hazard_detector_area_entered"]

@@ -6,13 +6,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xgls"]
 
 [node name="Node2D" type="Node2D"]
-process_mode = 3
 script = ExtResource("1_8yb10")
 
 [node name="Area2D" type="Area2D" parent="."]
-process_mode = 3
 collision_layer = 0
-collision_mask = 16
+collision_mask = 2
 monitorable = false
 
 [node name="Area" type="CollisionShape2D" parent="Area2D"]
@@ -21,7 +19,6 @@ shape = SubResource("CircleShape2D_6xgls")
 debug_color = Color(0, 0.647059, 0.258824, 0.419608)
 
 [node name="Key_art" type="Sprite2D" parent="."]
-process_mode = 3
 texture = ExtResource("1_m5v0p")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

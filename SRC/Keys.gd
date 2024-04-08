@@ -1,5 +1,11 @@
 extends Node2D
 
-func _on_area_2d_area_entered(_area:Area2D):
-	Events._gain_keys(1)
+@onready var area_2d = $Area2D
+
+signal key_Cellected
+
+func _on_area_2d_body_entered(_body:Node2D):
+	KeyPickupSounds.play()
+	emit_signal("key_Cellected")
+	area_2d.set_collision_mask_value(2, false)
 	queue_free()

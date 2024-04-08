@@ -1,6 +1,5 @@
 extends Container
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	MenuMusic.play()
@@ -11,4 +10,3 @@ func _ready():
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Sceans/HeadPhone_Warning.tscn")
 	LevelFade._fade_from_black()
-	

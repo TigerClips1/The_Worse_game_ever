@@ -3,7 +3,6 @@ extends Control
 @onready var vsync = $"."
 @onready var vsync_check_box = $VBoxContainer/Vsync_Check_Box
 
-
 func _ready():
 	_check_Vsync()
 	vsync_check_box.grab_focus()

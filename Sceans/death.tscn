@@ -212,37 +212,37 @@ region = Rect2(0, 252, 60, 63)
 [sub_resource type="SpriteFrames" id="SpriteFrames_rl067"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_kkxsn")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_nc4ee")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_ptd4l")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_60fmo")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_axajk")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_i0ghb")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_erh6s")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_nq8rw")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_exl3w")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_30eb5")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_hwny0")
 }, {
 "duration": 1.0,
@@ -358,7 +358,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 10.0
+"speed": 30.0
 }, {
 "frames": [],
 "loop": false,
@@ -373,3 +373,5 @@ script = SubResource("GDScript_jvaae")
 process_mode = 3
 position = Vector2(7, 12)
 sprite_frames = SubResource("SpriteFrames_rl067")
+frame = 47
+frame_progress = 1.0

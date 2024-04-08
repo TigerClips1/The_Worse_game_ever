@@ -56,11 +56,10 @@ offset_right = 9.0
 offset_bottom = 6.0
 color = Color(0.811765, 0.207843, 1, 0.2)
 
-[node name="Glitch_Key" type="AnimationPlayer" parent="."]
+[node name="Glitch_Key_ANmie" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_qb473")
 }
-autoplay = "Glitch_key"
 
 [node name="Glitch_Key_2D" type="Area2D" parent="."]
 collision_layer = 0

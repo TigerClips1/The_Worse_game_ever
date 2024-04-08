@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1x1ppoux27d8"]
+
+[ext_resource type="AudioStream" uid="uid://l135d2h3yt1n" path="res://ASSETS/Audio/Soud_Efx/toy-button-105724.mp3" id="1_k1lfp"]
+
+[node name="Jump_sound_efx" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_k1lfp")
+bus = &"Sound"
+area_mask = 2

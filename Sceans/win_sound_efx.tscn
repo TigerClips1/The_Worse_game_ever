@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chuspdgnbmskb"]
+
+[ext_resource type="AudioStream" uid="uid://cympum6bq7gb1" path="res://ASSETS/Audio/Soud_Efx/win-short-38508.mp3" id="1_tqvab"]
+
+[node name="Win_sound_efx" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_tqvab")

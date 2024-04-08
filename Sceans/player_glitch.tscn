@@ -298,7 +298,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
-"speed": 10.0
+"speed": 68.01
 }, {
 "frames": [],
 "loop": false,

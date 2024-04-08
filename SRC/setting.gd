@@ -6,7 +6,6 @@ extends Control
 @onready var music = $Slider/Slider_Hitbox/Slider_Vbox/Music
 @onready var sound = $Slider/Slider_Hitbox/Slider_Vbox/Sound
 
-
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	LevelFade._fade_from_black()
@@ -16,13 +15,10 @@ func _ready():
 	music.grab_focus()
 	sound.grab_focus()
 
-
-
 func _on_button_pressed():
 	Click.play()
 	var music_Bus = AudioServer.get_bus_index("Master")
 	AudioServer.set_bus_mute(music_Bus, not AudioServer.is_bus_mute(music_Bus))
-
 
 func _on_button_pressed_back():
 	Click.play()

@@ -12,19 +12,23 @@ config_version=5
 
 config/name="The Worse game ever made"
 config/description="THe Worse_game_Ever is a game that so trash "
-config/version="V1.0"
+config/version="1.0 Demo"
 run/main_scene="res://Sceans/warning.tscn"
+config/use_hidden_project_data_directory=false
 config/features=PackedStringArray("4.2", "GL Compatibility")
-run/max_fps=60
+run/max_fps=120
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://ASSETS/Images/Icon/icon.png"
+
+[audio]
+
+buses/default_bus_layout="res://resources/default_bus_layout.tres"
 
 [autoload]
 
 Events="*res://SRC/Events.gd"
 LevelFade="*res://Sceans/level_fade.tscn"
-AddFile="*res://SRC/Add_File.gd"
 CreditsMusic="*res://Sceans/credits_music.tscn"
 MenuMusic="*res://Sceans/menu_music.tscn"
 Click="*res://Sceans/click.tscn"
@@ -32,7 +36,17 @@ GltichNext="*res://Sceans/gltich_next.tscn"
 DeathSound="*res://Sceans/death_sound.tscn"
 SPookey="*res://Sceans/sevmue_1fx_0d_btuu.tscn"
 Jumpscare="*res://Sceans/jumpscare.tscn"
-DiscordRpc="*res://SRC/DISCORD_RPC.gd"
+JumpSoundEfx="*res://Sceans/jump_sound_efx.tscn"
+WalkingSoundEfx="*res://Sceans/walking_sound_efx.tscn"
+Level1Bgm="*res://Sceans/level_1_bgm.tscn"
+KeyPickupSounds="*res://Sceans/key_pickup_sounds.tscn"
+GameOverBgm="*res://Sceans/game_over_bgm.tscn"
+WinSoundEfx="*res://Sceans/win_sound_efx.tscn"
+
+[debug]
+
+file_logging/enable_file_logging=true
+settings/stdout/print_fps=true
 
 [display]
 
@@ -47,6 +61,10 @@ window/vsync/vsync_mode=0
 [dotnet]
 
 project/assembly_name="The Worse game ever made"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [gui]
 
@@ -119,12 +137,15 @@ plus={
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Hazards"
-2d_physics/layer_4="Hazzards_Anti_Cheat"
 2d_physics/layer_5="Keys"
 2d_physics/layer_6="Box"
+2d_physics/layer_7="Hazareds_Area_troll"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+reflections/sky_reflections/texture_array_reflections=false
+textures/default_filters/anisotropic_filtering_level=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false

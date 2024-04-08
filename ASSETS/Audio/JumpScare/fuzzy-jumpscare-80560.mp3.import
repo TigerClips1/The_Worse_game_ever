@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b0wa4vn2k3ap2"
-path="res://.godot/imported/fuzzy-jumpscare-80560.mp3-a523fd1cc04872dae20600e4d6085459.mp3str"
+path="res://godot/imported/fuzzy-jumpscare-80560.mp3-a523fd1cc04872dae20600e4d6085459.mp3str"
 
 [deps]
 
 source_file="res://ASSETS/Audio/JumpScare/fuzzy-jumpscare-80560.mp3"
-dest_files=["res://.godot/imported/fuzzy-jumpscare-80560.mp3-a523fd1cc04872dae20600e4d6085459.mp3str"]
+dest_files=["res://godot/imported/fuzzy-jumpscare-80560.mp3-a523fd1cc04872dae20600e4d6085459.mp3str"]
 
 [params]
 

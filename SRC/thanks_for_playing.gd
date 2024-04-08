@@ -27,7 +27,6 @@ func exit_input():
 	if Input.is_action_just_released("Exit"):
 		_return()
 
-
 func _credit_move():
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()

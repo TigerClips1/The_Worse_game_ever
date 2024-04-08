@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1cyad3u2h4ud"]
+
+[ext_resource type="AudioStream" uid="uid://kvkekxe6ipj7" path="res://ASSETS/Audio/Bgm/pixel-perfect-112527.mp3" id="1_dxkmd"]
+
+[node name="level1_bgm" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_dxkmd")
+bus = &"Music"
