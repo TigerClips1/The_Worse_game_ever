@@ -8,12 +8,29 @@
 font_names = PackedStringArray("Noto Music")
 font_italic = true
 generate_mipmaps = true
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_txlc0"]
 font = SubResource("SystemFont_mcdif")
 font_size = 10
 shadow_size = 11
 shadow_color = Color(0.811765, 0, 0.552941, 0)
+
+[sub_resource type="Animation" id="Animation_pk2qc"]
+resource_name = "Key_Glitch"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GLitch_HUD/HUDS_GLITCHS/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.360784, 1, 0.545098), Color(1, 1, 1, 0.545098), Color(0.584314, 0, 0.176471, 0.545098), Color(0.952941, 0, 0.890196, 0.545098), Color(0, 0.670588, 0.623529, 0.545098), Color(0.192157, 0, 0.576471, 0.545098), Color(0.564706, 0.6, 0, 0.545098), Color(0.901961, 0, 0.929412, 1), Color(1, 1, 1, 1), Color(0.0196078, 0.0196078, 0.0196078, 1), Color(1, 0.388235, 0.513726, 0.572549)]
+}
 
 [sub_resource type="Animation" id="Animation_4o7fd"]
 resource_name = "Label_Glitch"
@@ -56,22 +73,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 0.360784, 1, 0.545098)]
-}
-
-[sub_resource type="Animation" id="Animation_pk2qc"]
-resource_name = "Key_Glitch"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GLitch_HUD/HUDS_GLITCHS/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 0.360784, 1, 0.545098), Color(1, 1, 1, 0.545098), Color(0.584314, 0, 0.176471, 0.545098), Color(0.952941, 0, 0.890196, 0.545098), Color(0, 0.670588, 0.623529, 0.545098), Color(0.192157, 0, 0.576471, 0.545098), Color(0.564706, 0.6, 0, 0.545098), Color(0.901961, 0, 0.929412, 1), Color(1, 1, 1, 1), Color(0.0196078, 0.0196078, 0.0196078, 1), Color(1, 0.388235, 0.513726, 0.572549)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gru3d"]
