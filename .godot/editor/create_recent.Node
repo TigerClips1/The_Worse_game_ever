@@ -1,0 +1,14 @@
+CollisionShape2D
+Area2D
+AnimationPlayer
+AnimationTree
+Label
+Camera2D
+Node2D
+VideoStreamPlayer
+ColorRect
+TextureRect
+Panel
+CanvasLayer
+Sprite2D
+VBoxContainer

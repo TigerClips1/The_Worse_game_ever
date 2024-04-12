@@ -8,13 +8,14 @@ func _ready():
 
 func _input(_event):
 	if _event is InputEventKey and _event.pressed:
-		if _event.keycode == KEY_ALT and  KEY_TAB:
-			get_tree().paused = true
-			await  LevelFade._fade_to_black()
-			reload_scene_screat()
-			LevelFade._fade_from_black()
-			GltichNext.play()
-			get_tree().paused = false
+		if _event.keycode == KEY_ALT:
+			if _event.shift_pressed:
+				get_tree().paused = true
+				await  LevelFade._fade_to_black()
+				reload_scene_screat()
+				LevelFade._fade_from_black()
+				GltichNext.play()
+				get_tree().paused = false
 
 func reload_scene():
 	call_deferred("_reload_scene")

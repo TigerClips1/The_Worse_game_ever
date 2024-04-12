@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dd4423wmdh03"]
+
+[node name="Hazards_Horror" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false

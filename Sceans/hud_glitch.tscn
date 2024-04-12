@@ -1,0 +1,138 @@
+[gd_scene load_steps=10 format=3 uid="uid://c15xgmlersmpi"]
+
+[ext_resource type="Texture2D" uid="uid://cxaff7r53wpk5" path="res://ASSETS/Misc/tile_0027.png" id="1_ekp8l"]
+[ext_resource type="Theme" uid="uid://cr081nyfek6eb" path="res://resources/Panel_Style.tres" id="1_vlecs"]
+[ext_resource type="Script" path="res://SRC/hud_glitch.gd" id="1_y044u"]
+
+[sub_resource type="SystemFont" id="SystemFont_mcdif"]
+font_names = PackedStringArray("Noto Music")
+font_italic = true
+generate_mipmaps = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_txlc0"]
+font = SubResource("SystemFont_mcdif")
+font_size = 10
+shadow_size = 11
+shadow_color = Color(0.811765, 0, 0.552941, 0)
+
+[sub_resource type="Animation" id="Animation_4o7fd"]
+resource_name = "Label_Glitch"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GLitch_HUD/HUDS_GLITCHS/Count:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.431373, 0.913725, 1), Color(0.843137, 0, 0.772549, 1), Color(0.258824, 1, 0.937255, 1), Color(0, 0.839216, 0.392157, 1), Color(0.764706, 0.717647, 0.0313726, 1), Color(0.764706, 0, 0.0313726, 1), Color(0.0509804, 1, 0.305882, 1), Color(0.0509804, 0.0196078, 0.305882, 1), Color(1, 1, 1, 1), Color(0.968627, 0.172549, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qwh06"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GLitch_HUD/HUDS_GLITCHS/Count:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GLitch_HUD/HUDS_GLITCHS/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.360784, 1, 0.545098)]
+}
+
+[sub_resource type="Animation" id="Animation_pk2qc"]
+resource_name = "Key_Glitch"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GLitch_HUD/HUDS_GLITCHS/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.360784, 1, 0.545098), Color(1, 1, 1, 0.545098), Color(0.584314, 0, 0.176471, 0.545098), Color(0.952941, 0, 0.890196, 0.545098), Color(0, 0.670588, 0.623529, 0.545098), Color(0.192157, 0, 0.576471, 0.545098), Color(0.564706, 0.6, 0, 0.545098), Color(0.901961, 0, 0.929412, 1), Color(1, 1, 1, 1), Color(0.0196078, 0.0196078, 0.0196078, 1), Color(1, 0.388235, 0.513726, 0.572549)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gru3d"]
+_data = {
+"Key_Glitch": SubResource("Animation_pk2qc"),
+"Label_Glitch": SubResource("Animation_4o7fd"),
+"RESET": SubResource("Animation_qwh06")
+}
+
+[node name="HUD_GLITCH" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y044u")
+
+[node name="GLitch_HUD" type="CanvasLayer" parent="."]
+
+[node name="HUDS_GLITCHS" type="Panel" parent="GLitch_HUD"]
+offset_right = 40.0
+offset_bottom = 11.0
+theme = ExtResource("1_vlecs")
+
+[node name="ColorRect" type="ColorRect" parent="GLitch_HUD/HUDS_GLITCHS"]
+z_index = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 15.0
+offset_bottom = 8.0
+color = Color(1, 0.360784, 1, 0.545098)
+
+[node name="TextureRect" type="TextureRect" parent="GLitch_HUD/HUDS_GLITCHS"]
+z_index = -2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 15.0
+offset_bottom = 9.0
+texture = ExtResource("1_ekp8l")
+expand_mode = 1
+
+[node name="Count" type="Label" parent="GLitch_HUD/HUDS_GLITCHS"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = -5.0
+offset_right = 35.0
+offset_bottom = 18.0
+text = "0"
+label_settings = SubResource("LabelSettings_txlc0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Glitch" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gru3d")
+}
+
+[node name="Glitch2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gru3d")
+}

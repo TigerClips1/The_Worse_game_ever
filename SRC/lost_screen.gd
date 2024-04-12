@@ -22,6 +22,7 @@ func _action():
 #
 func _apply_input():
 	if Input.is_action_just_released("Enter"):
+		GameOverBgm.stop()
 		Click.play()
 		await get_tree().create_timer(1).timeout
 		_action()

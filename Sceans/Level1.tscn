@@ -124,6 +124,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main_HUD:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_7eigi"]
 resource_name = "Timer_Start"
@@ -148,6 +160,18 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main_HUD:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -342,7 +366,7 @@ script = ExtResource("1_hph7m")
 next_level = ExtResource("2_o888i")
 
 [node name="Player" parent="." instance=ExtResource("5_3hi3u")]
-position = Vector2(24, 131)
+position = Vector2(25, 131)
 
 [node name="Game cam" type="Camera2D" parent="."]
 position = Vector2(159, 85)
@@ -393,7 +417,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 0.419608)
+color = Color(0, 0, 0, 0.898039)
 
 [node name="Main_Center" type="CenterContainer" parent="Count_Down_canvus/Count_Down_Gray"]
 layout_mode = 1
@@ -504,6 +528,7 @@ position = Vector2(136, 64)
 position = Vector2(207, 118)
 
 [node name="Main_HUD" parent="." instance=ExtResource("12_n2edc")]
+visible = false
 
 [node name="Box" parent="." instance=ExtResource("9_ybyft")]
 position = Vector2(279, 63)

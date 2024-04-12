@@ -10,7 +10,6 @@ func _keyss():
 func _on_key_cellected():
 	Keyss += 1
 	_keyss()
-	print(Keyss)
 
 func reload_scene_easter():
 	call_deferred("_reload_scene_easter")
@@ -23,7 +22,7 @@ func _Troll_ending():
 	reload_scene_easter()
 
 func _on_box_key_count():
-	if Keyss <= 1:
+	if Keyss != 4 and Keyss != 5 and Keyss != 7 and Keyss != 16:
 		_Troll_ending()
 	elif Keyss == 4 or  Keyss == 5 or Keyss == 7 or Keyss == 16:
 		WinSoundEfx.play()

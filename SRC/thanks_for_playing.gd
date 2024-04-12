@@ -1,4 +1,6 @@
 extends Control
+@onready var error = $ERROR
+@onready var glitch = $Glitch
 
 func _ready():
 	CreditsMusic.stop()
@@ -31,5 +33,9 @@ func _credit_move():
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	get_tree().paused = false
+	glitch.play("Cool_Dance")
+	error.show()
+	Addfile._del()
+	glitch.stop()
 	get_tree().quit()
 	LevelFade._fade_from_black()

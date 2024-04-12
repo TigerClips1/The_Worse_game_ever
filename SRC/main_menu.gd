@@ -7,6 +7,7 @@ func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	start.grab_focus()
 	MenuMusic.autoplay = true
+	
 
 func _on_start_pressed():
 	Click.play()
@@ -35,3 +36,19 @@ func _on_quit_pressed():
 func _on_options_pressed():
 	Click.play()
 	get_tree().change_scene_to_file("res://Sceans/setting.tscn")
+
+
+func _on_v_box_container_mouse_entered():
+	Click.play()
+
+
+func _on_v_box_container_mouse_exited():
+	Click.play()
+
+
+func _on_v_box_container_focus_entered():
+	Click.play()
+
+
+func _on_v_box_container_focus_exited():
+	Click.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://0dytv66g2inu"]
+[gd_scene load_steps=9 format=3 uid="uid://0dytv66g2inu"]
 
 [ext_resource type="Script" path="res://SRC/thanks_for_playing.gd" id="1_upgwn"]
 
@@ -8,6 +8,58 @@ font_names = PackedStringArray("Open Sans")
 [sub_resource type="LabelSettings" id="LabelSettings_udcuh"]
 font = SubResource("SystemFont_ejbaw")
 font_color = Color(0.992157, 0, 0.47451, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_lmj8i"]
+font_names = PackedStringArray("Noto Sans Gujarati UI")
+font_italic = true
+generate_mipmaps = true
+force_autohinter = true
+multichannel_signed_distance_field = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_t5qmw"]
+font = SubResource("SystemFont_lmj8i")
+font_size = 13
+font_color = Color(0.458824, 1, 0.733333, 1)
+outline_size = 1
+shadow_size = 12
+shadow_color = Color(0, 0, 0, 0.635294)
+
+[sub_resource type="Animation" id="Animation_1cl0u"]
+resource_name = "Cool_Dance"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ERROR:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.458824, 1, 0.733333, 1), Color(0.701961, 0.470588, 0.976471, 1), Color(1, 0.364706, 0.545098, 1), Color(0, 0.858824, 0.65098, 1), Color(0.635294, 0, 0.101961, 1), Color(0.65098, 0, 0.258824, 1), Color(0, 0.384314, 0.403922, 1), Color(0.466667, 0.682353, 0, 1), Color(0.627451, 0.0745098, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ep8fs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ERROR:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.458824, 1, 0.733333, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cb6ry"]
+_data = {
+"Cool_Dance": SubResource("Animation_1cl0u"),
+"RESET": SubResource("Animation_ep8fs")
+}
 
 [node name="Thanks for playing" type="Control"]
 layout_mode = 3
@@ -19,8 +71,8 @@ grow_vertical = 2
 script = ExtResource("1_upgwn")
 
 [node name="THanks" type="Camera2D" parent="."]
-position = Vector2(167, 89)
-zoom = Vector2(0.9, 0.9)
+position = Vector2(298, 100)
+zoom = Vector2(0.3, 0.3)
 
 [node name="Good_Bye_Player" type="Label" parent="."]
 layout_mode = 1
@@ -38,3 +90,20 @@ God bless "
 label_settings = SubResource("LabelSettings_udcuh")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ERROR" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -183.0
+offset_top = 123.0
+offset_right = 812.0
+offset_bottom = 146.0
+text = "ERROR GAME Executable not found enabling emergency quit HELP ME THE GAME HAVE FULL CONTROL OVER THE COMPUTER please re install the game"
+label_settings = SubResource("LabelSettings_t5qmw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Glitch" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cb6ry")
+}

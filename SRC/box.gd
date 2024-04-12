@@ -10,7 +10,3 @@ func _on_box_area_area_entered(_area:Area2D):
 	box_area.set_collision_mask_value(6,false)
 	WinSoundEfx.play()
 	queue_free()
-	
-
-
-

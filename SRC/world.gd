@@ -25,6 +25,7 @@ func _ready():
 	game_Start.play("Timer_Start")
 	Level1Bgm.play()
 	GameOverBgm.stop()
+	Click.stop()
 
 func _level_completed():
 	if not next_level is PackedScene: return
@@ -33,9 +34,11 @@ func _level_completed():
 	get_tree().paused = false
 	reload_scene()
 	LevelFade._fade_from_black()
+	
 
 func _start_over():
 	if is_inside_tree():
 		get_tree().change_scene_to_file("res://Sceans/Level1.tscn")
+
 func _action():
 	call_deferred("_start_over")

@@ -3,12 +3,11 @@
 8.  add horror
 9.  add youtuber easteregg
 10. add sounds and music and bg music
-12. make it where it will add file
 13. add screat ending and level
 14. add code comments
-15. comeplate the horrors level 
 16. add enmeys
 17. fix more spelling
 18. figure out how to use DiscordRPC/Steam api for an easter egg
 19. Orgnaze the game source code to make it nice
 20. orgnaze all the nodes
+21. Add enmey using pathfinding in godot 

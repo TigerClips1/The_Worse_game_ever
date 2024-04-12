@@ -3,6 +3,8 @@ extends Control
 func _ready():
 	get_tree().paused = false
 	RenderingServer.set_default_clear_color(Color.BLACK)
+	WalkingSoundEfx.stop()
+	Level1Bgm.stop()
 
 func _input(_event):
 	_apply_input()

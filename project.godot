@@ -19,6 +19,8 @@ run/max_fps=120
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://ASSETS/Images/Icon/icon.png"
+config/macos_native_icon="res://ASSETS/Images/Icon/icon.png"
+config/windows_native_icon="res://ASSETS/Images/Icon/icon.png"
 
 [audio]
 
@@ -41,6 +43,7 @@ Level1Bgm="*res://Sceans/level_1_bgm.tscn"
 KeyPickupSounds="*res://Sceans/key_pickup_sounds.tscn"
 GameOverBgm="*res://Sceans/game_over_bgm.tscn"
 WinSoundEfx="*res://Sceans/win_sound_efx.tscn"
+Addfile="*res://SRC/Addfile.gd"
 
 [debug]
 
@@ -74,6 +77,7 @@ theme/custom="res://resources/Defulit.tres"
 animation_library={
 "animation/fps": 60.0
 }
+image={}
 
 [input]
 
@@ -136,9 +140,11 @@ plus={
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Hazards"
+2d_physics/layer_4="Hazards_Horror"
 2d_physics/layer_5="Keys"
 2d_physics/layer_6="Box"
 2d_physics/layer_7="Hazareds_Area_troll"
+2d_physics/layer_8="Addfiles_area"
 
 [rendering]
 

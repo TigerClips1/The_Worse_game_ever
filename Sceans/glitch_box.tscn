@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://0v2lnk1lafu8"]
+
+[ext_resource type="Script" path="res://SRC/glitch_box.gd" id="1_ecbed"]
+[ext_resource type="Texture2D" uid="uid://c4e4i73ldrlgc" path="res://ASSETS/Misc/tile_0028.png" id="1_hr3jb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mlsi"]
+
+[sub_resource type="Animation" id="Animation_8a8dd"]
+resource_name = "Glitch"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.368627, 0.552941, 0.709804), Color(0, 0.741176, 0.482353, 0.709804), Color(1, 1, 1, 0.709804), Color(0, 0.741176, 0.768627, 0.709804), Color(0, 0.776471, 0.45098, 0.709804), Color(0.811765, 0, 0.215686, 0.709804), Color(0.74902, 0, 0.760784, 0.709804), Color(0.917647, 0, 0.129412, 0.709804), Color(0.839216, 0, 0.843137, 0.709804)]
+}
+
+[sub_resource type="Animation" id="Animation_qheyl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.368627, 0.552941, 0.709804)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1lt60"]
+_data = {
+"Glitch": SubResource("Animation_8a8dd"),
+"RESET": SubResource("Animation_qheyl")
+}
+
+[node name="Glitch_Box" type="Node2D"]
+script = ExtResource("1_ecbed")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 10
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = 7.0
+color = Color(1, 0.368627, 0.552941, 0.709804)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hr3jb")
+
+[node name="Box_area" type="Area2D" parent="."]
+
+[node name="Win_Area" type="CollisionShape2D" parent="Box_area"]
+shape = SubResource("CircleShape2D_0mlsi")
+debug_color = Color(0.980392, 0, 0.368627, 0.419608)
+
+[node name="Glitch_Fun" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1lt60")
+}

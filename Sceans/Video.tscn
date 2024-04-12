@@ -1,0 +1,105 @@
+[gd_scene load_steps=8 format=3 uid="uid://bs87p4lyi2kv"]
+
+[ext_resource type="Script" path="res://SRC/Video.gd" id="1_ckdu4"]
+[ext_resource type="VideoStream" path="res://ASSETS/Misc/Ahkjsefehbjikedsbjkwe.ogv" id="1_v1o5u"]
+
+[sub_resource type="SystemFont" id="SystemFont_jxs02"]
+font_names = PackedStringArray("Noto Sans Hebrew")
+
+[sub_resource type="LabelSettings" id="LabelSettings_j2v48"]
+font = SubResource("SystemFont_jxs02")
+font_size = 32
+font_color = Color(1, 0.0509804, 0, 1)
+shadow_size = 3
+shadow_color = Color(0.258824, 0.270588, 0.882353, 1)
+
+[sub_resource type="Animation" id="Animation_ce8du"]
+resource_name = "Timer"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DEl_Timer:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3, 2.8, 4.6, 5.6, 6.8, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["ERROR All Game Files Will be Deleted in 5 Sec ERROR game data corrupted ERROR", "ERROR All Game Files Will be Deleted in 4  Sec ERROR game data corrupted ERROR", "ERROR All Game Files Will be Deleted in 3  Sec ERROR game data corrupted ERROR", "ERROR All Game Files Will be Deleted in 2  Sec ERROR game data corrupted ERROR", "ERROR All Game Files Will be Deleted in 1  Sec ERROR game data corrupted ERROR", "ERROR All Game Files Will be Deleted in 0  Sec ERROR game data corrupted ERROR", "Deleting  all game files ...", "Done Good Bye"]
+}
+
+[sub_resource type="Animation" id="Animation_70mxn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DEl_Timer:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["ERROR All Game Files Will be Deleted in 5 Sec ERROR game data corrupted ERROR"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4bymx"]
+_data = {
+"RESET": SubResource("Animation_70mxn"),
+"Timer": SubResource("Animation_ce8du")
+}
+
+[node name="VIdeo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ckdu4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.2, 0.2)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.5
+anchor_top = -2.5
+anchor_right = 2.5
+anchor_bottom = 2.5
+offset_left = 29.0
+offset_top = 4.0
+offset_right = 29.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_v1o5u")
+autoplay = true
+expand = true
+
+[node name="DEl_Timer" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.028
+anchor_top = -0.489
+anchor_right = 1.862
+anchor_bottom = 0.511
+offset_left = -0.039978
+offset_top = 0.0200043
+offset_right = 0.159973
+offset_bottom = 0.0199966
+grow_horizontal = 2
+grow_vertical = 2
+text = "ERROR All Game Files Will be Deleted in 5 Sec ERROR game data corrupted ERROR"
+label_settings = SubResource("LabelSettings_j2v48")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ERROR_PLEASE_HELP ME" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4bymx")
+}
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

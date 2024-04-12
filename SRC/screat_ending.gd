@@ -14,4 +14,3 @@ func _Glitch():
 	await glich.animation_finished
 	glich.play("RESET")
 	await  glich.animation_finished
-	
