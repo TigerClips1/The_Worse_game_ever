@@ -1,3 +1,5 @@
+DirectionalLight2D
+TileMap
 CollisionShape2D
 Area2D
 AnimationPlayer
@@ -11,4 +13,3 @@ TextureRect
 Panel
 CanvasLayer
 Sprite2D
-VBoxContainer

@@ -1,11 +1,12 @@
-res://Sceans/level_3.tscn
 res://resources/Panel_Style.tres
+res://Sceans/maze_level.tscn
 res://Sceans/main_menu.tscn
 res://Sceans/hud.tscn
 res://Sceans/Level1.tscn
 res://Sceans/end_cheat.tscn
 res://Sceans/lost_screen.tscn
 res://Sceans/level_2.tscn
+res://Sceans/level_3.tscn
 res://Sceans/Run_Out_Time.tscn
 res://Sceans/player.tscn
 res://Sceans/the_end.tscn
@@ -19,3 +20,6 @@ res://Sceans/gltch_key.tscn
 res://Sceans/hud_glitch.tscn
 res://Sceans/Video.tscn
 res://Sceans/hazards_horror.tscn
+res://SRC/maze_level.gd
+res://SRC/player_glitch.gd
+res://Sceans/player_glitch.tscn
