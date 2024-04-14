@@ -1,5 +1,5 @@
-res://resources/Panel_Style.tres
 res://Sceans/maze_level.tscn
+res://resources/Panel_Style.tres
 res://Sceans/main_menu.tscn
 res://Sceans/hud.tscn
 res://Sceans/Level1.tscn
@@ -20,6 +20,6 @@ res://Sceans/gltch_key.tscn
 res://Sceans/hud_glitch.tscn
 res://Sceans/Video.tscn
 res://Sceans/hazards_horror.tscn
-res://SRC/maze_level.gd
-res://SRC/player_glitch.gd
 res://Sceans/player_glitch.tscn
+res://Sceans/controller_control.tscn
+res://Sceans/Game_control_screen.tscn

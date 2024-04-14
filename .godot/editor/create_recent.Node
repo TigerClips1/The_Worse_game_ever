@@ -1,3 +1,7 @@
+TextureRect
+Sprite2D
+Path2D
+PathFollow2D
 DirectionalLight2D
 TileMap
 CollisionShape2D
@@ -8,8 +12,3 @@ Label
 Camera2D
 Node2D
 VideoStreamPlayer
-ColorRect
-TextureRect
-Panel
-CanvasLayer
-Sprite2D

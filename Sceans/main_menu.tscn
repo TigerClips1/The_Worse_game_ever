@@ -95,6 +95,6 @@ text = "Quit"
 [connection signal="mouse_exited" from="Button/HBoxContainer/VBoxContainer" to="." method="_on_v_box_container_mouse_exited"]
 [connection signal="pressed" from="Button/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button/HBoxContainer/VBoxContainer/Control" to="." method="_on_control_pressed"]
-[connection signal="pressed" from="Button/HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Button/HBoxContainer/VBoxContainer/Options" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Button/HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Button/HBoxContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
