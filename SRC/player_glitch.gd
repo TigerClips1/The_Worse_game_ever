@@ -96,7 +96,7 @@ func _reload_scene():
 func _on_hazard_detector_area_entered(_area):
 	get_tree().paused = true
 	players_sprite_glitch.hide()
-	#glich.stop()
+	Addfile._add_File3_GLITCH()
 	Jumpscare.play()
 	await death_glitch._play()
 	death_glitch._restore()

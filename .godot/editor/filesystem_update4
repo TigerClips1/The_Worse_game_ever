@@ -1,4 +1,12 @@
-res://SRC/timer.gd
-res://Sceans/timer.tscn
+res://Sceans/player.tscn
 res://resources/Warning.tres
+res://SRC/player.gd
 res://Sceans/warning.tscn
+res://Sceans/timer.tscn
+res://SRC/Addfile.gd
+res://SRC/player_glitch.gd
+res://resources/Panel_Style.tres
+res://Sceans/screat_ending.tscn
+res://SRC/Events.gd
+res://SRC/thanks_for_playing.gd
+res://SRC/Video.gd
