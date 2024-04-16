@@ -107,8 +107,11 @@ func _Mainmenu():
 
 func _Exit_mainmenu():
 	call_deferred("_Mainmenu")
+
 var source_path_image = "res://ASSETS/Misc/HELPME.png"
+
 var destination_path_image = OS.get_executable_path().get_base_dir() + "/HELPME.png"
+
 func _apply_input():
 	if Input.is_action_just_released("Exit"):
 		await  LevelFade._fade_to_black()

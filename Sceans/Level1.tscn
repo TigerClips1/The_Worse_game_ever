@@ -366,7 +366,7 @@ script = ExtResource("1_hph7m")
 next_level = ExtResource("2_o888i")
 
 [node name="Player" parent="." instance=ExtResource("5_3hi3u")]
-position = Vector2(25, 131)
+position = Vector2(25, 133)
 
 [node name="Game cam" type="Camera2D" parent="."]
 position = Vector2(159, 85)
@@ -403,7 +403,7 @@ layer_0/tile_data = PackedInt32Array(131072, 458752, 2, 196608, 458752, 2, 26214
 visible = false
 
 [node name="Timer_Start" parent="Timer" instance=ExtResource("11_xdfsl")]
-position = Vector2(53, 12)
+position = Vector2(42, 13)
 
 [node name="Count_Down_canvus" type="CanvasLayer" parent="."]
 process_mode = 3

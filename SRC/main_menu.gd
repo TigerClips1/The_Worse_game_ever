@@ -48,7 +48,3 @@ func _on_v_box_container_mouse_exited():
 
 func _on_v_box_container_focus_entered():
 	Click.play()
-
-
-func _on_v_box_container_focus_exited():
-	Click.play()

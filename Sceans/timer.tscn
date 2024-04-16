@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs5haxf5j8cty"]
+[gd_scene load_steps=5 format=3 uid="uid://cs5haxf5j8cty"]
 
 [ext_resource type="Script" path="res://SRC/timer.gd" id="1_f8f4a"]
 [ext_resource type="FontFile" uid="uid://dft6swqgtgbwm" path="res://ASSETS/Font/Hud_font/Anton-Regular.ttf" id="2_otnxq"]
+[ext_resource type="Script" path="res://addons/TIMER/addons/random_timer_plugin/random_timer.gd" id="3_amtvg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2itis"]
 font = ExtResource("2_otnxq")
@@ -23,8 +24,11 @@ label_settings = SubResource("LabelSettings_2itis")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Timer" type="Timer" parent="."]
+[node name="RandomTimer" type="Timer" parent="."]
 wait_time = 30.0
 autostart = true
+script = ExtResource("3_amtvg")
+variance = 10.0
+randomize_on_timeout = false
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="RandomTimer" to="." method="_on_random_timer_timeout"]

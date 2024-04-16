@@ -15,7 +15,6 @@ config/description="THe Worse_game_Ever is a game that so trash "
 config/version="1.0 Demo"
 run/main_scene="res://Sceans/warning.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-run/max_fps=120
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://ASSETS/Images/Icon/icon.png"
@@ -66,7 +65,7 @@ project/assembly_name="The Worse game ever made"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/TIMER/addons/random_timer_plugin/plugin.cfg")
 
 [gui]
 
@@ -145,6 +144,11 @@ plus={
 2d_physics/layer_6="Box"
 2d_physics/layer_7="Hazareds_Area_troll"
 2d_physics/layer_8="Addfiles_area"
+
+[memory]
+
+limits/multithreaded_server/rid_pool_prealloc=500
+limits/message_queue/max_size_mb=2048
 
 [rendering]
 

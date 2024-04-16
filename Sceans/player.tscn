@@ -32,17 +32,17 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0hter")
 }],
-"loop": true,
+"loop": false,
 "name": &"Walk",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1cr8n")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kkxsn"]

@@ -1,13 +1,13 @@
 extends Node2D
 
-@onready var timer = $Timer
 @onready var label = %TImer_Count
+@onready var random_timer = $RandomTimer
 
 func _ready():
-	timer.start()
+	random_timer.start()
 
 func _time_Left():
-	var time_left = timer.time_left
+	var time_left = random_timer.time_left
 	var Min = floor(time_left / 50)
 	var Secrod = int(time_left) % 50
 	return [Min, Secrod]
@@ -22,8 +22,8 @@ func _Clear_scene():
 func _run_Scene():
 	call_deferred("_Clear_scene")
 
-func _on_timer_timeout():
-	label.hide()
+func _on_random_timer_timeout():
+	queue_free()
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	LevelFade._fade_from_black()
