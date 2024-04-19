@@ -1,1 +1,12 @@
+Label
+Panel
+MarginContainer
+HBoxContainer
+Camera2D
+Sprite2D
+ParallaxLayer
+ParallaxBackground
+CanvasLayer
+Timer
+AnimationPlayer
 RandomTimer

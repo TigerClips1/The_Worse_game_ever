@@ -16,8 +16,7 @@ func _process(_delta):
 	label.text = "%02d:%02d" % _time_Left()
 
 func _Clear_scene():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/Run_Out_Time.tscn")
+	get_tree().change_scene_to_file("res://Sceans/Run_Out_Time.tscn")
 
 func _run_Scene():
 	call_deferred("_Clear_scene")

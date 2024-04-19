@@ -21,8 +21,7 @@ func _give_input():
 		_apply()
 
 func _credits():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/credits.tscn")
+	get_tree().change_scene_to_file("res://Sceans/credits.tscn")
 
 func _apply():
 	call_deferred("_credits")

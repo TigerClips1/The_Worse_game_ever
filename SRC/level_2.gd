@@ -8,8 +8,7 @@ func reload_scene():
 	call_deferred("_reload_scene")
 
 func _reload_scene():
-	if is_inside_tree():
-		get_tree().change_scene_to_packed(next_level)
+	get_tree().change_scene_to_packed(next_level)
 
 func _ready():
 	Level1Bgm.stop()

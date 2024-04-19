@@ -881,6 +881,7 @@ color = Color(0.984314, 0.705882, 0.756863, 0.0941176)
 [node name="Horror_Lighting" type="DirectionalLight2D" parent="."]
 blend_mode = 1
 shadow_enabled = true
+shadow_filter = 2
 
 [node name="Keys" type="Node2D" parent="."]
 

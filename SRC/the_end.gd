@@ -24,12 +24,10 @@ func reload_scene_screat():
 	call_deferred("_reload_scene_Screat")
 
 func _reload_scene():
-	if is_inside_tree():
-		get_tree().change_scene_to_packed(next_level)
+	get_tree().change_scene_to_packed(next_level)
 
 func _reload_scene_Screat():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/screat_ending.tscn")
+	get_tree().change_scene_to_file("res://Sceans/screat_ending.tscn")
 
 func _level_completed():
 	if not next_level is PackedScene: return

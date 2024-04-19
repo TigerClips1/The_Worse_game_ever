@@ -29,8 +29,7 @@ func _input(_event):
 	exit_input()
 
 func _Back_main_menu():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Sceans/main_menu.tscn")
 func _return():
 	await  LevelFade._fade_to_black()
 	call_deferred("_Back_main_menu")
@@ -47,9 +46,8 @@ func reload_scene():
 	call_deferred("_change_Credits")
 	
 func _change_Credits():
-	if is_inside_tree():
-		get_tree().change_scene_to_packed(next_level)
-		
+	get_tree().change_scene_to_packed(next_level)
+
 func _credit_move():
 	if not next_level is PackedScene: return
 	await  LevelFade._fade_to_black()

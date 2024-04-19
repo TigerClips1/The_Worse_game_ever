@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://c22ntb38hjh5q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cf4bs"]
+bg_color = Color(0.419608, 0, 0.0745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.8, 0.8, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_a5xrg"]
+font_names = PackedStringArray("Noto Sans Bassa Vah")
+
+[sub_resource type="LabelSettings" id="LabelSettings_bf7tg"]
+font = SubResource("SystemFont_a5xrg")
+font_color = Color(0.411765, 1, 0.8, 1)
+
+[node name="Text_Box_lAyer" type="CanvasLayer"]
+
+[node name="Panel_Holder" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = -1
+anchor_left = 0.022
+anchor_top = 0.044
+anchor_right = 0.966
+anchor_bottom = 0.283
+offset_left = -0.0400004
+offset_top = 0.0799994
+offset_right = -0.119995
+offset_bottom = 0.0599976
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Main_Textbox_BG" type="Panel" parent="Panel_Holder"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cf4bs")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.053
+anchor_top = 0.083
+anchor_right = 0.928
+anchor_bottom = 0.25
+offset_left = 0.039999
+offset_top = -1.94
+offset_right = 0.039978
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Text_box_Hit_box" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Top" type="Label" parent="MarginContainer/Text_box_Hit_box"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "^"
+label_settings = SubResource("LabelSettings_bf7tg")
+
+[node name="Label" type="Label" parent="MarginContainer/Text_box_Hit_box"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+autowrap_mode = 3
+
+[node name="Bye" type="Label" parent="MarginContainer/Text_box_Hit_box"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+text = ">"
+label_settings = SubResource("LabelSettings_bf7tg")

@@ -102,8 +102,7 @@ func _input(_event):
 	_apply_input()
 
 func _Mainmenu():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Sceans/main_menu.tscn")
 
 func _Exit_mainmenu():
 	call_deferred("_Mainmenu")

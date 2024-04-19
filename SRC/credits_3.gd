@@ -43,8 +43,7 @@ func exit_input():
 		_return()
 
 func _reload_scene():
-	if is_inside_tree():
-		get_tree().change_scene_to_packed(next_level)
+	get_tree().change_scene_to_packed(next_level)
 	
 func _credit_move():
 	if not next_level is PackedScene: return

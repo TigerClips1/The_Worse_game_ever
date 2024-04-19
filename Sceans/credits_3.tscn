@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmwbdjj8jlopk"]
+[gd_scene load_steps=7 format=3 uid="uid://bmwbdjj8jlopk"]
 
 [ext_resource type="Script" path="res://SRC/credits_3.gd" id="1_3qaox"]
 [ext_resource type="PackedScene" uid="uid://b8onedwv1xdss" path="res://Sceans/credits_4.tscn" id="2_sw5t4"]
@@ -9,6 +9,14 @@ font_names = PackedStringArray("DejaVu Sans Mono")
 [sub_resource type="LabelSettings" id="LabelSettings_2nf4i"]
 font = SubResource("SystemFont_bux5l")
 font_color = Color(1, 0.572549, 0.690196, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_h44ne"]
+font_names = PackedStringArray("Noto Sans Adlam")
+
+[sub_resource type="LabelSettings" id="LabelSettings_a5uxa"]
+font = SubResource("SystemFont_h44ne")
+font_size = 28
+font_color = Color(0.984314, 0.458824, 0, 1)
 
 [node name="Credits3" type="Label"]
 offset_left = 56.0
@@ -23,3 +31,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_3qaox")
 next_level = ExtResource("2_sw5t4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 63.0
+offset_right = 181.0
+offset_bottom = 102.0
+text = "craftpix.net"
+label_settings = SubResource("LabelSettings_a5uxa")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -10,7 +10,6 @@ var was_wall_normal = Vector2.ZERO
 @onready var death_glitch = $Death_Glitch
 @onready var coyote_jump_timer_glitch = $Coyote_jump_Timer_glitch
 @onready var wall_jump_timer_glich = $Wall_jump_Timer_Glich
-#@onready var glich = $"../Glich"
 
 func _physics_process(delta):
 	Apply_Gravaty(delta)
@@ -90,14 +89,14 @@ func reload_scene():
 	call_deferred("_reload_scene")
 
 func _reload_scene():
-	if is_inside_tree():
-		get_tree().reload_current_scene()
+	get_tree().reload_current_scene()
 
 func _on_hazard_detector_area_entered(_area):
 	get_tree().paused = true
 	players_sprite_glitch.hide()
-	Addfile._add_File3_GLITCH()
+	Events._add_all_Glitch()
 	Jumpscare.play()
+	Events._timer()
 	await death_glitch._play()
 	death_glitch._restore()
 	await  LevelFade._fade_to_black()

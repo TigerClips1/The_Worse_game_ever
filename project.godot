@@ -44,11 +44,6 @@ GameOverBgm="*res://Sceans/game_over_bgm.tscn"
 WinSoundEfx="*res://Sceans/win_sound_efx.tscn"
 Addfile="*res://SRC/Addfile.gd"
 
-[debug]
-
-file_logging/enable_file_logging=true
-settings/stdout/print_fps=true
-
 [display]
 
 window/size/viewport_width=320
@@ -65,7 +60,7 @@ project/assembly_name="The Worse game ever made"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/TIMER/addons/random_timer_plugin/plugin.cfg", "res://addons/addons/gamejolt/plugin.cfg")
+enabled=PackedStringArray("res://addons/TIMER/addons/random_timer_plugin/plugin.cfg")
 
 [game_jolt]
 
@@ -152,11 +147,6 @@ plus={
 2d_physics/layer_6="Box"
 2d_physics/layer_7="Hazareds_Area_troll"
 2d_physics/layer_8="Addfiles_area"
-
-[memory]
-
-limits/multithreaded_server/rid_pool_prealloc=500
-limits/message_queue/max_size_mb=2048
 
 [rendering]
 

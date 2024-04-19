@@ -14,8 +14,7 @@ func _input(_event):
 	_apply_input()
 
 func _start_over():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/Level1.tscn")
+	get_tree().change_scene_to_file("res://Sceans/Level1.tscn")
 func _action():
 	call_deferred("_start_over")
 	LevelFade._fade_from_black()

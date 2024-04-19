@@ -15,8 +15,7 @@ func reload_scene_easter():
 	call_deferred("_reload_scene_easter")
 
 func _reload_scene_easter():
-	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Sceans/end_cheat.tscn")
+	get_tree().change_scene_to_file("res://Sceans/end_cheat.tscn")
 
 func _Troll_ending():
 	reload_scene_easter()
