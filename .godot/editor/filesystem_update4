@@ -2,17 +2,3 @@ res://Sceans/text_box.tscn
 res://resources/Warning.tres
 res://resources/Panel_Style.tres
 res://resources/credits_4.tres
-res://SRC/text_box.gd
-res://Sceans/warning.tscn
-res://Sceans/timer.tscn
-res://Sceans/player.tscn
-res://Sceans/screat_ending.tscn
-res://Sceans/player_glitch.tscn
-res://Sceans/Level1.tscn
-res://Sceans/level_3.tscn
-res://Sceans/level_2.tscn
-res://Sceans/the_end.tscn
-res://Sceans/bg.tscn
-res://Sceans/credits_2.tscn
-res://Sceans/credits_3.tscn
-res://Sceans/bg_2.tscn

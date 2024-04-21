@@ -43,6 +43,7 @@ KeyPickupSounds="*res://Sceans/key_pickup_sounds.tscn"
 GameOverBgm="*res://Sceans/game_over_bgm.tscn"
 WinSoundEfx="*res://Sceans/win_sound_efx.tscn"
 Addfile="*res://SRC/Addfile.gd"
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [display]
 
@@ -58,9 +59,14 @@ window/vsync/vsync_mode=0
 
 project/assembly_name="The Worse game ever made"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/TIMER/addons/random_timer_plugin/plugin.cfg")
+enabled=PackedStringArray("res://addons/TIMER/addons/random_timer_plugin/plugin.cfg", "res://addons/discord-rpc-gd/plugin.cfg")
 
 [game_jolt]
 

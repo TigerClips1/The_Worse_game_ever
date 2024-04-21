@@ -1,0 +1,12 @@
+{
+	"disabled_build_options": {
+		"disable_3d": true,
+		"openxr": false
+	},
+	"disabled_classes": [
+		"Node3D",
+		"SkeletonIK3D",
+		"World3D"
+	],
+	"type": "build_profile"
+}
