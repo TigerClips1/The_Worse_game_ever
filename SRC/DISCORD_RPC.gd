@@ -2,7 +2,7 @@ extends  Node2D
 ## https://discord.com/developers/docs/topics/gateway-events#activity-object-activity-structure
 ## ^ (not all fields are allowed by Discord)
 #
-#const APPLICATION_ID: int = 123456789012345678 
+#const APPLICATION_ID: int = 123456789012345678
 #
 #var discord := DiscordRPCTutorial.new()
 #

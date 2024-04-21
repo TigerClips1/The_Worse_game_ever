@@ -7,7 +7,7 @@ func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	start.grab_focus()
 	MenuMusic.autoplay = true
-	
+
 
 func _on_start_pressed():
 	Click.play()

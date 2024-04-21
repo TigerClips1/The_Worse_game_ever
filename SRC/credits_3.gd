@@ -44,7 +44,7 @@ func exit_input():
 
 func _reload_scene():
 	get_tree().change_scene_to_packed(next_level)
-	
+
 func _credit_move():
 	if not next_level is PackedScene: return
 	get_tree().paused = true

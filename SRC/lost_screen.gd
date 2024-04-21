@@ -9,7 +9,7 @@ func _ready():
 	DeathSound.stop()
 	Level1Bgm.stop()
 	GameOverBgm.play()
-	
+
 func _input(_event):
 	_apply_input()
 

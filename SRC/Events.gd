@@ -53,11 +53,11 @@ func _timer():
 		timer.start()
 		should_show = false
 		return
-		
+
 func _Noprmal_AddFIles():
 	if should_show == true:
 		Addfile._add_File()
 		Addfile._add_File()
 		should_show = false
 		return
-	
+

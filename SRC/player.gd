@@ -78,7 +78,7 @@ func update_Anmation(input_axis):
 		WalkingSoundEfx.play()
 	else:
 		player_spirte.play("idle")
-		
+
 
 func reload_scene():
 	call_deferred("_reload_scene")

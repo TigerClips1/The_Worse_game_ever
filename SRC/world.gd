@@ -33,7 +33,7 @@ func _level_completed():
 	get_tree().paused = false
 	reload_scene()
 	LevelFade._fade_from_black()
-	
+
 
 func _start_over():
 	if is_inside_tree():

@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c22ntb38hjh5q"]
+[gd_scene load_steps=8 format=3 uid="uid://c22ntb38hjh5q"]
+
+[ext_resource type="Script" path="res://SRC/text_box.gd" id="1_4cdv5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cf4bs"]
 bg_color = Color(0.419608, 0, 0.0745098, 1)
@@ -15,7 +17,46 @@ font_names = PackedStringArray("Noto Sans Bassa Vah")
 font = SubResource("SystemFont_a5xrg")
 font_color = Color(0.411765, 1, 0.8, 1)
 
+[sub_resource type="Animation" id="Animation_efuej"]
+resource_name = "Blinking"
+length = 7.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text_box_main_Container/Text_box_Hit_box/Next:visible")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.7, 2.5, 3.4, 4.4, 5.3, 6.2, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [false, true, false, true, false, true, false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_p3m4q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text_box_main_Container/Text_box_Hit_box/Next:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tt561"]
+_data = {
+"Blinking": SubResource("Animation_efuej"),
+"RESET": SubResource("Animation_p3m4q")
+}
+
 [node name="Text_Box_lAyer" type="CanvasLayer"]
+script = ExtResource("1_4cdv5")
 
 [node name="Panel_Holder" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(20, 20)
@@ -24,10 +65,10 @@ anchor_left = 0.022
 anchor_top = 0.044
 anchor_right = 0.966
 anchor_bottom = 0.283
-offset_left = -0.0400004
-offset_top = 0.0799994
+offset_left = -0.04
+offset_top = 0.0799999
 offset_right = -0.119995
-offset_bottom = 0.0599976
+offset_bottom = 16.06
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -36,38 +77,40 @@ size_flags_vertical = 4
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_cf4bs")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Text_box_main_Container" type="MarginContainer" parent="."]
 anchors_preset = -1
-anchor_left = 0.053
-anchor_top = 0.083
-anchor_right = 0.928
-anchor_bottom = 0.25
-offset_left = 0.039999
-offset_top = -1.94
-offset_right = 0.039978
+anchor_left = 0.028
+anchor_top = 0.067
+anchor_right = 0.95
+anchor_bottom = 0.361
+offset_left = 0.04
+offset_top = -0.0600004
+offset_bottom = 0.0199966
 grow_horizontal = 2
 
-[node name="Panel" type="Panel" parent="MarginContainer"]
+[node name="Holding_panel" type="Panel" parent="Text_box_main_Container"]
+visible = false
 layout_mode = 2
 
-[node name="Text_box_Hit_box" type="HBoxContainer" parent="MarginContainer"]
+[node name="Text_box_Hit_box" type="HBoxContainer" parent="Text_box_main_Container"]
 layout_mode = 2
 
-[node name="Top" type="Label" parent="MarginContainer/Text_box_Hit_box"]
+[node name="Text_box" type="RichTextLabel" parent="Text_box_main_Container/Text_box_Hit_box"]
 layout_mode = 2
-size_flags_vertical = 0
-text = "^"
-label_settings = SubResource("LabelSettings_bf7tg")
+size_flags_horizontal = 3
+bbcode_enabled = true
+scroll_following = true
 
-[node name="Label" type="Label" parent="MarginContainer/Text_box_Hit_box"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 1
-autowrap_mode = 3
-
-[node name="Bye" type="Label" parent="MarginContainer/Text_box_Hit_box"]
+[node name="Next" type="Label" parent="Text_box_main_Container/Text_box_Hit_box"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 8
 text = ">"
 label_settings = SubResource("LabelSettings_bf7tg")
+
+[node name="Blink" type="AnimationPlayer" parent="Text_box_main_Container/Text_box_Hit_box/Next"]
+root_node = NodePath("../../../..")
+libraries = {
+"": SubResource("AnimationLibrary_tt561")
+}

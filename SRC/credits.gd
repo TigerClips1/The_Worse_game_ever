@@ -37,14 +37,14 @@ func _return():
 	MenuMusic.play()
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 	LevelFade._fade_from_black()
-	
+
 func exit_input():
 	if Input.is_action_just_released("Exit"):
 		_return()
 
 func reload_scene():
 	call_deferred("_change_Credits")
-	
+
 func _change_Credits():
 	get_tree().change_scene_to_packed(next_level)
 
