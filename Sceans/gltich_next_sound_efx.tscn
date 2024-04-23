@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8ma1l4jomim7"]
+
+[ext_resource type="AudioStream" uid="uid://dggti6t27hg2q" path="res://ASSETS/Audio/Soud_Efx/glitch-transition-sfx-182152.mp3" id="1_rv1gf"]
+
+[node name="Gltich_Next" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_rv1gf")

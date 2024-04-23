@@ -1,6 +1,5 @@
 extends Node2D
 
-
 signal glitch_key_Count
 @onready var box_area = $Box_area
 @onready var glitch_fun = $Glitch_Fun

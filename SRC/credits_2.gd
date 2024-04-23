@@ -22,15 +22,15 @@ func _ready():
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	CreditsMusic.autoplay = true
 	await get_tree().create_timer(5).timeout
-	_credit_move()
+	credit_move()
 
-func reload_scene():
-	call_deferred("_reload_scene")
+func Chnage_Credit_scene():
+	call_deferred("Change_Credits_scene")
 
-func _reload_scene():
+func Change_Credits_scene():
 	get_tree().change_scene_to_packed(next_level)
 
-func _return():
+func Back_To_Menureturn():
 	await  LevelFade._fade_to_black()
 	call_deferred("_Back_main_menu")
 	CreditsMusic.stop()
@@ -42,12 +42,12 @@ func _input(_event):
 
 func exit_input():
 	if Input.is_action_just_released("Exit"):
-		_return()
+		Back_To_Menureturn
 
-func _credit_move():
+func credit_move():
 	if not next_level is PackedScene: return
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	get_tree().paused = false
-	reload_scene()
+	Chnage_Credit_scene()
 	LevelFade._fade_from_black()

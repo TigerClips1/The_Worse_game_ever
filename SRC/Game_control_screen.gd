@@ -2,7 +2,6 @@ extends Control
 
 @onready var back_main_menu = %Back_main_menu
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	back_main_menu.grab_focus()

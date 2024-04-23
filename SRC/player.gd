@@ -2,13 +2,8 @@ class_name  Player
 extends CharacterBody2D
 
 @export var movementData : _PlayerMovementData
-
 var air_jump = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var is_alive = true
-var input_enabled = true
-var level_Time = 0.0
-var start_level_msc = 0.0
 @onready var player_spirte = $Player_Spirte
 @onready var coyote_jump_timer = $Coyote_jump_Timer
 @onready var death = $Death
@@ -32,7 +27,6 @@ func _physics_process(delta):
 	if just_left_ledge:
 		coyote_jump_timer.start()
 	update_Anmation(input_axis)
-
 
 func Apply_Gravaty(delta):
 	if not is_on_floor():
@@ -67,9 +61,8 @@ func Apply_friction(input_axis, delta):
 			velocity.x = move_toward(velocity.x, 0, movementData.friction * delta)
 
 func Apply_air_resistance(input_axis, delta):
-	if input_enabled:
-		if input_axis == 0 and not is_on_floor():
-			velocity.x =  move_toward(velocity.x, 0, movementData.Air_resistance * delta)
+	if input_axis == 0 and not is_on_floor():
+		velocity.x =  move_toward(velocity.x, 0, movementData.Air_resistance * delta)
 
 func update_Anmation(input_axis):
 	if input_axis != 0:
@@ -78,7 +71,6 @@ func update_Anmation(input_axis):
 		WalkingSoundEfx.play()
 	else:
 		player_spirte.play("idle")
-
 
 func reload_scene():
 	call_deferred("_reload_scene")
@@ -117,11 +109,9 @@ func _apply_input():
 		_Exit_mainmenu()
 		LevelFade._fade_from_black()
 
-
 func _on_sound_efx_timer_timeout():
 	sound_efx_timer.start()
 	WalkingSoundEfx.stop()
-
 
 func _on_hazards_horror_detected_area_entered(_area):
 	Addfile._add_File2()

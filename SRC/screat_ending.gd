@@ -1,16 +1,14 @@
 extends Node2D
 
-@onready var glich = $Glich
-@onready var horror_lighting = $Horror_Lighting
+@onready var Glitch_BG = $Glich
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	RenderingServer.set_default_clear_color(Color.BLACK)
-	_Glitch()
+	PlayGlitchBG()
 
-func _Glitch():
-	glich.play("Gltich")
-	await glich.animation_finished
-	glich.play("RESET")
-	await  glich.animation_finished
+func PlayGlitchBG():
+	Glitch_BG.play("Gltich")
+	await Glitch_BG.animation_finished
+	Glitch_BG.play("RESET")
+	await  Glitch_BG.animation_finished

@@ -4,10 +4,10 @@
 [ext_resource type="Script" path="res://SRC/level_2.gd" id="1_kpfqp"]
 [ext_resource type="PackedScene" uid="uid://rfbrfr8x5lre" path="res://Sceans/player.tscn" id="2_hupra"]
 [ext_resource type="PackedScene" uid="uid://dstcevk2hfm2o" path="res://Sceans/level_3.tscn" id="2_y1rfk"]
+[ext_resource type="PackedScene" uid="uid://c8ek1v0plts3y" path="res://Sceans/Background_level2.tscn" id="3_jlx37"]
 [ext_resource type="PackedScene" uid="uid://bf1n1ap0b5rva" path="res://Sceans/SPIKES.tscn" id="5_pyj2i"]
-[ext_resource type="PackedScene" uid="uid://c8ek1v0plts3y" path="res://Sceans/bg_2.tscn" id="7_ar0yw"]
 [ext_resource type="PackedScene" uid="uid://cqmdxl8p4ue5" path="res://Sceans/Keys.tscn" id="7_tabqt"]
-[ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/box.tscn" id="8_7nwep"]
+[ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/Wining_box.tscn" id="8_7nwep"]
 [ext_resource type="PackedScene" uid="uid://cs5haxf5j8cty" path="res://Sceans/timer.tscn" id="9_kvvhr"]
 [ext_resource type="PackedScene" uid="uid://bsdmwf6ca8dak" path="res://Sceans/hud.tscn" id="10_oyrlh"]
 
@@ -186,7 +186,7 @@ sources/0 = SubResource("TileSetAtlasSource_12pbu")
 script = ExtResource("1_kpfqp")
 next_level = ExtResource("2_y1rfk")
 
-[node name="BG_2" parent="." instance=ExtResource("7_ar0yw")]
+[node name="BG_2" parent="." instance=ExtResource("3_jlx37")]
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ald52")

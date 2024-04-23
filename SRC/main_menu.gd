@@ -2,12 +2,11 @@ extends Control
 
 @onready var start = %Start
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	start.grab_focus()
 	MenuMusic.autoplay = true
-
 
 func _on_start_pressed():
 	Click.play()
@@ -44,7 +43,6 @@ func _on_v_box_container_mouse_entered():
 
 func _on_v_box_container_mouse_exited():
 	Click.play()
-
 
 func _on_v_box_container_focus_entered():
 	Click.play()

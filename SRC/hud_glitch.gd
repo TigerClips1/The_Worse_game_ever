@@ -16,7 +16,6 @@ func _glitch_Play():
 func _number_play():
 	glitch_2.play("Label_Glitch")
 
-# Called when the node enters the scene tree for the first time.
 func _keyss():
 	count.text = str(Keyss_glich)
 

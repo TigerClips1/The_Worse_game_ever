@@ -2,7 +2,6 @@ extends Label
 
 @export var next_level : PackedScene
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
@@ -23,14 +22,14 @@ func _ready():
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	CreditsMusic.autoplay = true
 	await get_tree().create_timer(5).timeout
-	_credit_move()
+	Change_credit_move()
 
-func reload_scene():
-	call_deferred("_reload_scene")
+func Credits_main_Change():
+	call_deferred("Change_Credits")
 
-func _return():
+func Back_main_menu():
 	await  LevelFade._fade_to_black()
-	call_deferred("_Back_main_menu")
+	call_deferred("Back_main_menu")
 	CreditsMusic.stop()
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 	LevelFade._fade_from_black()
@@ -40,16 +39,15 @@ func _input(_event):
 
 func exit_input():
 	if Input.is_action_just_released("Exit"):
-		_return()
+		Back_main_menu()
 
-func _reload_scene():
+func Change_Credits():
 	get_tree().change_scene_to_packed(next_level)
 
-func _credit_move():
+func Change_credit_move():
 	if not next_level is PackedScene: return
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	get_tree().paused = false
-	reload_scene()
+	Credits_main_Change()
 	LevelFade._fade_from_black()
-

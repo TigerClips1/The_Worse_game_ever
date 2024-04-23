@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cs5haxf5j8cty" path="res://Sceans/timer.tscn" id="5_hrxjb"]
 [ext_resource type="PackedScene" uid="uid://dd4423wmdh03" path="res://Sceans/hazards_horror.tscn" id="5_npe2t"]
 [ext_resource type="PackedScene" uid="uid://cqmdxl8p4ue5" path="res://Sceans/Keys.tscn" id="6_ie3my"]
-[ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/box.tscn" id="7_5l6aw"]
+[ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/Wining_box.tscn" id="9_oglbt"]
 [ext_resource type="PackedScene" uid="uid://bsdmwf6ca8dak" path="res://Sceans/hud.tscn" id="9_px56u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6a8ix"]
@@ -376,7 +376,7 @@ position = Vector2(278, 25)
 offset = Vector2(-5, -7)
 transform = Transform2D(1, 0, 0, 1, -5, -7)
 
-[node name="Box" parent="." instance=ExtResource("7_5l6aw")]
+[node name="Box" parent="." instance=ExtResource("9_oglbt")]
 position = Vector2(317, 26)
 
 [connection signal="key_Cellected" from="KEYS/Key1" to="HUD" method="_on_keys_level_3_cellcted"]

@@ -1,6 +1,5 @@
 extends Container
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	MenuMusic.play()
 	RenderingServer.set_default_clear_color(Color.BLACK)

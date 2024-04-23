@@ -18,7 +18,7 @@ func _ready():
 	await get_tree().create_timer(2).timeout
 	label.hide()
 	await get_tree().create_timer(5).timeout
-	_credit_move()
+	Horror_credits_Next()
 
 func _return():
 	await  LevelFade._fade_to_black()
@@ -34,16 +34,16 @@ func exit_input():
 	if Input.is_action_just_released("Exit"):
 		_return()
 
-func reload_scene():
-	call_deferred("_reload_scene")
+func Change_Horror_scene():
+	call_deferred("Horror_Credits_load")
 
-func _reload_scene():
+func Horror_Credits_load():
 	get_tree().change_scene_to_packed(next_level)
 
-func _credit_move():
+func Horror_credits_Next():
 	if not next_level is PackedScene: return
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	get_tree().paused = false
-	reload_scene()
+	Change_Horror_scene()
 	LevelFade._fade_from_black()

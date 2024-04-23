@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3r2ep6e8krn5"]
 
-[ext_resource type="Script" path="res://SRC/w_ining.gd" id="1_xly4h"]
+[ext_resource type="Script" path="res://SRC/wining_scene.gd" id="1_xly4h"]
 
 [sub_resource type="SystemFont" id="SystemFont_5btwr"]
 

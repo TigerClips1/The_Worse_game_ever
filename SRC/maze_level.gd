@@ -1,6 +1,5 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
+#init
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)

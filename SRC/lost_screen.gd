@@ -1,6 +1,6 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
+#Initlize
 func _ready():
 	get_tree().paused = false
 	RenderingServer.set_default_clear_color(Color.BLACK)
@@ -13,10 +13,10 @@ func _ready():
 func _input(_event):
 	_apply_input()
 
-func _start_over():
+func _Restart_over():
 	get_tree().change_scene_to_file("res://Sceans/Level1.tscn")
 func _action():
-	call_deferred("_start_over")
+	call_deferred("_Restart_over")
 	LevelFade._fade_from_black()
 #
 func _apply_input():

@@ -6,10 +6,10 @@ extends Node2D
 @onready var countdown = $Countdown
 @onready var game_Start = $Game
 
-func reload_scene():
-	call_deferred("_reload_scene")
+func Change_scene_main():
+	call_deferred("Change_scene")
 
-func _reload_scene():
+func Change_scene():
 	get_tree().change_scene_to_packed(next_level)
 
 func _ready():
@@ -31,7 +31,7 @@ func _level_completed():
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	get_tree().paused = false
-	reload_scene()
+	Change_scene_main()
 	LevelFade._fade_from_black()
 
 

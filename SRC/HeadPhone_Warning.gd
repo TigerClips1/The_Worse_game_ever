@@ -1,6 +1,5 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	MenuMusic.autoplay = true
 	RenderingServer.set_default_clear_color(Color.DARK_BLUE)

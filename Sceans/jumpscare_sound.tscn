@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vitml0cipfjb"]
+
+[ext_resource type="AudioStream" uid="uid://b0wa4vn2k3ap2" path="res://ASSETS/Audio/JumpScare/fuzzy-jumpscare-80560.mp3" id="1_pbyeh"]
+
+[node name="Jumpscare" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = ExtResource("1_pbyeh")
+bus = &"Sound"

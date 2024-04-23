@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var next_level : PackedScene
+@export var End_level : PackedScene
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color.CRIMSON)
@@ -12,27 +12,27 @@ func _input(_event):
 			if _event.shift_pressed:
 				get_tree().paused = true
 				await  LevelFade._fade_to_black()
-				reload_scene_screat()
+				Change_scene_screat()
 				LevelFade._fade_from_black()
 				GltichNext.play()
 				get_tree().paused = false
 
-func reload_scene():
-	call_deferred("_reload_scene")
+func Apply_Win_scene():
+	call_deferred("Change_Win_scene")
 
-func reload_scene_screat():
-	call_deferred("_reload_scene_Screat")
+func Change_scene_screat():
+	call_deferred("Change_scene_screat_Main")
 
-func _reload_scene():
-	get_tree().change_scene_to_packed(next_level)
+func Change_Win_scene():
+	get_tree().change_scene_to_packed(End_level)
 
-func _reload_scene_Screat():
+func Change_scene_screat_Main():
 	get_tree().change_scene_to_file("res://Sceans/screat_ending.tscn")
 
 func _level_completed():
-	if not next_level is PackedScene: return
+	if not End_level is PackedScene: return
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	get_tree().paused = false
-	reload_scene()
+	Apply_Win_scene()
 	LevelFade._fade_from_black()
