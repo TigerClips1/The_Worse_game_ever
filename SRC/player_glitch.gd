@@ -1,10 +1,23 @@
+"""
+*********************************************************
+*               This file is part of                    #
+*                The Worse Gme Ever                     #
+*   https://github.com/TigerClips1/The_Worse_game_ever	#
+*           *********************************           #
+*           * Copyright (©) 2024 TigerClips1 *          #
+*           *********************************           #
+*                                                       #
+*                                                       #
+******************************************************* #
+"""
+
 extends CharacterBody2D
 
 @export var movementData : _PlayerMovementData
 
-var air_jump = false
+var air_jump:bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var just_wall_jump = false
+var just_wall_jump:bool = false
 var was_wall_normal = Vector2.ZERO
 @onready var players_sprite_glitch = $Players_Sprite_glitch
 @onready var death_glitch = $Death_Glitch
@@ -15,7 +28,7 @@ func _physics_process(delta):
 	Apply_Gravaty(delta)
 	HandleWalljump()
 	Handlejump()
-	var input_axis = Input.get_axis("Left_arrow", "Right_arrow")
+	var input_axis:int = Input.get_axis("Left_arrow", "Right_arrow")
 	Apply_Actlation(input_axis, delta)
 	Handile_Air_acceleration(input_axis, delta)
 	Apply_friction(input_axis, delta)

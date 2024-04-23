@@ -1,3 +1,16 @@
+"""
+*********************************************************
+*               This file is part of                    #
+*                The Worse Gme Ever                     #
+*   https://github.com/TigerClips1/The_Worse_game_ever	#
+*           *********************************           #
+*           * Copyright (©) 2024 TigerClips1 *          #
+*           *********************************           #
+*                                                       #
+*                                                       #
+******************************************************* #
+"""
+
 extends Control
 
 @onready var Text = $"wining_Text/Help Me"
@@ -15,6 +28,7 @@ func _ready():
 
 func _input(_event):
 	give_input()
+
 func give_input():
 	if Input.is_action_just_pressed("Enter"):
 		applyToChangeNextScene()

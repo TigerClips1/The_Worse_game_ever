@@ -1,8 +1,21 @@
+"""
+*********************************************************
+*               This file is part of                    #
+*                The Worse Gme Ever                     #
+*   https://github.com/TigerClips1/The_Worse_game_ever	#
+*           *********************************           #
+*           * Copyright (©) 2024 TigerClips1 *          #
+*           *********************************           #
+*                                                       #
+*                                                       #
+******************************************************* #
+"""
+
 class_name  Player
 extends CharacterBody2D
 
 @export var movementData : _PlayerMovementData
-var air_jump = false
+var air_jump:bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var player_spirte = $Player_Spirte
 @onready var coyote_jump_timer = $Coyote_jump_Timer
@@ -16,7 +29,7 @@ func _ready():
 func _physics_process(delta):
 	Apply_Gravaty(delta)
 	Handlejump()
-	var input_axis = Input.get_axis("Left_arrow", "Right_arrow")
+	var input_axis:int = Input.get_axis("Left_arrow", "Right_arrow")
 	Apply_Actlation(input_axis, delta)
 	Handile_Air_acceleration(input_axis, delta)
 	Apply_friction(input_axis, delta)
@@ -98,10 +111,6 @@ func _Mainmenu():
 
 func _Exit_mainmenu():
 	call_deferred("_Mainmenu")
-
-var source_path_image = "res://ASSETS/Misc/HELPME.png"
-
-var destination_path_image = OS.get_executable_path().get_base_dir() + "/HELPME.png"
 
 func _apply_input():
 	if Input.is_action_just_released("Exit"):

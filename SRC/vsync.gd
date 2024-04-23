@@ -1,3 +1,16 @@
+"""
+*********************************************************
+*               This file is part of                    #
+*                The Worse Gme Ever                     #
+*   https://github.com/TigerClips1/The_Worse_game_ever	#
+*           *********************************           #
+*           * Copyright (©) 2024 TigerClips1 *          #
+*           *********************************           #
+*                                                       #
+*                                                       #
+******************************************************* #
+"""
+
 extends Control
 
 @onready var vsync = $"."
@@ -6,6 +19,7 @@ extends Control
 func _ready():
 	_check_Vsync()
 	vsync_check_box.grab_focus()
+
 func _check_Vsync():
 	if DisplayServer.window_get_vsync_mode() == DisplayServer.VSYNC_ENABLED:
 		vsync_check_box.set_pressed_no_signal(true)

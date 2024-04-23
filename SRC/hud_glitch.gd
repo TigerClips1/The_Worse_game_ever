@@ -1,11 +1,23 @@
-extends Control
+"""
+*********************************************************
+*               This file is part of                    #
+*                The Worse Gme Ever                     #
+*   https://github.com/TigerClips1/The_Worse_game_ever	#
+*           *********************************           #
+*           * Copyright (©) 2024 TigerClips1 *          #
+*           *********************************           #
+*                                                       #
+*                                                       #
+******************************************************* #
+"""
 
+extends Control
 
 @onready var glitch = $Glitch
 @onready var count = $GLitch_HUD/HUDS_GLITCHS/Count
 @onready var glitch_2 = $Glitch2
 
-var Keyss_glich = 0
+var Keyss_glich:int = 0
 
 func _ready():
 	_glitch_Play()
@@ -23,7 +35,6 @@ func _on_gltch_key_glitch_key_cellected():
 	_number_play()
 	Keyss_glich += 1
 	_keyss()
-
 
 func _on_glitch_box_glitch_key_count():
 	if Keyss_glich != 15 and Keyss_glich != 12 and Keyss_glich != 10:

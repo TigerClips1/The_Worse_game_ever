@@ -1,3 +1,16 @@
+"""
+*********************************************************
+*               This file is part of                    #
+*                The Worse Gme Ever                     #
+*   https://github.com/TigerClips1/The_Worse_game_ever	#
+*           *********************************           #
+*           * Copyright (©) 2024 TigerClips1 *          #
+*           *********************************           #
+*                                                       #
+*                                                       #
+******************************************************* #
+"""
+
 extends Control
 
 #Initlize
@@ -18,7 +31,7 @@ func _Restart_over():
 func _action():
 	call_deferred("_Restart_over")
 	LevelFade._fade_from_black()
-#
+
 func _apply_input():
 	if Input.is_action_just_released("Enter"):
 		GameOverBgm.stop()

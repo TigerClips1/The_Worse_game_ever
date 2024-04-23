@@ -1,15 +1,28 @@
+"""
+*********************************************************
+*               This file is part of                    #
+*                The Worse Gme Ever                     #
+*   https://github.com/TigerClips1/The_Worse_game_ever	#
+*           *********************************           #
+*           * Copyright (©) 2024 TigerClips1 *          #
+*           *********************************           #
+*                                                       #
+*                                                       #
+******************************************************* #
+"""
+
 extends Node
 
 signal  Level_comepiled
 
 #this would be change later where it only use 4 varables
-var source_path := "res://ASSETS/Misc/d2h5IHlvdSBjaGVhdA==.txt"
+var source_path:String = "res://ASSETS/Misc/d2h5IHlvdSBjaGVhdA==.txt"
 var destination_path := OS.get_executable_path().get_base_dir() + "/d2h5IHlvdSBjaGVhdA==.txt"
 var destination_path_excute := OS.get_executable_path().get_base_dir() + "/The_Worse_ Game_Ever.Linux.x86_64"
 var destination_path_excute2 := OS.get_executable_path().get_base_dir() + "/*.exe"
 var file := FileAccess.open(source_path, FileAccess.READ)
-var data := file.get_as_text()
-var source_path_image := "res://ASSETS/Misc/HELPME.png"
+var data:String = file.get_as_text()
+var source_path_image :String = "res://ASSETS/Misc/HELPME.png"
 var destination_path_image := OS.get_executable_path().get_base_dir() + "/HELPME.png"
 var source_file := FileAccess.open(source_path_image, FileAccess.READ)
 var buffer := source_file.get_buffer(source_file.get_length())
@@ -54,7 +67,7 @@ func timer():
 		should_show = false
 		return
 
-func Noprmal_AddFIles():
+func Normal_AddFIles():
 	if should_show == true:
 		Addfile._add_File()
 		Addfile._add_File()

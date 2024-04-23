@@ -1,3 +1,16 @@
+"""
+*********************************************************
+*               This file is part of                    #
+*                The Worse Gme Ever                     #
+*   https://github.com/TigerClips1/The_Worse_game_ever	#
+*           *********************************           #
+*           * Copyright (©) 2024 TigerClips1 *          #
+*           *********************************           #
+*                                                       #
+*                                                       #
+******************************************************* #
+"""
+
 extends Node2D
 
 @export var next_level : PackedScene
@@ -33,7 +46,6 @@ func _level_completed():
 	get_tree().paused = false
 	Change_scene_main()
 	LevelFade._fade_from_black()
-
 
 func _start_over():
 	if is_inside_tree():
