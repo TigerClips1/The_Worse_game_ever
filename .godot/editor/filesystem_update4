@@ -57,3 +57,5 @@ res://SRC/thanks_for_playing.gd
 res://SRC/end_cheat.gd
 res://SRC/player_glitch.gd
 res://SRC/player.gd
+res://Sceans/fake_keys.tscn
+res://SRC/fake_keys.gd

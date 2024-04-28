@@ -9512,61 +9512,61 @@ debug_color = Color(0.996078, 0, 0.219608, 0.419608)
 process_mode = 3
 
 [node name="Fake_keys" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(-28, 62)
+position = Vector2(-27, 68)
 
 [node name="Fake_keys2" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(81, 62)
+position = Vector2(79, 63)
 
 [node name="Fake_keys3" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(171, 66)
+position = Vector2(173, 63)
 
 [node name="Fake_keys4" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(296, 66)
+position = Vector2(297, 62)
 
 [node name="Fake_keys5" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(368, 66)
+position = Vector2(370, 65)
 
 [node name="Fake_keys6" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(421, 66)
+position = Vector2(419, 64)
 
 [node name="Fake_keys7" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(459, 65)
+position = Vector2(456, 64)
 
 [node name="Fake_keys8" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(62, -101)
+position = Vector2(350, -97)
 
 [node name="Fake_keys9" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(99, -101)
+position = Vector2(319, -99)
 
 [node name="Fake_keys10" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(137, -100)
+position = Vector2(282, -96)
 
 [node name="Fake_keys11" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(170, -99)
+position = Vector2(227, -96)
 
 [node name="Fake_keys12" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(190, -99)
+position = Vector2(190, -97)
 
 [node name="Fake_keys13" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(225, -98)
+position = Vector2(169, -96)
 
 [node name="Fake_keys14" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(276, -101)
+position = Vector2(133, -97)
 
 [node name="Fake_keys15" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(317, -103)
+position = Vector2(95, -96)
 
 [node name="Fake_keys16" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(352, -96)
+position = Vector2(62, -97)
 
 [node name="Fake_keys17" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(138, -136)
+position = Vector2(135, -138)
 
 [node name="Fake_keys18" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(205, -137)
+position = Vector2(202, -130)
 
 [node name="Fake_keys19" parent="troll_keys" instance=ExtResource("4_2ng0u")]
-position = Vector2(245, -136)
+position = Vector2(241, -136)
 
 [node name="Real_keys" type="Node2D" parent="."]
 
@@ -9574,58 +9574,58 @@ position = Vector2(245, -136)
 position = Vector2(168, 24)
 
 [node name="Key2" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(26, 24)
+position = Vector2(227, 64)
 
 [node name="Key3" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(25, 97)
+position = Vector2(24, 29)
 
 [node name="Key4" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(297, 27)
+position = Vector2(25, 101)
 
 [node name="Key5" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(204, -66)
+position = Vector2(82, -60)
 
 [node name="Key6" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(152, -63)
+position = Vector2(44, -78)
 
 [node name="Key7" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(79, -62)
+position = Vector2(150, -65)
 
 [node name="Key8" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(38, -80)
+position = Vector2(204, -64)
 
 [node name="Key9" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(-6, -161)
+position = Vector2(261, -82)
 
 [node name="Key10" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(221, -153)
+position = Vector2(296, -82)
 
 [node name="Key11" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(262, -152)
+position = Vector2(297, 25)
 
 [node name="Key12" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(456, -138)
+position = Vector2(385, 26)
 
 [node name="Key13" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(456, -31)
+position = Vector2(456, -132)
 
 [node name="Key14" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(62, -27)
+position = Vector2(389, -116)
 
 [node name="Key15" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(318, -25)
+position = Vector2(260, -149)
 
-[node name="Keys16" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(258, -77)
+[node name="Key16" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(228, -150)
 
 [node name="Key17" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(298, -79)
+position = Vector2(-8, -150)
 
 [node name="Key18" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(220, 62)
+position = Vector2(310, -24)
 
-[node name="Keys19" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(389, -117)
+[node name="Key19" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(62, -42)
 
 [node name="HUD" parent="." instance=ExtResource("11_r87bm")]
 offset = Vector2(-5, -7)
@@ -9651,8 +9651,8 @@ position = Vector2(479, -96)
 [connection signal="key_Collected" from="Real_keys/Key13" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Collected" from="Real_keys/Key14" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Collected" from="Real_keys/Key15" to="HUD" method="_on_key_1_key_collected"]
-[connection signal="key_Collected" from="Real_keys/Keys16" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key16" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Collected" from="Real_keys/Key17" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Collected" from="Real_keys/Key18" to="HUD" method="_on_key_1_key_collected"]
-[connection signal="key_Collected" from="Real_keys/Keys19" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key19" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Count" from="Box" to="HUD" method="_on_box_key_count"]

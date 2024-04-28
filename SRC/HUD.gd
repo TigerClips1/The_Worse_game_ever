@@ -45,6 +45,15 @@ func _on_keys_1_key_collected() -> void:
 	Keyss += 1
 	_keyss()
 
+func _on_key_1_key_collectedlefffffff() -> void:
+	Keyss += 1
+	_keyss()
+
+
+func _on_key_6_key_collected() -> void:
+	Keyss += 1
+	_keyss()
+
 
 func _on_key_1_key_collected() -> void:
 	Keyss += 1

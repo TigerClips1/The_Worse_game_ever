@@ -377,7 +377,7 @@ shape = SubResource("RectangleShape2D_ejsfo")
 debug_color = Color(0.956863, 0.207843, 0, 0.419608)
 
 [node name="Keys" type="Area2D" parent="."]
-collision_layer = 2
+collision_layer = 16
 collision_mask = 0
 monitoring = false
 
@@ -389,7 +389,7 @@ debug_color = Color(0.984314, 0, 0.356863, 0.419608)
 [node name="Box_Area" type="Area2D" parent="."]
 collision_layer = 32
 collision_mask = 0
-monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box_Area"]
 position = Vector2(3, -51)

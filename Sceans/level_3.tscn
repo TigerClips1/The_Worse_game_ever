@@ -354,20 +354,23 @@ position = Vector2(40, 6)
 [node name="Key1" parent="KEYS" instance=ExtResource("6_ie3my")]
 position = Vector2(225, 133)
 
-[node name="Key2" parent="KEYS" instance=ExtResource("6_ie3my")]
-position = Vector2(170, 115)
+[node name="Key8" parent="KEYS" instance=ExtResource("6_ie3my")]
+position = Vector2(225, 47)
 
-[node name="Key3" parent="KEYS" instance=ExtResource("6_ie3my")]
-position = Vector2(136, 101)
-
-[node name="Key4" parent="KEYS" instance=ExtResource("6_ie3my")]
-position = Vector2(102, 84)
-
-[node name="Key5" parent="KEYS" instance=ExtResource("6_ie3my")]
+[node name="Key9" parent="KEYS" instance=ExtResource("6_ie3my")]
 position = Vector2(171, 64)
 
-[node name="Key6" parent="KEYS" instance=ExtResource("6_ie3my")]
-position = Vector2(226, 45)
+[node name="Key10" parent="KEYS" instance=ExtResource("6_ie3my")]
+position = Vector2(104, 82)
+
+[node name="Key11" parent="KEYS" instance=ExtResource("6_ie3my")]
+position = Vector2(134, 101)
+
+[node name="Key12" parent="KEYS" instance=ExtResource("6_ie3my")]
+position = Vector2(171, 116)
+
+[node name="Key13" parent="KEYS" instance=ExtResource("6_ie3my")]
+position = Vector2(276, 28)
 
 [node name="Key7" parent="KEYS" instance=ExtResource("6_ie3my")]
 position = Vector2(277, 27)
@@ -379,11 +382,12 @@ transform = Transform2D(1, 0, 0, 1, -5, -7)
 [node name="Box" parent="." instance=ExtResource("9_oglbt")]
 position = Vector2(317, 26)
 
-[connection signal="key_Collected" from="KEYS/Key1" to="HUD" method="_on_key_1_key_collected"]
-[connection signal="key_Collected" from="KEYS/Key2" to="HUD" method="_on_key_1_key_collected"]
-[connection signal="key_Collected" from="KEYS/Key3" to="HUD" method="_on_key_1_key_collected"]
-[connection signal="key_Collected" from="KEYS/Key4" to="HUD" method="_on_key_1_key_collected"]
-[connection signal="key_Collected" from="KEYS/Key5" to="HUD" method="_on_key_1_key_collected"]
-[connection signal="key_Collected" from="KEYS/Key6" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="KEYS/Key1" to="HUD" method="_on_key_1_key_collectedlefffffff"]
+[connection signal="key_Collected" from="KEYS/Key8" to="HUD" method="_on_key_1_key_collectedlefffffff"]
+[connection signal="key_Collected" from="KEYS/Key9" to="HUD" method="_on_key_1_key_collectedlefffffff"]
+[connection signal="key_Collected" from="KEYS/Key10" to="HUD" method="_on_key_1_key_collectedlefffffff"]
+[connection signal="key_Collected" from="KEYS/Key11" to="HUD" method="_on_key_1_key_collectedlefffffff"]
+[connection signal="key_Collected" from="KEYS/Key12" to="HUD" method="_on_key_1_key_collectedlefffffff"]
+[connection signal="key_Collected" from="KEYS/Key13" to="HUD" method="_on_key_1_key_collectedlefffffff"]
 [connection signal="key_Collected" from="KEYS/Key7" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Count" from="Box" to="HUD" method="_on_box_key_count"]

@@ -24,7 +24,7 @@
 ##var data4:String  = files3.get_as_text()
 ##var file_manger:String  = OS.get_executable_path().get_base_dir()
 #
-#extends Node
+extends Node
 #
 #func add_File():
 	#Events.file.close()
