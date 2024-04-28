@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj3b4a4yvy4m1"]
+
+[ext_resource type="Script" path="res://Sceans/enmey_ai.gd" id="1_wdsby"]
+[ext_resource type="Texture2D" uid="uid://c4e4i73ldrlgc" path="res://ASSETS/Misc/tile_0028.png" id="2_hh5uf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oa78r"]
+radius = 7.51665
+
+[node name="Enmey_horror" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_wdsby")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(161, 126)
+texture = ExtResource("2_hh5uf")
+
+[node name="Player_Death" type="CollisionShape2D" parent="."]
+position = Vector2(161.5, 126.5)
+shape = SubResource("CircleShape2D_oa78r")

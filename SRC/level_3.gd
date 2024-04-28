@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -17,7 +17,7 @@ extends Node2D
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color.DARK_RED)
-	Events.Level_comepiled.connect(_level_completed)
+	Events.level_completed.connect(_level_completed)
 
 func Change_scene():
 	call_deferred("change_scene")

@@ -379,11 +379,4 @@ transform = Transform2D(1, 0, 0, 1, -5, -7)
 [node name="Box" parent="." instance=ExtResource("9_oglbt")]
 position = Vector2(317, 26)
 
-[connection signal="key_Cellected" from="KEYS/Key1" to="HUD" method="_on_keys_level_3_cellcted"]
-[connection signal="key_Cellected" from="KEYS/Key2" to="HUD" method="_on_keys_level_3_cellcted"]
-[connection signal="key_Cellected" from="KEYS/Key3" to="HUD" method="_on_keys_level_3_cellcted"]
-[connection signal="key_Cellected" from="KEYS/Key4" to="HUD" method="_on_keys_level_3_cellcted"]
-[connection signal="key_Cellected" from="KEYS/Key5" to="HUD" method="_on_keys_level_3_cellcted"]
-[connection signal="key_Cellected" from="KEYS/keys6" to="HUD" method="_on_keys_level_3_cellcted"]
-[connection signal="key_Cellected" from="KEYS/Keys7" to="HUD" method="_on_keys_level_3_cellcted"]
 [connection signal="key_Count" from="Box" to="HUD" method="_on_box_key_count"]

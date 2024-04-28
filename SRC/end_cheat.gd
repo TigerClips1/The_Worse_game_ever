@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -21,7 +21,7 @@ func _ready():
 	JumpSoundEfx.stop()
 	DeathSound.stop()
 	RenderingServer.set_default_clear_color(Color.BLACK)
-	Addfile._add_File()
+	Addfile.add_File()
 	await get_tree().create_timer(2).timeout
 	#open a link to the browser
 	OS.shell_open("https://www.youtube.com/watch?v=EpX1_YJPGAY")

@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -13,8 +13,8 @@
 
 extends Control
 
-@onready var vsync = $"."
-@onready var vsync_check_box = $VBoxContainer/Vsync_Check_Box
+@onready var vsync := $"."
+@onready var vsync_check_box := $VBoxContainer/Vsync_Check_Box
 
 func _ready():
 	_check_Vsync()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cut6xtmy8wnnh"]
+[gd_scene load_steps=36 format=3 uid="uid://cut6xtmy8wnnh"]
 
 [ext_resource type="Script" path="res://SRC/the_end.gd" id="1_pnbkj"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="3_vjn15"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="8_6ypxe"]
 [ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/Wining_box.tscn" id="10_bb46a"]
 [ext_resource type="PackedScene" uid="uid://bsdmwf6ca8dak" path="res://Sceans/hud.tscn" id="11_r87bm"]
+[ext_resource type="PackedScene" uid="uid://dj3b4a4yvy4m1" path="res://Sceans/enmey_ai.tscn" id="11_u5b7v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4edn8"]
 texture = ExtResource("4_eq4sy")
@@ -9625,20 +9626,24 @@ transform = Transform2D(1, 0, 0, 1, -5, -7)
 [node name="Box" parent="." instance=ExtResource("10_bb46a")]
 position = Vector2(479, -96)
 
-[connection signal="key_Cellected" from="Real_keys/Key1" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key2" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key3" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key4" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key5" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key6" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key7" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key8" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key9" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key10" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key11" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key12" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key13" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key14" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key15" to="HUD" method="_on_key_cellected_level4"]
-[connection signal="key_Cellected" from="Real_keys/Key16" to="HUD" method="_on_key_cellected_level4"]
+[node name="Enmey" type="Node2D" parent="."]
+
+[node name="Enmey_AI" parent="." instance=ExtResource("11_u5b7v")]
+position = Vector2(186, 78)
+
+[node name="Enmey_AI2" parent="." instance=ExtResource("11_u5b7v")]
+position = Vector2(130, 71)
+
+[node name="Enmey_AI3" parent="." instance=ExtResource("11_u5b7v")]
+position = Vector2(0, 71)
+
+[node name="Enmey_AI4" parent="." instance=ExtResource("11_u5b7v")]
+position = Vector2(304, 72)
+
+[node name="Enmey_AI5" parent="." instance=ExtResource("11_u5b7v")]
+position = Vector2(391, 74)
+
+[node name="Enmey_AI6" parent="." instance=ExtResource("11_u5b7v")]
+position = Vector2(460, 75)
+
 [connection signal="key_Count" from="Box" to="HUD" method="_on_box_key_count"]

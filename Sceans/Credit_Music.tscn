@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4ft8soacf7xu"]
+
+[ext_resource type="AudioStream" uid="uid://bbvmrrl8sg50m" path="res://ASSETS/Audio/Credits_Bgm/Creepy_Music_Box_With_Static_Roblox_credits.ogg" id="1_ehqq5"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = ExtResource("1_ehqq5")
+bus = &"Music"

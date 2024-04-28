@@ -532,8 +532,4 @@ visible = false
 [node name="Box" parent="." instance=ExtResource("9_ybyft")]
 position = Vector2(279, 63)
 
-[connection signal="key_Cellected" from="Keys/Keys1" to="Main_HUD" method="_on_key_cellected"]
-[connection signal="key_Cellected" from="Keys/Keys2" to="Main_HUD" method="_on_key_cellected"]
-[connection signal="key_Cellected" from="Keys/Keys3" to="Main_HUD" method="_on_key_cellected"]
-[connection signal="key_Cellected" from="Keys/Keys4" to="Main_HUD" method="_on_key_cellected"]
 [connection signal="key_Count" from="Box" to="Main_HUD" method="_on_box_key_count"]

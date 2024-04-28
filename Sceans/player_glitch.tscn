@@ -1,7 +1,7 @@
 [gd_scene load_steps=55 format=3 uid="uid://dp05igbqaoqjq"]
 
 [ext_resource type="Script" path="res://SRC/player_glitch.gd" id="1_7ll27"]
-[ext_resource type="Resource" uid="uid://j1vocnco4nc3" path="res://resources/Defult_Play_Data.tres" id="2_813yi"]
+[ext_resource type="Resource" uid="uid://dfbxxnmbdp0yp" path="res://resources/Glitch.tres" id="2_gh2r8"]
 [ext_resource type="Texture2D" uid="uid://dda8js7ldb7lx" path="res://ASSETS/Images/vfx/Effect_BloodImpact_1_60x63.png" id="3_b7veg"]
 [ext_resource type="Script" path="res://SRC/Death.gd" id="4_52nmw"]
 [ext_resource type="Texture2D" uid="uid://gn8s7mo4kxf7" path="res://ASSETS/Images/Player/tilemap-characters.png" id="5_4k8we"]
@@ -351,10 +351,11 @@ fill_from = Vector2(0.5, 0.5)
 [node name="Player_GLitch" type="CharacterBody2D"]
 position = Vector2(158, 119)
 collision_layer = 2
+collision_mask = 3
 floor_constant_speed = true
 floor_snap_length = 3.0
 script = ExtResource("1_7ll27")
-movementData = ExtResource("2_813yi")
+movementData = ExtResource("2_gh2r8")
 
 [node name="Player_Cam" type="Camera2D" parent="."]
 position = Vector2(0, -53)

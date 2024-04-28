@@ -374,9 +374,4 @@ transform = Transform2D(1, 0, 0, 1, -10, -7)
 [node name="Box" parent="." instance=ExtResource("8_7nwep")]
 position = Vector2(314, 26)
 
-[connection signal="key_Cellected" from="KEYS/Keys1" to="HUD" method="_on_node_2d_key_cellected"]
-[connection signal="key_Cellected" from="KEYS/Keys2" to="HUD" method="_on_node_2d_key_cellected"]
-[connection signal="key_Cellected" from="KEYS/Keys3" to="HUD" method="_on_node_2d_key_cellected"]
-[connection signal="key_Cellected" from="KEYS/Keys4" to="HUD" method="_on_node_2d_key_cellected"]
-[connection signal="key_Cellected" from="KEYS/Keys5" to="HUD" method="_on_node_2d_key_cellected"]
 [connection signal="key_Count" from="Box" to="HUD" method="_on_box_key_count"]

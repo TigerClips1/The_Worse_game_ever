@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -14,8 +14,8 @@
 extends Node2D
 
 signal glitch_key_Count
-@onready var box_area = $Box_area
-@onready var glitch_fun = $Glitch_Fun
+@onready var box_area := $Box_area
+@onready var glitch_fun := $Glitch_Fun
 
 func _ready():
 	glitch_fun.play("Glitch")

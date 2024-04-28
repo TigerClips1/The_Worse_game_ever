@@ -8,6 +8,7 @@ font_color = Color(1, 0.537255, 0.0745098, 1)
 outline_color = Color(0, 0.976471, 0.988235, 1)
 
 [node name="credits" type="Label"]
+process_mode = 3
 offset_left = 80.0
 offset_top = 24.0
 offset_right = 238.0

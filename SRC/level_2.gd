@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -26,7 +26,7 @@ func Change_scene():
 func _ready():
 	Level1Bgm.stop()
 	RenderingServer.set_default_clear_color(Color.BLACK)
-	Events.Level_comepiled.connect(_level_completed)
+	Events.level_completed.connect(_level_completed)
 
 func _level_completed():
 	if not next_level is PackedScene: return

@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -13,7 +13,7 @@
 
 extends CanvasLayer
 
-@onready var hud_counter = %Hud_counter
+@onready var hud_counter := %Hud_counter
 
 var Keyss:int = 0
 
@@ -28,7 +28,7 @@ func reload_scene_easter():
 	call_deferred("_reload_scene_easter")
 
 func _reload_scene_easter():
-	get_tree().change_scene_to_file("res://Sceans/end_cheat.tscn")
+	get_tree().change_scene_to_file("res://Sceans/Cheat_Ending.tscn")
 
 func Apply_Troll_ending():
 	reload_scene_easter()

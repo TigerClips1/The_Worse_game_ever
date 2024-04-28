@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -12,35 +12,23 @@
 """
 
 extends Control
-@onready var error = $ERROR
-@onready var glitch = $Glitch
+@onready var error := $ERROR
+@onready var glitch := $Glitch
+
+const Back_Menu := preload("res://SRC/Credits.gd")
+@export var menu:Back_Menu
 
 func _ready():
-	CreditsMusic.stop()
+	menu = Back_Menu.new()
+	menu.exit_input()
+	CreditMusic.stop()
 	GltichNext.play()
 	SPookey.autoplay = true
 	RenderingServer.set_default_clear_color(Color.BLACK)
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	await get_tree().create_timer(10).timeout
+	_Load()
+	await get_tree().create_timer(5).timeout
 	_credit_move()
-
-func _return():
-	await  LevelFade._fade_to_black()
-	call_deferred("_Back_main_menu")
-	CreditsMusic.stop()
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
-	LevelFade._fade_from_black()
-
-func _input(_event):
-	exit_input()
-
-func exit_input():
-	if Input.is_action_just_released("Exit"):
-		_return()
 
 func _credit_move():
 	get_tree().paused = true
@@ -48,7 +36,12 @@ func _credit_move():
 	get_tree().paused = false
 	glitch.play("Cool_Dance")
 	error.show()
-	Events._del()
+	Events.delete()
 	glitch.stop()
 	get_tree().quit()
 	LevelFade._fade_from_black()
+
+func _Load():
+	for x in menu.credit_horror:
+		await  get_tree().create_timer(1).timeout
+		DisplayServer.window_set_mode(x)

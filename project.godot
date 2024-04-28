@@ -29,7 +29,6 @@ buses/default_bus_layout="res://resources/default_bus_layout.tres"
 
 Events="*res://SRC/Events.gd"
 LevelFade="*res://Sceans/level_fade.tscn"
-CreditsMusic="*res://Sceans/credits_music.tscn"
 MenuMusic="*res://Sceans/menu_music.tscn"
 Click="*res://Sceans/Click_soundefx.tscn"
 GltichNext="*res://Sceans/gltich_next_sound_efx.tscn"
@@ -44,6 +43,7 @@ GameOverBgm="*res://Sceans/game_over_bgm.tscn"
 WinSoundEfx="*res://Sceans/win_sound_efx.tscn"
 Addfile="*res://SRC/Addfile.gd"
 DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
+CreditMusic="*res://Sceans/Credit_Music.tscn"
 
 [display]
 

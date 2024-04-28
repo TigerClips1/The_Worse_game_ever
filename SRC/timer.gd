@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -13,16 +13,16 @@
 
 extends Node2D
 
-@onready var label = %TImer_Count
-@onready var random_timer = $RandomTimer
+@onready var label := %TImer_Count
+@onready var random_timer := $RandomTimer
 
 func _ready():
 	random_timer.start()
 
 func _time_Left():
 	var time_left = random_timer.time_left
-	var Min = floor(time_left / 50)
-	var Secrod = int(time_left) % 50
+	var Min = float(time_left / 50)
+	var Secrod := int(time_left) % 50
 	return [Min, Secrod]
 
 func _process(_delta):
@@ -35,7 +35,6 @@ func _run_Scene():
 	call_deferred("_Clear_scene")
 
 func _on_random_timer_timeout():
-	queue_free()
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	LevelFade._fade_from_black()

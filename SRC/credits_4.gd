@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -14,46 +14,22 @@
 extends Label
 
 @export var next_level : PackedScene
+const Back_Menu := preload("res://SRC/Credits.gd")
+@export var menu:Back_Menu
 
 func _ready():
+	menu = Back_Menu.new()
+	menu.exit_input()
 	RenderingServer.set_default_clear_color(Color.BLACK)
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	await get_tree().create_timer(1).timeout
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-	await get_tree().create_timer(1).timeout
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
-	CreditsMusic.autoplay = true
+	CreditMusic.autoplay = true
+	_Load()
 	await get_tree().create_timer(5).timeout
 	_credit_move()
 
-func Back_main_menu():
-	await  LevelFade._fade_to_black()
-	call_deferred("Back_main_menu")
-	CreditsMusic.stop()
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
-	LevelFade._fade_from_black()
+func Change_credits_scene():
+	call_deferred("Credits_change")
 
-func _input(_event):
-	exit_input()
-
-func exit_input():
-	if Input.is_action_just_released("Exit"):
-		Back_main_menu()
-
-func reload_scene():
-	call_deferred("_reload_scene")
-
-func _reload_scene():
+func Credits_change():
 	get_tree().change_scene_to_packed(next_level)
 
 func _credit_move():
@@ -61,5 +37,10 @@ func _credit_move():
 	get_tree().paused = true
 	await  LevelFade._fade_to_black()
 	get_tree().paused = false
-	reload_scene()
+	Change_credits_scene()
 	LevelFade._fade_from_black()
+
+func _Load():
+	for x in menu.credit_horror:
+		await  get_tree().create_timer(1).timeout
+		DisplayServer.window_set_mode(x)

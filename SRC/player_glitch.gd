@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -11,6 +11,7 @@
 ******************************************************* #
 """
 
+#Initialize
 extends CharacterBody2D
 
 @export var movementData : _PlayerMovementData
@@ -19,30 +20,30 @@ var air_jump:bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var just_wall_jump:bool = false
 var was_wall_normal = Vector2.ZERO
-@onready var players_sprite_glitch = $Players_Sprite_glitch
-@onready var death_glitch = $Death_Glitch
-@onready var coyote_jump_timer_glitch = $Coyote_jump_Timer_glitch
-@onready var wall_jump_timer_glich = $Wall_jump_Timer_Glich
+@onready var players_sprite_glitch := $Players_Sprite_glitch
+@onready var death_glitch := $Death_Glitch
+@onready var coyote_jump_timer_glitch := $Coyote_jump_Timer_glitch
+@onready var wall_jump_timer_glich := $Wall_jump_Timer_Glich
 
 func _physics_process(delta):
 	Apply_Gravaty(delta)
 	HandleWalljump()
 	Handlejump()
-	var input_axis:int = Input.get_axis("Left_arrow", "Right_arrow")
+	var input_axis := Input.get_axis("Left_arrow", "Right_arrow")
 	Apply_Actlation(input_axis, delta)
 	Handile_Air_acceleration(input_axis, delta)
 	Apply_friction(input_axis, delta)
 	Apply_air_resistance(input_axis, delta)
-	var was_on_floor = is_on_floor()
-	var was_on_Wall = is_on_wall_only()
+	var was_on_floor := is_on_floor()
+	var was_on_Wall := is_on_wall_only()
 	if was_on_Wall:
 		was_wall_normal = get_wall_normal()
 	move_and_slide()
-	var just_left_ledge = was_on_floor and not is_on_floor() and velocity.y >= 0
+	var just_left_ledge := was_on_floor and not is_on_floor() and velocity.y >= 0
 	if just_left_ledge:
 		coyote_jump_timer_glitch.start()
 	just_wall_jump = false
-	var just_on_Wall = was_on_Wall and not is_on_wall()
+	var just_on_Wall := was_on_Wall and not is_on_wall()
 	if just_on_Wall:
 		wall_jump_timer_glich.start()
 	update_Anmation(input_axis)
@@ -53,7 +54,7 @@ func Apply_Gravaty(delta):
 
 func HandleWalljump():
 	if not is_on_wall_only() and wall_jump_timer_glich.time_left <= 0.0: return
-	var wall_normal = get_wall_normal()
+	var wall_normal := get_wall_normal()
 	if wall_jump_timer_glich.time_left > 0.0:
 		wall_normal = was_wall_normal
 	if Input.is_action_just_released("Space"):
@@ -107,7 +108,7 @@ func _reload_scene():
 func _on_hazard_detector_area_entered(_area):
 	get_tree().paused = true
 	players_sprite_glitch.hide()
-	Events._add_all_Glitch()
+	Events.add_all_Glitch()
 	Jumpscare.play()
 	await death_glitch._play()
 	death_glitch._restore()

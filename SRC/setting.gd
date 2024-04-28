@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -13,20 +13,13 @@
 
 extends Control
 
-@onready var mute = $Mute/Mute_cantainer/Mute
-@onready var back = $Back/Back_cantainer/Back
-@onready var master = $Slider/Slider_Hitbox/Slider_Vbox/Master
-@onready var music = $Slider/Slider_Hitbox/Slider_Vbox/Music
-@onready var sound = $Slider/Slider_Hitbox/Slider_Vbox/Sound
+@onready var mute := $Mute/Mute_cantainer/Mute
+
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	LevelFade._fade_from_black()
 	mute.grab_focus()
-	back.grab_focus()
-	master.grab_focus()
-	music.grab_focus()
-	sound.grab_focus()
 
 func _on_button_pressed():
 	Click.play()

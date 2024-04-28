@@ -1,7 +1,7 @@
 """
 *********************************************************
 *               This file is part of                    #
-*                The Worse Gme Ever                     #
+*                The Worse Game Ever                    #
 *   https://github.com/TigerClips1/The_Worse_game_ever	#
 *           *********************************           #
 *           * Copyright (©) 2024 TigerClips1 *          #
@@ -13,7 +13,7 @@
 
 extends AnimatedSprite2D
 
-@onready var death = $"."
+@onready var death := $"."
 
 func _play():
 	death.play("Death")

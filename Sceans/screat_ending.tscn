@@ -1406,19 +1406,4 @@ offset_top = 5.0
 offset_right = -4.0
 offset_bottom = 5.0
 
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key2" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key3" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key4" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key5" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key6" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key7" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key8" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key9" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key10" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key11" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key12" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key13" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key14" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
-[connection signal="glitch_key_Cellected" from="Keys/Gltch_Key15" to="HUD_GLITCH" method="_on_gltch_key_glitch_key_cellected"]
 [connection signal="glitch_key_Count" from="Glitch_Box" to="HUD_GLITCH" method="_on_glitch_box_glitch_key_count"]
