@@ -59,3 +59,5 @@ res://SRC/player_glitch.gd
 res://SRC/player.gd
 res://Sceans/fake_keys.tscn
 res://SRC/fake_keys.gd
+res://Sceans/Wining_box.tscn
+res://SRC/box.gd

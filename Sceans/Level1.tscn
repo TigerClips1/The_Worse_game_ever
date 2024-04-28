@@ -366,7 +366,7 @@ script = ExtResource("1_hph7m")
 next_level = ExtResource("2_o888i")
 
 [node name="Player" parent="." instance=ExtResource("5_3hi3u")]
-position = Vector2(25, 133)
+position = Vector2(27, 133)
 
 [node name="Game cam" type="Camera2D" parent="."]
 visible = false
@@ -530,7 +530,7 @@ position = Vector2(206, 116)
 visible = false
 
 [node name="Box" parent="." instance=ExtResource("9_ybyft")]
-position = Vector2(279, 63)
+position = Vector2(274, 58)
 
 [connection signal="key_Collected" from="Keys/Keys1" to="Main_HUD" method="_on_keys_1_key_collected"]
 [connection signal="key_Collected" from="Keys/Keys5" to="Main_HUD" method="_on_keys_1_key_collected"]
