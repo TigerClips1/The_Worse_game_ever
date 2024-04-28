@@ -521,10 +521,10 @@ position = Vector2(63, 66)
 position = Vector2(81, 117)
 
 [node name="Keys3" parent="Keys" instance=ExtResource("9_n46ci")]
-position = Vector2(136, 64)
+position = Vector2(136, 63)
 
 [node name="Keys4" parent="Keys" instance=ExtResource("9_n46ci")]
-position = Vector2(207, 118)
+position = Vector2(207, 115)
 
 [node name="Main_HUD" parent="." instance=ExtResource("12_n2edc")]
 visible = false
@@ -532,4 +532,8 @@ visible = false
 [node name="Box" parent="." instance=ExtResource("9_ybyft")]
 position = Vector2(279, 63)
 
+[connection signal="key_Collected" from="Keys/Keys1" to="Main_HUD" method="_on_keys_1_key_collected"]
+[connection signal="key_Collected" from="Keys/Keys2" to="." method="_on_keys_1_key_collected"]
+[connection signal="key_Collected" from="Keys/Keys3" to="." method="_on_keys_1_key_collected"]
+[connection signal="key_Collected" from="Keys/Keys4" to="." method="_on_keys_1_key_collected"]
 [connection signal="key_Count" from="Box" to="Main_HUD" method="_on_box_key_count"]

@@ -23,5 +23,5 @@ func _ready():
 func _on_back_pressed():
 	Click.play()
 	await  LevelFade._fade_to_black()
-	get_tree().change_scene_to_file("res://Sceans/Game_control_screen.tscn")
+	get_tree().change_scene_to_file("res://Sceans/Game_control_screen_keyborred.tscn")
 	LevelFade._fade_from_black()

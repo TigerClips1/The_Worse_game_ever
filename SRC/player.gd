@@ -124,7 +124,7 @@ func _on_sound_efx_timer_timeout():
 	WalkingSoundEfx.stop()
 
 func _on_hazards_horror_detected_area_entered(_area):
-	Addfile._add_File2()
+	#Addfile._add_File2()
 	WalkingSoundEfx.stop()
 	DeathSound.play()
 	DeathSound.autoplay = true

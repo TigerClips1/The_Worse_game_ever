@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cut6xtmy8wnnh"]
+[gd_scene load_steps=35 format=3 uid="uid://cut6xtmy8wnnh"]
 
 [ext_resource type="Script" path="res://SRC/the_end.gd" id="1_pnbkj"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="3_vjn15"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="8_6ypxe"]
 [ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/Wining_box.tscn" id="10_bb46a"]
 [ext_resource type="PackedScene" uid="uid://bsdmwf6ca8dak" path="res://Sceans/hud.tscn" id="11_r87bm"]
-[ext_resource type="PackedScene" uid="uid://dj3b4a4yvy4m1" path="res://Sceans/enmey_ai.tscn" id="11_u5b7v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4edn8"]
 texture = ExtResource("4_eq4sy")
@@ -9578,46 +9577,55 @@ position = Vector2(168, 24)
 position = Vector2(26, 24)
 
 [node name="Key3" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(26, 96)
+position = Vector2(25, 97)
 
 [node name="Key4" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(295, 25)
+position = Vector2(297, 27)
 
 [node name="Key5" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(384, 30)
+position = Vector2(204, -66)
 
 [node name="Key6" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(457, -31)
+position = Vector2(152, -63)
 
 [node name="Key7" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(294, -80)
+position = Vector2(79, -62)
 
 [node name="Key8" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(253, -79)
-
-[node name="Key9" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(205, -64)
-
-[node name="Key10" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(152, -62)
-
-[node name="Key11" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(79, -63)
-
-[node name="Key12" parent="Real_keys" instance=ExtResource("6_dnw3e")]
 position = Vector2(38, -80)
 
+[node name="Key9" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(-6, -161)
+
+[node name="Key10" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(221, -153)
+
+[node name="Key11" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(262, -152)
+
+[node name="Key12" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(456, -138)
+
 [node name="Key13" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(-7, -161)
+position = Vector2(456, -31)
 
 [node name="Key14" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(223, -152)
+position = Vector2(62, -27)
 
 [node name="Key15" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(261, -153)
+position = Vector2(318, -25)
 
-[node name="Key16" parent="Real_keys" instance=ExtResource("6_dnw3e")]
-position = Vector2(454, -137)
+[node name="Keys16" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(258, -77)
+
+[node name="Key17" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(298, -79)
+
+[node name="Key18" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(220, 62)
+
+[node name="Keys19" parent="Real_keys" instance=ExtResource("6_dnw3e")]
+position = Vector2(389, -117)
 
 [node name="HUD" parent="." instance=ExtResource("11_r87bm")]
 offset = Vector2(-5, -7)
@@ -9628,22 +9636,23 @@ position = Vector2(479, -96)
 
 [node name="Enmey" type="Node2D" parent="."]
 
-[node name="Enmey_AI" parent="." instance=ExtResource("11_u5b7v")]
-position = Vector2(186, 78)
-
-[node name="Enmey_AI2" parent="." instance=ExtResource("11_u5b7v")]
-position = Vector2(130, 71)
-
-[node name="Enmey_AI3" parent="." instance=ExtResource("11_u5b7v")]
-position = Vector2(0, 71)
-
-[node name="Enmey_AI4" parent="." instance=ExtResource("11_u5b7v")]
-position = Vector2(304, 72)
-
-[node name="Enmey_AI5" parent="." instance=ExtResource("11_u5b7v")]
-position = Vector2(391, 74)
-
-[node name="Enmey_AI6" parent="." instance=ExtResource("11_u5b7v")]
-position = Vector2(460, 75)
-
+[connection signal="key_Collected" from="Real_keys/Key1" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key2" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key3" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key4" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key5" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key6" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key7" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key8" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key9" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key10" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key11" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key12" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key13" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key14" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key15" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Keys16" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key17" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Key18" to="HUD" method="_on_key_1_key_collected"]
+[connection signal="key_Collected" from="Real_keys/Keys19" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Count" from="Box" to="HUD" method="_on_box_key_count"]

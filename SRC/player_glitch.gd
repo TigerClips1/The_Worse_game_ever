@@ -112,7 +112,7 @@ func _on_hazard_detector_area_entered(_area):
 	Jumpscare.play()
 	await death_glitch._play()
 	death_glitch._restore()
-	Events._timer()
+	#Events._timer()
 	await  LevelFade._fade_to_black()
 	reload_scene()
 	LevelFade._fade_from_black()

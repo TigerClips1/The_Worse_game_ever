@@ -34,21 +34,18 @@ func Apply_Troll_ending():
 	reload_scene_easter()
 
 func _on_box_key_count():
-	if Keyss != 4 and Keyss != 5 and Keyss != 7 and Keyss != 16:
+	if Keyss != 4 and Keyss != 5 and Keyss != 7 and Keyss != 19:
 		Apply_Troll_ending()
-	elif Keyss == 4 or  Keyss == 5 or Keyss == 7 or Keyss == 16:
+	elif Keyss == 4 or  Keyss == 5 or Keyss == 7 or Keyss == 19:
 		WinSoundEfx.play()
-		Events.Level_comepiled.emit()
+		Events.level_completed.emit()
 	queue_free()
 
-func _on_node_2d_key_cellected():
+func _on_keys_1_key_collected() -> void:
 	Keyss += 1
 	_keyss()
 
-func _on_keys_level_3_cellcted():
-	Keyss += 1
-	_keyss()
 
-func _on_key_cellected_level4():
+func _on_key_1_key_collected() -> void:
 	Keyss += 1
 	_keyss()

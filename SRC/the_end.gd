@@ -17,7 +17,7 @@ extends Node2D
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color.CRIMSON)
-	Events.Level_comepiled.connect(_level_completed)
+	Events.level_completed.connect(_level_completed)
 
 func _input(_event):
 	if _event is InputEventKey and _event.pressed:

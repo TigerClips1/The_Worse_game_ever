@@ -36,7 +36,7 @@ func _on_credits_pressed():
 func _on_control_pressed():
 	Click.play()
 	await  LevelFade._fade_to_black()
-	get_tree().change_scene_to_file("res://Sceans/Game_control_screen.tscn")
+	get_tree().change_scene_to_file("res://Sceans/Game_control_screen_keyborred.tscn")
 	LevelFade._fade_from_black()
 
 func _on_quit_pressed():

@@ -1,6 +1,7 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1714265715
-export_presets.cfg::TextFile::-1::1713377071::0::1::::<><>::
+::res://::1714280317
+export_presets.cfg::TextFile::-1::1714266994::0::1::::<><>::
+README.md::TextFile::-1::1714267793::0::1::::<><>::
 ::res://addons/::1713682941
 ::res://addons/controller_icons/::1713376351
 ControllerIcons.gd::GDScript::-1::1713376351::0::1::::<>Node<>::
@@ -572,8 +573,8 @@ tile_0068.png::CompressedTexture2D::7430981759904026611::1713376351::1713376351:
 DIE.txt::TextFile::-1::1713376351::0::1::::<><>::
 WILL.txt::TextFile::-1::1713376351::0::1::::<><>::
 YOU.txt::TextFile::-1::1713376351::0::1::::<><>::
-::res://resources/::1714256398
-credits_4.tres::LabelSettings::9211980071916569552::1714256398::0::1::::<><>::
+::res://resources/::1714267147
+credits_4.tres::LabelSettings::9211980071916569552::1714267147::0::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::5906380228043548586::1713376351::0::1::::<><>::
 Defulit.tres::Theme::3913268978249726508::1713376351::0::1::::<><>::uid://cm5vsbusier6i::::res://resources/See.tres
 Defult_Play_Data.tres::Resource/Resource::686673597550502108::1713912764::0::1::::<><>::res://SRC/Player_movement_data.gd
@@ -582,12 +583,12 @@ Glitch.tres::Resource/Resource::7513708912508234731::1713912131::0::1::::<><>::r
 JumpScare.tres::VideoStreamTheora::577145367651452817::1713376351::0::1::::<><>::
 Jump_change.tres::Resource/Resource::9191937069261089717::1713376351::0::1::::<><>::res://SRC/Player_movement_data.gd
 Keys.tres::Resource::8629214206699736230::1713376351::0::1::::<><>::
-Panel_Style.tres::Theme::6019711964598876981::1714256398::0::1::::<><>::
+Panel_Style.tres::Theme::6019711964598876981::1714267147::0::1::::<><>::
 See.tres::StyleBoxTexture::5678346109050912586::1713376351::0::1::::<><>::
-Setting.tres::Theme::3783983142530846224::1714256398::0::1::::<><>::
+Setting.tres::Theme::3783983142530846224::1714267147::0::1::::<><>::
 Slow_movement.tres::Resource/Resource::1520503364893875465::1713376351::0::1::::<><>::res://SRC/Player_movement_data.gd
 Text_BOX.tres::Theme::5013914683559195185::1713388597::0::1::::<><>::
-Warning.tres::Theme::3297350834641179845::1714256398::0::1::::<><>::
+Warning.tres::Theme::3297350834641179845::1714267147::0::1::::<><>::
 ::res://Sceans/::1714264810
 Background_level1.tscn::PackedScene::8810160241270122824::1714264807::0::1::::<><>::uid://pyi3u34encnc::::res://ASSETS/Images/bg/m6/1.png<>uid://b47mcajo21f1g::::res://ASSETS/Images/bg/m6/2.png<>uid://vi55yk2uiwbj::::res://ASSETS/Images/bg/m6/3.png<>uid://b33cq7syeeqvp::::res://ASSETS/Images/bg/m6/4.png<>uid://dlpkx86dw6q6b::::res://ASSETS/Images/bg/m6/5.png
 Background_level2.tscn::PackedScene::7097985461334164864::1714264807::0::1::::<><>::uid://bnohfifb7n4gl::::res://ASSETS/Images/bg/m2/PRE_ORIG_SIZE.png
@@ -651,7 +652,7 @@ Wining_box.tscn::PackedScene::2754026133089798124::1713376351::0::1::::<><>::uid
 Wining_scene.tscn::PackedScene::6774870749015882172::1713839823::0::1::::<><>::res://SRC/wining_scene.gd
 winnig.tscn::PackedScene::6731859184232809054::1713376351::0::1::::<><>::res://SRC/Keys.gd<>uid://cxaff7r53wpk5::::res://ASSETS/Misc/tile_0027.png
 win_sound_efx.tscn::PackedScene::5306570688143360685::1713376351::0::1::::<><>::uid://cympum6bq7gb1::::res://ASSETS/Audio/Soud_Efx/win-short-38508.mp3
-::res://SRC/::1714265504
+::res://SRC/::1714267147
 Addfile.gd::GDScript::-1::1714263489::0::1::::<>Node<>::
 box.gd::GDScript::-1::1714263484::0::1::::<>Node2D<>::
 controller_control.gd::GDScript::-1::1714263473::0::1::::<>Control<>::
@@ -672,7 +673,7 @@ HeadPhone_Warning.gd::GDScript::-1::1714263402::0::1::::<>Control<>::
 HUD.gd::GDScript::-1::1714263398::0::1::::<>CanvasLayer<>::
 hud_glitch.gd::GDScript::-1::1714263395::0::1::::<>Control<>::
 Keys.gd::GDScript::-1::1714264405::0::1::::<>Node2D<>::
-Level1.gd::GDScript::-1::1714264422::0::1::::<>Node2D<>::
+Level1.gd::GDScript::-1::1714267147::0::1::::<>Node2D<>::
 level_2.gd::GDScript::-1::1714263633::0::1::::<>Node2D<>::
 level_3.gd::GDScript::-1::1714263636::0::1::::<>Node2D<>::
 level_fade.gd::GDScript::-1::1714263376::0::1::::<>CanvasLayer<>::

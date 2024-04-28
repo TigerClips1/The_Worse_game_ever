@@ -355,16 +355,16 @@ position = Vector2(-1, 2)
 [node name="Keys1" parent="KEYS" instance=ExtResource("7_tabqt")]
 position = Vector2(64, 48)
 
-[node name="Keys2" parent="KEYS" instance=ExtResource("7_tabqt")]
-position = Vector2(28, 131)
+[node name="Keys6" parent="KEYS" instance=ExtResource("7_tabqt")]
+position = Vector2(27, 131)
 
-[node name="Keys3" parent="KEYS" instance=ExtResource("7_tabqt")]
-position = Vector2(143, 73)
+[node name="Keys7" parent="KEYS" instance=ExtResource("7_tabqt")]
+position = Vector2(143, 75)
 
-[node name="Keys4" parent="KEYS" instance=ExtResource("7_tabqt")]
+[node name="Keys8" parent="KEYS" instance=ExtResource("7_tabqt")]
 position = Vector2(195, 75)
 
-[node name="Keys5" parent="KEYS" instance=ExtResource("7_tabqt")]
+[node name="Keys9" parent="KEYS" instance=ExtResource("7_tabqt")]
 position = Vector2(251, 75)
 
 [node name="HUD" parent="." instance=ExtResource("10_oyrlh")]
@@ -374,4 +374,9 @@ transform = Transform2D(1, 0, 0, 1, -10, -7)
 [node name="Box" parent="." instance=ExtResource("8_7nwep")]
 position = Vector2(314, 26)
 
+[connection signal="key_Collected" from="KEYS/Keys1" to="HUD" method="_on_keys_1_key_collected"]
+[connection signal="key_Collected" from="KEYS/Keys6" to="HUD" method="_on_keys_1_key_collected"]
+[connection signal="key_Collected" from="KEYS/Keys7" to="HUD" method="_on_keys_1_key_collected"]
+[connection signal="key_Collected" from="KEYS/Keys8" to="HUD" method="_on_keys_1_key_collected"]
+[connection signal="key_Collected" from="KEYS/Keys9" to="HUD" method="_on_keys_1_key_collected"]
 [connection signal="key_Count" from="Box" to="HUD" method="_on_box_key_count"]
