@@ -36,7 +36,7 @@ func _credit_move():
 	get_tree().paused = false
 	glitch.play("Cool_Dance")
 	error.show()
-	#Events.delete()
+	Events.delete()
 	glitch.stop()
 	get_tree().quit()
 	LevelFade._fade_from_black()

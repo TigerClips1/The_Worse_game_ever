@@ -369,7 +369,6 @@ next_level = ExtResource("2_o888i")
 position = Vector2(27, 133)
 
 [node name="Game cam" type="Camera2D" parent="."]
-visible = false
 position = Vector2(159, 85)
 limit_smoothed = true
 position_smoothing_enabled = true

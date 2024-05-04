@@ -47,6 +47,8 @@ func Apply_Gravaty(delta):
 		velocity.y += gravity * movementData.Gravity_scale * delta
 
 func Handlejump():
+	#FIXME
+	#match i am going to think about how to add this to it wont use alot of if satement
 	if is_on_floor(): air_jump = true
 	if is_on_floor() or coyote_jump_timer.time_left > 0.0:
 		if Input.is_action_just_pressed("Space"):
@@ -116,6 +118,7 @@ func _Exit_mainmenu():
 func _apply_input():
 	if Input.is_action_just_released("Exit"):
 		await  LevelFade._fade_to_black()
+		MenuMusic.play()
 		_Exit_mainmenu()
 		LevelFade._fade_from_black()
 
@@ -124,7 +127,7 @@ func _on_sound_efx_timer_timeout():
 	WalkingSoundEfx.stop()
 
 func _on_hazards_horror_detected_area_entered(_area):
-	#Addfile._add_File2()
+	Addfile.add_Image()
 	WalkingSoundEfx.stop()
 	DeathSound.play()
 	DeathSound.autoplay = true
