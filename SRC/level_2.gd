@@ -17,6 +17,9 @@ extends Node2D
 
 @export var next_level : PackedScene
 
+
+
+
 func Apply_Change_scene():
 	call_deferred("Change_scene")
 
@@ -25,6 +28,7 @@ func Change_scene():
 
 func _ready():
 	Level1Bgm.stop()
+	HorrorBgm.play()
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	Events.level_completed.connect(_level_completed)
 

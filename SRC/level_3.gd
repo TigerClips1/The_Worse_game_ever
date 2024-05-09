@@ -16,6 +16,7 @@ extends Node2D
 @export var next_level : PackedScene
 
 func _ready():
+	HorrorBgm.stop()
 	RenderingServer.set_default_clear_color(Color.DARK_RED)
 	Events.level_completed.connect(_level_completed)
 

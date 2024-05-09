@@ -92,7 +92,7 @@ func reload_scene():
 	call_deferred("_reload_scene")
 
 func _reload_scene():
-	if is_inside_tree():
+	if is_inside_tree:
 		get_tree().change_scene_to_file("res://Sceans/lost_screen.tscn")
 
 func _on_hazard_detector_area_entered(_area):
@@ -118,7 +118,7 @@ func _Exit_mainmenu():
 func _apply_input():
 	if Input.is_action_just_released("Exit"):
 		await  LevelFade._fade_to_black()
-		MenuMusic.play()
+		MenuMusic.play(12.5)
 		_Exit_mainmenu()
 		LevelFade._fade_from_black()
 

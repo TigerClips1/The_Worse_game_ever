@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr5qwj8ikhfm0"]
+
+[ext_resource type="AudioStream" uid="uid://hhxxjcvem6ar" path="res://ASSETS/Audio/BGM_Horror/Pxel_TIny_scary.ogg" id="1_fb1xg"]
+
+[node name="Horror_BGM" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = ExtResource("1_fb1xg")
+bus = &"Music"

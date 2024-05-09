@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dstcevk2hfm2o"]
+[gd_scene load_steps=23 format=3 uid="uid://dstcevk2hfm2o"]
 
 [ext_resource type="Script" path="res://SRC/level_3.gd" id="1_l1dq5"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="1_txvkr"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cqmdxl8p4ue5" path="res://Sceans/Keys.tscn" id="6_ie3my"]
 [ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/Wining_box.tscn" id="9_oglbt"]
 [ext_resource type="PackedScene" uid="uid://bsdmwf6ca8dak" path="res://Sceans/hud.tscn" id="9_px56u"]
+[ext_resource type="AudioStream" uid="uid://cnb0gl3f2chul" path="res://ASSETS/Audio/BGM_Horror/BGM3_Horror.ogg" id="10_ftui5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6a8ix"]
 texture = ExtResource("1_txvkr")
@@ -381,6 +382,11 @@ transform = Transform2D(1, 0, 0, 1, -5, -7)
 
 [node name="Box" parent="." instance=ExtResource("9_oglbt")]
 position = Vector2(317, 26)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_ftui5")
+autoplay = true
+bus = &"Music"
 
 [connection signal="key_Collected" from="KEYS/Key1" to="HUD" method="_on_key_1_key_collectedlefffffff"]
 [connection signal="key_Collected" from="KEYS/Key8" to="HUD" method="_on_key_1_key_collectedlefffffff"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cut6xtmy8wnnh"]
+[gd_scene load_steps=36 format=3 uid="uid://cut6xtmy8wnnh"]
 
 [ext_resource type="Script" path="res://SRC/the_end.gd" id="1_pnbkj"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="3_vjn15"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://rfbrfr8x5lre" path="res://Sceans/player.tscn" id="7_2xton"]
 [ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="8_6ypxe"]
 [ext_resource type="PackedScene" uid="uid://bficn4x0segye" path="res://Sceans/Wining_box.tscn" id="10_bb46a"]
+[ext_resource type="AudioStream" uid="uid://drny17vxyp8kq" path="res://ASSETS/Audio/BGM_Horror/bgm_Horror_Endogg.ogg" id="11_ilkap"]
 [ext_resource type="PackedScene" uid="uid://bsdmwf6ca8dak" path="res://Sceans/hud.tscn" id="11_r87bm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4edn8"]
@@ -9635,6 +9636,11 @@ transform = Transform2D(1, 0, 0, 1, -5, -7)
 position = Vector2(479, -96)
 
 [node name="Enmey" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ilkap")
+autoplay = true
+bus = &"Music"
 
 [connection signal="key_Collected" from="Real_keys/Key1" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Collected" from="Real_keys/Key2" to="HUD" method="_on_key_1_key_collected"]

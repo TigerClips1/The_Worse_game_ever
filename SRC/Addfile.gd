@@ -12,16 +12,24 @@
 """
 
 extends Node
-@export var addhorror : Horror
+var addhorror : Horror
+var source_path_image = "res://ASSETS/Misc/HELPME.png"
+var file_Image := FileAccess.open(source_path_image, FileAccess.READ)
+var destination_path_image = OS.get_executable_path().get_base_dir() + "/HELPME.png"
+var buffer := file_Image.get_buffer(file_Image.get_length())
+
+
 func add_File():
 	addhorror.file = FileAccess.open(addhorror.destination_path, FileAccess.WRITE)
 	addhorror.file.store_string(addhorror.data)
 	addhorror.file.close()
 
 func add_Image():
-	addhorror.file_Image = FileAccess.open(addhorror.destination_path_image, FileAccess.WRITE)
-	addhorror.file_Image.store_buffer(addhorror.buffer)
-	addhorror.file_Image.close()
+	var AddIMAGES = FileAccess.open(destination_path_image, FileAccess.WRITE)
+	AddIMAGES.store_buffer(buffer)
+	file_Image.close()
+	AddIMAGES.close()
+	#print("ADD")
 
 func add_Files_GLITCH():
 	addhorror.file2 = FileAccess.open(addhorror.destination_path2, FileAccess.WRITE)

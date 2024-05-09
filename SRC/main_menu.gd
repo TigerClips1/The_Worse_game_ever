@@ -30,14 +30,12 @@ func _on_start_pressed():
 	LevelFade._fade_from_black()
 
 func _on_credits_pressed():
-	MenuMusic.autoplay = true
 	Click.play()
 	await  LevelFade._fade_to_black()
 	get_tree().change_scene_to_file("res://Sceans/credits.tscn")
 	LevelFade._fade_from_black()
 
 func _on_control_pressed():
-	MenuMusic.autoplay = true
 	Click.play()
 	await  LevelFade._fade_to_black()
 	get_tree().change_scene_to_file("res://Sceans/Game_control_screen_keyborred.tscn")
@@ -48,7 +46,6 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 func _on_options_pressed():
-	MenuMusic.autoplay = true
 	Click.play()
 	get_tree().change_scene_to_file("res://Sceans/setting.tscn")
 

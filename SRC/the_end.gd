@@ -20,15 +20,18 @@ func _ready():
 	Events.level_completed.connect(_level_completed)
 
 func _input(_event):
+	#FIXME Turn all these If Satement to Match somehow
 	if _event is InputEventKey and _event.pressed:
 		if _event.keycode == KEY_ALT:
-			if _event.shift_pressed:
-				get_tree().paused = true
-				await  LevelFade._fade_to_black()
-				Change_scene_screat()
-				LevelFade._fade_from_black()
-				GltichNext.play()
-				get_tree().paused = false
+			if _event.keycode == KEY_PLUS:
+				if _event.shift_pressed:
+					get_tree().paused = true
+					await  LevelFade._fade_to_black()
+					Change_scene_screat()
+					LevelFade._fade_from_black()
+					GltichNext.play()
+					get_tree().paused = false
+		return
 
 func Apply_Win_scene():
 	call_deferred("Change_Win_scene")
@@ -49,5 +52,3 @@ func _level_completed():
 	get_tree().paused = false
 	Apply_Win_scene()
 	LevelFade._fade_from_black()
-
-

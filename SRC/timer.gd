@@ -15,9 +15,12 @@ extends Node2D
 
 @onready var label := %TImer_Count
 @onready var random_timer := $RandomTimer
+@onready var time_tick: AudioStreamPlayer2D = $'TIme TICK'
 
 func _ready():
+	time_tick.play()
 	random_timer.start()
+
 
 func _time_Left():
 	var time_left = random_timer.time_left
