@@ -45,6 +45,7 @@ Addfile="*res://SRC/Addfile.gd"
 DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 CreditMusic="*res://Sceans/Credit_Music.tscn"
 HorrorBgm="*res://Sceans/horror_bgm.tscn"
+DiscordRpc="*res://SRC/DISCORD_RPC.gd"
 
 [display]
 

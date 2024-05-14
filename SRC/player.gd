@@ -29,7 +29,6 @@ func _ready():
 
 func _physics_process(delta):
 	Apply_Gravaty(delta)
-	Handlejump()
 	var input_axis := Input.get_axis("Left_arrow", "Right_arrow")
 	Apply_Actlation(input_axis, delta)
 	Handile_Air_acceleration(input_axis, delta)
@@ -46,22 +45,23 @@ func Apply_Gravaty(delta):
 	if not is_on_floor():
 		velocity.y += gravity * movementData.Gravity_scale * delta
 
-func Handlejump():
-	#FIXME
-	#match i am going to think about how to add this to it wont use alot of if satement
+
+func _input(event: InputEvent) -> void:
 	if is_on_floor(): air_jump = true
 	if is_on_floor() or coyote_jump_timer.time_left > 0.0:
-		if Input.is_action_just_pressed("Space"):
-				velocity.y = movementData.jump_velocity
-				JumpSoundEfx.play()
+			if event.is_action_pressed("Space"):
+						velocity.y = movementData.jump_velocity
+						JumpSoundEfx.play()
 	elif not is_on_floor():
-			if Input.is_action_just_pressed("Space") and  velocity.y < movementData.jump_velocity / 2:
-				velocity.y = movementData.jump_velocity / 2
-				JumpSoundEfx.play()
-			if Input.is_action_just_pressed("Space") and air_jump:
-				velocity.y = movementData.jump_velocity * 0.8
-				JumpSoundEfx.play()
-				air_jump = false
+					if event.is_action_pressed("Space") and  velocity.y < movementData.jump_velocity / 2:
+						velocity.y = movementData.jump_velocity / 2
+						JumpSoundEfx.play()
+					if event.is_action_pressed("Space") and air_jump:
+						velocity.y = movementData.jump_velocity * 0.8
+						JumpSoundEfx.play()
+						air_jump = false
+	_apply_input()
+
 
 func Apply_Actlation(input_axis, delta):
 		if not is_on_floor(): return
@@ -105,9 +105,6 @@ func _on_hazard_detector_area_entered(_area):
 	await  LevelFade._fade_to_black()
 	reload_scene()
 	LevelFade._fade_from_black()
-
-func _input(_event):
-	_apply_input()
 
 func _Mainmenu():
 	get_tree().change_scene_to_file("res://Sceans/main_menu.tscn")
