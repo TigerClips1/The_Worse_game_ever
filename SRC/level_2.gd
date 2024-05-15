@@ -17,9 +17,6 @@ extends Node2D
 
 @export var next_level : PackedScene
 
-
-
-
 func Apply_Change_scene():
 	call_deferred("Change_scene")
 

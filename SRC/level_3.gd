@@ -14,6 +14,7 @@
 extends Node2D
 
 @export var next_level : PackedScene
+@onready var horror_bgm: AudioStreamPlayer2D = $Horror_BGM
 
 func _ready():
 	HorrorBgm.stop()

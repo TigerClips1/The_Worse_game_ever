@@ -20,10 +20,11 @@ func _ready():
 	WalkingSoundEfx.stop()
 	JumpSoundEfx.stop()
 	DeathSound.stop()
+	HorrorBgm.stop()
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	print("Add")
 	Addfile.add_File()
 	await get_tree().create_timer(2).timeout
 	#open a link to the browser
-	OS.shell_open("https://www.youtube.com/watch?v=EpX1_YJPGAY")
+	OS.shell_open("https://www.youtube.com/watch?v=hvL1339luv0")
 	get_tree().quit()

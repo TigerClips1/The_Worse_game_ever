@@ -92,7 +92,7 @@ func reload_scene():
 	call_deferred("_reload_scene")
 
 func _reload_scene():
-	if is_inside_tree:
+	if is_inside_tree():
 		get_tree().change_scene_to_file("res://Sceans/lost_screen.tscn")
 
 func _on_hazard_detector_area_entered(_area):

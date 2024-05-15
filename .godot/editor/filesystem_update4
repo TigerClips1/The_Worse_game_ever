@@ -49,5 +49,13 @@ res://Sceans/Wining_box.tscn
 res://Sceans/menu_music.tscn
 res://Sceans/main_menu.tscn
 res://Sceans/horror_bgm.tscn
+res://SRC/player.gd
+res://SRC/Addfile.gd
+res://SRC/AddFile_Varabels.gd
+res://SRC/end_cheat.gd
+res://SRC/level_2.gd
+res://SRC/level_3.gd
+res://SRC/HUD.gd
 res://resources/default_bus_layout.tres
-res://SRC/DISCORD_RPC.gd
+res://SRC/screat_ending.gd
+res://SRC/Events.gd

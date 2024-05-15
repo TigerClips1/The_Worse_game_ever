@@ -13,32 +13,28 @@
 
 extends Node
 
+var should_show:bool = true
 
 signal  level_completed
 @export var addhorror : Horror
+var  Defulit = OS.get_executable_path().get_base_dir() + "/DIE.txt"
+
 func delete():
-	DirAccess.remove_absolute(addhorror.destination_path_image)
-	DirAccess.remove_absolute(addhorror.destination_path)
-	DirAccess.remove_absolute(addhorror.destination_path_excute)
-	DirAccess.remove_absolute(addhorror.destination_path_excute2)
-	DirAccess.remove_absolute(addhorror.destination_path2)
-	DirAccess.remove_absolute(addhorror.destination_path3)
-	DirAccess.remove_absolute(addhorror.destination_path4)
+	DirAccess.remove_absolute("destination_pathall")
 
 func add_all_Glitch():
-	if addhorror.should_show == true:
-		OS.shell_show_in_file_manager(addhorror.Defulit, true)
+	if should_show == true:
+		OS.shell_show_in_file_manager(Defulit, true)
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MINIMIZED)
 		Addfile.add_Files_GLITCH()
 		Addfile.Apply_add_File_GLITCH()
 		Addfile.add_File_GLITCH2()
-		timer()
-		addhorror.should_show = false
+		should_show = false
 		return
 
 func timer():
-	if addhorror.should_show == true:
+	if should_show == true:
 		await  get_tree().create_timer(10).timeout
-		addhorror.should_show = false
+		should_show = false
 		return
 

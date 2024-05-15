@@ -10,8 +10,8 @@
 
 [node name="BGLayer" type="ParallaxLayer" parent="."]
 position = Vector2(20, 21)
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(25, 0)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(25, 25)
 
 [node name="Happy_BG" type="Sprite2D" parent="BGLayer"]
 position = Vector2(132.5, 71.5)
@@ -20,8 +20,8 @@ texture = ExtResource("1_7dsxb")
 
 [node name="BGLayer2" type="ParallaxLayer" parent="."]
 position = Vector2(20, 21)
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(25, 0)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(25, 25)
 
 [node name="Happy_BG" type="Sprite2D" parent="BGLayer2"]
 position = Vector2(133, 39)
@@ -30,8 +30,8 @@ texture = ExtResource("2_6p8qr")
 
 [node name="BGLayer3" type="ParallaxLayer" parent="."]
 position = Vector2(20, 21)
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(25, 0)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(25, 25)
 
 [node name="Happy_BG" type="Sprite2D" parent="BGLayer3"]
 position = Vector2(130.5, 72)
@@ -40,8 +40,8 @@ texture = ExtResource("3_40a78")
 
 [node name="BGLayer4" type="ParallaxLayer" parent="."]
 position = Vector2(20, 21)
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(25, 0)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(25, 25)
 
 [node name="Happy_BG" type="Sprite2D" parent="BGLayer4"]
 position = Vector2(131, 71)
@@ -50,8 +50,8 @@ texture = ExtResource("4_uwbkv")
 
 [node name="BGLayer5" type="ParallaxLayer" parent="."]
 position = Vector2(20, 21)
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(25, 0)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(25, 25)
 
 [node name="Happy_BG" type="Sprite2D" parent="BGLayer5"]
 position = Vector2(130.5, 70)
