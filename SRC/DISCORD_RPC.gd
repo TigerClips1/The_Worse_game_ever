@@ -20,7 +20,5 @@ func _ready():
 func Discord():
 	DiscordRPC.app_id = 1240064180711587860
 	DiscordRPC.state = "Playing dumbest game ever made in man kind"
-	DiscordRPC.large_image = "https://github.com/TigerClips1/The_Worse_game_ever/blob/0b9fe6b1df7f1c75e742ac0699ab728e2a1bee98/ASSETS/Images/Icon_Discord_RPC/icon.png"
-	DiscordRPC.small_image = "icon_small.png" # Image key from "Art Assets"
 	DiscordRPC.start_timestamp = int(Time.get_unix_time_from_system()) # "02:46 elapsed"
 	DiscordRPC.refresh() # Always refresh after changing the values!
