@@ -33,6 +33,7 @@ func _ready():
 	GameOverBgm.stop()
 	Click.stop()
 
+
 func Change_scene():
 	call_deferred("change_scene")
 

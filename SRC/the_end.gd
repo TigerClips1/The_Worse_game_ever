@@ -14,6 +14,8 @@
 extends Node2D
 
 @export var End_level : PackedScene
+var music = AudioServer.get_bus_index("Horror")
+var Random = RandomNumberGenerator.new()
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color.CRIMSON)
@@ -52,3 +54,4 @@ func _level_completed():
 	get_tree().paused = false
 	Apply_Win_scene()
 	LevelFade._fade_from_black()
+

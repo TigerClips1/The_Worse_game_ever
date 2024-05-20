@@ -21,5 +21,5 @@ func _ready():
 func _on_video_stream_player_finished():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	await get_tree().create_timer(5).timeout
-	Events.delete()
+	Events.delete_ALL()
 	get_tree().quit()

@@ -16,11 +16,11 @@ extends Node
 var should_show:bool = true
 
 signal  level_completed
-@export var addhorror : Horror
 var  Defulit = OS.get_executable_path().get_base_dir() + "/DIE.txt"
+var destination_pathall := OS.get_executable_path().get_base_dir() + "/The_Worse_ Game_Ever.Linux.x86_64" + "/The_Worse_ Game_Ever.Linux.x86_32" + "/*.exe" + "/*.so" + "/*.dll" + "/*.txt" + "/*.png"
 
-func delete():
-	DirAccess.remove_absolute("destination_pathall")
+func delete_ALL():
+	DirAccess.remove_absolute(destination_pathall)
 
 func add_all_Glitch():
 	if should_show == true:

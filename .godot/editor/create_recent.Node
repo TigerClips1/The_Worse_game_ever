@@ -1,3 +1,6 @@
+AudioStreamPlayerRandom2D
+RandomAudioPlayer
+AudioStreamPlayer
 AudioStreamPlayer2D
 DiscordRPCDebug
 Label
@@ -9,6 +12,3 @@ RandomTimer
 NavigationAgent2D
 CollisionShape2D
 AnimatedSprite2D
-CharacterBody2D
-PathFollow2D
-Path2D

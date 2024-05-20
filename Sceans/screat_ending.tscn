@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://f0kdk70186c0"]
+[gd_scene load_steps=41 format=3 uid="uid://f0kdk70186c0"]
 
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="1_83vjl"]
 [ext_resource type="Script" path="res://SRC/screat_ending.gd" id="1_md1kw"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://0v2lnk1lafu8" path="res://Sceans/glitch_box.tscn" id="6_wn2wk"]
 [ext_resource type="PackedScene" uid="uid://c15xgmlersmpi" path="res://Sceans/hud_glitch.tscn" id="7_68moj"]
 [ext_resource type="AudioStream" uid="uid://o1y8uv2fo87o" path="res://ASSETS/Audio/492057494c4c204b494c4c20594f55/EBKEQRJAIFHFGV2FKIQFST2VEBJUKRKLEBEVGICJJYQEQRKMJQQE6URAKREEKICGJFGEKUZA.mp3" id="8_ulep3"]
+[ext_resource type="Script" path="res://addons/RAMDOMTIMER/addons/random_audio/AudioStreamPlayerRandom2D.gd" id="9_jomen"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlenu"]
 texture = ExtResource("1_83vjl")
@@ -1409,6 +1410,8 @@ offset_bottom = 5.0
 
 [node name="HORROR" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_ulep3")
-bus = &"Music"
+bus = &"Horror"
+script = ExtResource("9_jomen")
+pitch_deviation = 0.96
 
 [connection signal="glitch_key_Count" from="Glitch_Box" to="HUD_GLITCH" method="_on_glitch_box_glitch_key_count"]

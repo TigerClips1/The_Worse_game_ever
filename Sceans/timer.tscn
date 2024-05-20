@@ -26,7 +26,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RandomTimer" type="Timer" parent="."]
-wait_time = 21.0101
+wait_time = 10.8173
 autostart = true
 script = ExtResource("3_amtvg")
 variance = 10.0

@@ -48,6 +48,6 @@ func Horror_credits_Next():
 	LevelFade._fade_from_black()
 
 func _Load():
-	for x in menu.credit_horror:
-		await  get_tree().create_timer(1).timeout
-		DisplayServer.window_set_mode(x)
+	for Credits_Horror in menu.credit_horror:
+			await  get_tree().create_timer(1).timeout
+			DisplayServer.window_set_mode(Credits_Horror)

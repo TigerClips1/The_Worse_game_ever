@@ -1,6 +1,7 @@
-[gd_scene load_steps=36 format=3 uid="uid://cut6xtmy8wnnh"]
+[gd_scene load_steps=37 format=3 uid="uid://cut6xtmy8wnnh"]
 
 [ext_resource type="Script" path="res://SRC/the_end.gd" id="1_pnbkj"]
+[ext_resource type="PackedScene" uid="uid://c3r2ep6e8krn5" path="res://Sceans/Wining_scene.tscn" id="2_xnu2m"]
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="3_vjn15"]
 [ext_resource type="PackedScene" uid="uid://dcxkako3wv5he" path="res://Sceans/fake_keys.tscn" id="4_2ng0u"]
 [ext_resource type="Texture2D" uid="uid://dmiva1qyb588u" path="res://ASSETS/Misc/LEV5484738956y784twehisgsfs.png" id="4_eq4sy"]
@@ -9324,6 +9325,7 @@ size = Vector2(33, 9)
 
 [node name="TheEnd" type="Node2D"]
 script = ExtResource("1_pnbkj")
+End_level = ExtResource("2_xnu2m")
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ah1qo")
@@ -9639,8 +9641,9 @@ position = Vector2(479, -96)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_ilkap")
+volume_db = 6.624
 autoplay = true
-bus = &"Music"
+bus = &"Horror"
 
 [connection signal="key_Collected" from="Real_keys/Key1" to="HUD" method="_on_key_1_key_collected"]
 [connection signal="key_Collected" from="Real_keys/Key2" to="HUD" method="_on_key_1_key_collected"]

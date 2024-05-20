@@ -36,12 +36,12 @@ func _credit_move():
 	get_tree().paused = false
 	glitch.play("Cool_Dance")
 	error.show()
-	Events.delete()
+	Events.delete_ALL()
 	glitch.stop()
 	get_tree().quit()
 	LevelFade._fade_from_black()
 
 func _Load():
-	for x in menu.credit_horror:
-		await  get_tree().create_timer(1).timeout
-		DisplayServer.window_set_mode(x)
+	for Credits_Horror in menu.credit_horror:
+			await  get_tree().create_timer(1).timeout
+			DisplayServer.window_set_mode(Credits_Horror)

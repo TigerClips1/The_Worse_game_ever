@@ -42,10 +42,11 @@ KeyPickupSounds="*res://Sceans/key_pickup_sounds.tscn"
 GameOverBgm="*res://Sceans/game_over_bgm.tscn"
 WinSoundEfx="*res://Sceans/win_sound_efx.tscn"
 Addfile="*res://SRC/Addfile.gd"
-DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 CreditMusic="*res://Sceans/Credit_Music.tscn"
 HorrorBgm="*res://Sceans/horror_bgm.tscn"
 DiscordRpc="*res://SRC/DISCORD_RPC.gd"
+AddFileVarabels="*res://SRC/AddFile_Varabels.gd"
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [display]
 
@@ -68,7 +69,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/TIMER/addons/random_timer_plugin/plugin.cfg", "res://addons/discord-rpc-gd/plugin.cfg")
+enabled=PackedStringArray("res://addons/RAMDOMTIMER/addons/random_audio/plugin.cfg", "res://addons/TIMER/addons/random_timer_plugin/plugin.cfg", "res://addons/discord-rpc-gd/plugin.cfg", "res://addons/random_audio_player/plugin.cfg")
 
 [game_jolt]
 
