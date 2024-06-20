@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://bmc36vycrm6g0" path="res://ASSETS/Images/object/tilemap.png" id="1_83vjl"]
 [ext_resource type="Script" path="res://SRC/screat_ending.gd" id="1_md1kw"]
 [ext_resource type="PackedScene" uid="uid://dp05igbqaoqjq" path="res://Sceans/player_glitch.tscn" id="3_vo7d6"]
+[ext_resource type="Script" path="res://addons/TIMER/addons/random_timer_plugin/random_timer.gd" id="4_1k5ft"]
 [ext_resource type="PackedScene" uid="uid://1q7ox68anxpk" path="res://Sceans/gltch_key.tscn" id="4_fumho"]
 [ext_resource type="PackedScene" uid="uid://ds7eese7nc1kw" path="res://Sceans/hazard_area.tscn" id="5_abr1v"]
 [ext_resource type="PackedScene" uid="uid://0v2lnk1lafu8" path="res://Sceans/glitch_box.tscn" id="6_wn2wk"]
 [ext_resource type="PackedScene" uid="uid://c15xgmlersmpi" path="res://Sceans/hud_glitch.tscn" id="7_68moj"]
 [ext_resource type="AudioStream" uid="uid://o1y8uv2fo87o" path="res://ASSETS/Audio/492057494c4c204b494c4c20594f55/EBKEQRJAIFHFGV2FKIQFST2VEBJUKRKLEBEVGICJJYQEQRKMJQQE6URAKREEKICGJFGEKUZA.mp3" id="8_ulep3"]
-[ext_resource type="Script" path="res://addons/RAMDOMTIMER/addons/random_audio/AudioStreamPlayerRandom2D.gd" id="9_jomen"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlenu"]
 texture = ExtResource("1_83vjl")
@@ -849,6 +849,19 @@ script = ExtResource("1_md1kw")
 [node name="Player_GLitch" parent="." instance=ExtResource("3_vo7d6")]
 position = Vector2(-347, 218)
 
+[node name="Spookey" type="AudioStreamPlayer2D" parent="Player_GLitch"]
+stream = ExtResource("8_ulep3")
+pitch_scale = 0.68
+bus = &"Horror"
+
+[node name="RandomTimer" type="Timer" parent="Player_GLitch"]
+process_callback = 0
+wait_time = 10.0
+autostart = true
+script = ExtResource("4_1k5ft")
+variance = 15.0
+randomize_on_timeout = false
+
 [node name="HUD" type="Camera2D" parent="."]
 
 [node name="Glich_LEvel" type="TileMap" parent="."]
@@ -1408,10 +1421,5 @@ offset_top = 5.0
 offset_right = -4.0
 offset_bottom = 5.0
 
-[node name="HORROR" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_ulep3")
-bus = &"Horror"
-script = ExtResource("9_jomen")
-pitch_deviation = 0.96
-
+[connection signal="timeout" from="Player_GLitch/RandomTimer" to="." method="_on_random_timer_timeout"]
 [connection signal="glitch_key_Count" from="Glitch_Box" to="HUD_GLITCH" method="_on_glitch_box_glitch_key_count"]

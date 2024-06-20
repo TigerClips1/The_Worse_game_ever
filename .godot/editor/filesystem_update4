@@ -4,6 +4,7 @@ res://resources/Warning.tres
 res://resources/Panel_Style.tres
 res://resources/credits_4.tres
 res://resources/Setting.tres
+res://SRC/screat_ending.gd
 res://Sceans/warning.tscn
 res://Sceans/timer.tscn
 res://Sceans/player.tscn
@@ -50,5 +51,4 @@ res://Sceans/menu_music.tscn
 res://Sceans/main_menu.tscn
 res://Sceans/horror_bgm.tscn
 res://Sceans/Wining_scene.tscn
-res://SRC/screat_ending.gd
-res://SRC/player_glitch.gd
+res://addons/random_audio_player/nodes/random_audio_player.gd

@@ -14,22 +14,19 @@
 extends Node2D
 
 @onready var Glitch_BG := $Glich
-@onready var horror: AudioStreamPlayer2D = $HORROR
-
-var isplying = true
-
+@onready var spookey = $Player_GLitch/Spookey
+@onready var random_timer = $Player_GLitch/RandomTimer
+#@onready var time = random_timer.time_left
 func _ready():
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	PlayGlitchBG()
-
-
-
+	#print(time)
 func PlayGlitchBG():
 	Glitch_BG.play("Gltich")
 	await Glitch_BG.animation_finished
 	Glitch_BG.play("RESET")
 	await  Glitch_BG.animation_finished
 
-
-
+func _on_random_timer_timeout():
+	spookey.play()

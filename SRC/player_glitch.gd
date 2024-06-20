@@ -24,11 +24,6 @@ var was_wall_normal = Vector2.ZERO
 @onready var death_glitch := $Death_Glitch
 @onready var coyote_jump_timer_glitch := $Coyote_jump_Timer_glitch
 @onready var wall_jump_timer_glich := $Wall_jump_Timer_Glich
-@onready var horror: AudioStreamPlayer2D = $'../HORROR'
-
-func _ready() -> void:
-		horror.play_random()
-
 
 func _physics_process(delta):
 	Apply_Gravaty(delta)
