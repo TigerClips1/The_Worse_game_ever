@@ -15,6 +15,7 @@ extends Node2D
 
 @onready var area_2d = $Area2D
 
+@warning_ignore("unused_signal")
 signal key_Collected
 
 func _on_area_2d_body_entered(_body:Node2D):

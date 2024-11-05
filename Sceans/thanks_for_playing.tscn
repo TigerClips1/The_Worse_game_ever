@@ -4,6 +4,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_ejbaw"]
 font_names = PackedStringArray("Open Sans")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_udcuh"]
 font = SubResource("SystemFont_ejbaw")
@@ -14,6 +15,7 @@ font_names = PackedStringArray("Noto Sans Gujarati UI")
 font_italic = true
 generate_mipmaps = true
 force_autohinter = true
+subpixel_positioning = 0
 multichannel_signed_distance_field = true
 
 [sub_resource type="LabelSettings" id="LabelSettings_t5qmw"]

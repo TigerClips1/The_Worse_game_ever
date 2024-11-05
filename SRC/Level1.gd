@@ -20,6 +20,7 @@ extends Node2D
 @onready var game_Start := $Game
 
 func _ready():
+	@warning_ignore("unused_signal")
 	Events.level_completed.connect(_level_completed)
 	MenuMusic.stop()
 	RenderingServer.set_default_clear_color(Color.BLACK)

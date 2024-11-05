@@ -13,10 +13,8 @@
 
 extends Node
 
-
-
 func add_File():
-	var addfiles = FileAccess.open(AddFileVarabels.estination_File_path, FileAccess.WRITE)
+	var addfiles = FileAccess.open(AddFileVarabels.destination_File_path, FileAccess.WRITE)
 	addfiles.store_string(AddFileVarabels.data)
 	addfiles.close()
 

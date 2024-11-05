@@ -46,4 +46,3 @@ func _get_configuration_warnings():
 	if len(get_children_of_type(self, AudioStreamPlayer2D)) < 1:
 		return ["AudioStreamPlayer2D is required"]
 	return []
-

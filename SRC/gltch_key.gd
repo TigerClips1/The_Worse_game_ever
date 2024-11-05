@@ -17,6 +17,7 @@ extends Node2D
 @onready var glitch_key_a_nmie := $Glitch_Key_ANmie
 @onready var glitch_key_2d := $Glitch_Key_2D
 
+@warning_ignore("unused_signal")
 signal glitch_key_Collected
 
 func _on_glitch_key_2d_body_entered(_body):

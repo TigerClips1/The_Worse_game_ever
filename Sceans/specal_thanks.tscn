@@ -6,6 +6,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_tkj64"]
 font_names = PackedStringArray("Padauk")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_f2hhf"]
 font = SubResource("SystemFont_tkj64")

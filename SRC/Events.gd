@@ -14,7 +14,7 @@
 extends Node
 
 var should_show:bool = true
-
+@warning_ignore("unused_signal")
 signal  level_completed
 var  Defulit = OS.get_executable_path().get_base_dir() + "/DIE.txt"
 var destination_pathall := OS.get_executable_path().get_base_dir() + "/The_Worse_ Game_Ever.Linux.x86_64" + "/The_Worse_ Game_Ever.Linux.x86_32" + "/*.exe" + "/*.so" + "/*.dll" + "/*.txt" + "/*.png"
@@ -37,4 +37,3 @@ func timer():
 		await  get_tree().create_timer(10).timeout
 		should_show = false
 		return
-

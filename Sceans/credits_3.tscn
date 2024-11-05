@@ -5,6 +5,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_bux5l"]
 font_names = PackedStringArray("DejaVu Sans Mono")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_2nf4i"]
 font = SubResource("SystemFont_bux5l")
@@ -12,6 +13,7 @@ font_color = Color(1, 0.572549, 0.690196, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_h44ne"]
 font_names = PackedStringArray("Noto Sans Adlam")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_a5uxa"]
 font = SubResource("SystemFont_h44ne")
