@@ -2,7 +2,7 @@
 
 So this game is a 2D platformor/horror game/Psychologic horror 
 
-If you want to commit to this project you need godot4.2.1 
+If you want to commit to this project you need godot4.3 
 here the command you can use to clone the repo
 `git clone https://github.com/TigerClips1/The_Worse_game_ever` 
 NOTE make sure you have Cmd or if you on linux termnal open
